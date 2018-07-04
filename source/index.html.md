@@ -18,7 +18,8 @@ title: NYC Musicians, Singers & Songwriters
 
 ## Open Mics
 
-- http://www.openmicnewyork.com/
+- [Open Mic New York](http://www.openmicnewyork.com/)
+- [openmikes.org](https://openmikes.org/listings/nearzip.php?proximity=10&cityState=New+York%2C+NY)
 
 ## Performing Information
 
