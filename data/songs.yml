@@ -85,6 +85,7 @@
   spotify: https://open.spotify.com/track/5J2CHimS7dWYMImCHkEFaJ
   chords: https://tabs.ultimate-guitar.com/t/the_beatles/a_hard_days_night_ver6_crd.htm
   lyrics: http://www.azlyrics.com/lyrics/beatles/aharddaysnight.html
+  chordpro: hard-days-night
   year: 1964
   sheet: hard-days-night
 - title: Hotel California
@@ -236,18 +237,22 @@
   artist: The Platters
   spotify: https://open.spotify.com/track/0S5cs4lAkx99tGjoWS4Jtk?si=CPX1oiB7Q5G0ljPcVCQWRw
   chords: https://tabs.ultimate-guitar.com/tab/the_platters/only_you_chords_176345
+  chordpro: only-you
 - title: Daydream
   artist: The Lovin' Spoonful
   spotify: https://open.spotify.com/track/3c06k9x6MHHdPQi3ix68yF?si=XROeDMgtTyGoCc4EA1b8oQ
   chords: https://tabs.ultimate-guitar.com/tab/the_lovin_spoonful/daydream_chords_1044362
+  chordpro: daydream
 - title: Bad Moon Rising
   artist: Creedence Clearwater Revival
   spotify: https://open.spotify.com/track/66FSV5dLK5sNLZ00IfHxfD?si=rQq390e7TcKTxdP9yofslw
   chords: https://tabs.ultimate-guitar.com/tab/creedence_clearwater_revival/bad_moon_rising_chords_15892
+  chordpro: bad-moon-rising
 - title: Wish You Where Here
   artist: Pink Floyd
   spotify: https://open.spotify.com/track/6mFkJmJqdDVQ1REhVfGgd1?si=_uLlIdrjQreo4K90SnG3aw
   chords: https://tabs.ultimate-guitar.com/tab/pink_floyd/wish_you_were_here_chords_44555
+  chordpro: wish-you-were-here
 - title: Have You Ever Seen The Rain
   artist: Creedence Clearwater Revival
   spotify: https://open.spotify.com/track/4JuJ9ewGWWGy0U3URuXOSI?si=7rEKGy09QsW4Q9YtPZJkOQ

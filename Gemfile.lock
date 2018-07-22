@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/spilth/chordpro
+  revision: 59ea850a5b6f175fbb0a65e9622be827df4a0e70
+  specs:
+    chordpro (0.0.1)
+      builder
+      parslet
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -119,6 +127,7 @@ GEM
     padrino-support (0.13.3.4)
       activesupport (>= 3.1)
     parallel (1.12.1)
+    parslet (1.8.2)
     public_suffix (3.0.2)
     rack (2.0.5)
     rb-fsevent (0.10.3)
@@ -144,6 +153,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  chordpro!
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)
   middleman-s3_sync

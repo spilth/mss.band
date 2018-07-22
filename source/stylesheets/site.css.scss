@@ -1,0 +1,33 @@
+.line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.chord, .lyric {
+  text-wrap: avoid;
+  // Make sure chords right next to each other have breathing room
+  margin-right: 0.4em;
+}
+
+.chord {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: -0.2em;
+}
+
+.lyric {
+  // Force the chords above an empty lyrics section to the top
+  min-height: 1.5em;
+  font-family: "Times New Roman";
+  font-size: 1.4rem;
+}
+
+.comment {
+  font-family: "Times New Roman";
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+

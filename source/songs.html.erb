@@ -17,17 +17,21 @@ layout: layout
   <% data.songs.sort_by(&:title).each do |song| %>
     <tr>
       <td>
-        <%= song.title %>
+        <% if song.chordpro %>
+          <%= link_to song.title, "/songs/#{song.chordpro}" %>
+        <% else %>
+          <%= song.title %>
+        <% end %>
       </td>
       <td><%= song.artist %></td>
       <td>
         <% if song.spotify %>
-          <%= link_to 'Listen', song.spotify %>
+          <%= link_to 'Spotify', song.spotify %>
         <% end %>
       </td>
       <td>
         <% if song.chords %>
-          <%= link_to 'Learn', song.chords %>
+          <%= link_to 'Ultimate Guitar', song.chords %>
         <% end %>
       </td>
     </tr>
