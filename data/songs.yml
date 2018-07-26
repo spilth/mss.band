@@ -183,11 +183,11 @@
 - title: Earth Angel
   artist: The Pengiuns
   capo: 1st
-  sheet: earth-angel
   youtube: https://www.youtube.com/watch?v=VJcGi4-n_Yw
   spotify: https://open.spotify.com/track/75Mwp7YsQRk0ZBq1lOdL2T
   lyrics: https://genius.com/The-penguins-earth-angel-lyrics
   chords: https://tabs.ultimate-guitar.com/tab/the_penguins/earth_angel_chords_1091381
+  chordpro: earth-angel
   year: 1954
 - title: Under the Boardwalk
   artist: The Drifters
@@ -208,6 +208,7 @@
   artist: The Turtles
   spotify: https://open.spotify.com/track/1JO1xLtVc8mWhIoE3YaCL0
   chords: https://tabs.ultimate-guitar.com/tab/the_turtles/happy_together_chords_1087337
+  chordpro: happy-together
 - title: Bye Bye Love
   artist: The Everly Brothers
   spotify: https://open.spotify.com/track/6oRHRkQigTzJ3KwpO3XOV6
@@ -258,4 +259,4 @@
   artist: Creedence Clearwater Revival
   spotify: https://open.spotify.com/track/2gE95JskwQ1pCACTpGe1Db?si=5lLYB5OLSQyOGiik0qIQwg
   chords: https://tabs.ultimate-guitar.com/tab/creedence_clearwater_revival/down_on_the_corner_chords_109260
-
+  chordpro: down-on-the-corner
