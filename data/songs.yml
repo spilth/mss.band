@@ -28,6 +28,7 @@
   chords: https://tabs.ultimate-guitar.com/n/neil_young/heart_of_gold_crd.htm
   lyrics: http://www.azlyrics.com/lyrics/neilyoung/heartofgold.html
   year: 1972
+  chordpro: heart-of-gold
 - title: Free Fallin'
   artist: Tom Petty
   youtube: https://www.youtube.com/watch?v=1lWJXDG2i0A
@@ -82,12 +83,13 @@
   year: 1964
   sheet: hard-days-night
 - title: Hotel California
-  artist: Eagles
+  artist: The Eagles
   youtube: https://www.youtube.com/watch?v=jFi2ZM_7FnM
   spotify: https://open.spotify.com/track/40riOy7x9W7GXjyGp4pjAv
   chords: https://tabs.ultimate-guitar.com/e/eagles/hotel_california_ver6_crd.htm
   lyrics: http://www.azlyrics.com/lyrics/eagles/hotelcalifornia.html
   year: 1976
+  chordpro: hotel-california
 - title: Knockin' on Heaven's Door
   artist: Bob Dylan
   youtube: https://www.youtube.com/watch?v=rnKbImRPhTE
@@ -231,6 +233,7 @@
   artist: The Beatles
   spotify: https://open.spotify.com/track/0aym2LBJBk9DAYuHHutrIl?si=esGP3dSsRmWDlLZUrftY4w
   chords: https://tabs.ultimate-guitar.com/tab/the_beatles/hey_jude_chords_17275
+  chordpro: hey-jude
 - title: Only You
   artist: The Platters
   spotify: https://open.spotify.com/track/0S5cs4lAkx99tGjoWS4Jtk?si=CPX1oiB7Q5G0ljPcVCQWRw
@@ -255,6 +258,7 @@
   artist: Creedence Clearwater Revival
   spotify: https://open.spotify.com/track/4JuJ9ewGWWGy0U3URuXOSI?si=7rEKGy09QsW4Q9YtPZJkOQ
   chords: https://tabs.ultimate-guitar.com/tab/creedence_clearwater_revival/have_you_ever_seen_the_rain_chords_56479
+  chordpro: have-you-ever-seen-the-rain
 - title: Down On The Corner
   artist: Creedence Clearwater Revival
   spotify: https://open.spotify.com/track/2gE95JskwQ1pCACTpGe1Db?si=5lLYB5OLSQyOGiik0qIQwg
