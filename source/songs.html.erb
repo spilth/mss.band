@@ -1,9 +1,11 @@
 ---
-title: Songs
+title: Song List
 layout: layout
 ---
 
-<p class="lead">This is a collection of songs for our meet ups to learn and play. A playlist of these songs are available on <a href="https://open.spotify.com/user/spilth/playlist/1NaTfvTr9vGRuLPFZ5vPPz">Spotify</a> and <a href="https://www.ultimate-guitar.com/user/playlist/shared?h=CZXbBj5q2-w1AMYO_MpRLFrg">Ultimate Guitar</a>.</p>
+<p class="lead">This is a collection of songs for our meet ups to learn and play together.</p>
+
+<p>A playlist of these songs is available on <a href="https://open.spotify.com/user/spilth/playlist/1NaTfvTr9vGRuLPFZ5vPPz">Spotify</a> and <a href="https://www.ultimate-guitar.com/user/playlist/shared?h=CZXbBj5q2-w1AMYO_MpRLFrg">Ultimate Guitar</a>.</p>
 
 <table class="table table-hover">
   <thead>
@@ -17,21 +19,20 @@ layout: layout
   <% data.songs.sort_by(&:title).each do |song| %>
     <tr>
       <td>
-        <% if song.chordpro %>
-          <%= link_to song.title, "/songs/#{song.chordpro}" %>
-        <% else %>
-          <%= song.title %>
-        <% end %>
+        <%= song.title %>
       </td>
       <td><%= song.artist %></td>
       <td>
         <% if song.spotify %>
-          <%= link_to 'Spotify', song.spotify %>
+          <%= link_to 'Listen', song.spotify %>
         <% end %>
       </td>
       <td>
-        <% if song.chords %>
-          <%= link_to 'Ultimate Guitar', song.chords %>
+        <% if song.chordpro %>
+          <%= link_to 'Learn', "/songs/#{song.chordpro}" %>
+        <% elsif song.chords %>
+          <%= link_to 'Learn', song.chords %>
+          <i class="fas fa-external-link-alt fa-xs fa-fw"></i>
         <% end %>
       </td>
     </tr>
