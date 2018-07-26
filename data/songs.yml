@@ -43,13 +43,6 @@
   chords: https://tabs.ultimate-guitar.com/b/blues_traveler/run_around_crd.htm
   lyrics: http://www.azlyrics.com/lyrics/bluestraveler/runaround.html
   year: 1994
-- title: Closing Time
-  artist: Semisonic
-  youtube: https://www.youtube.com/watch?v=xGytDsqkQY8
-  spotify: https://open.spotify.com/track/087OBLtoeS3Q6j0k6tMNAI
-  chords: https://tabs.ultimate-guitar.com/s/semisonic/closing_time_ver2_crd.htm
-  lyrics: http://www.azlyrics.com/lyrics/semisonic/closingtime.html
-  year: 1998
 - title: Island in the Sun
   artist: Weezer
   youtube: https://www.youtube.com/watch?v=erG5rgNYSdk
@@ -108,6 +101,7 @@
   spotify: https://open.spotify.com/track/44AyOl4qVkzS48vBsbNXaC
   chords: https://tabs.ultimate-guitar.com/e/elvis_presley/cant_help_falling_in_love_with_you_ver2_crd.htm
   lyrics: http://www.azlyrics.com/lyrics/elvispresley/canthelpfallinginlove.html
+  chordpro: cant-help-falling-in-love
   capo: 2nd
   year: 1961
   sheet: cant-help-falling-in-love
@@ -117,6 +111,7 @@
   spotify: https://open.spotify.com/track/7dblNGnRXEBrVJunazs2U5
   chords: https://tabs.ultimate-guitar.com/t/the_everly_brothers/all_i_have_to_do_is_dream_ver10_crd.htm#
   lyrics: http://www.azlyrics.com/lyrics/everlybrothers/allihavetodoisdream.html
+  chordpro: all-i-have-to-do-is-dream
   capo: 3rd
   year: 1958
   sheet: all-i-have-to-do-is-dream
@@ -217,6 +212,7 @@
   artist: The Everly Brothers
   spotify: https://open.spotify.com/track/6oRHRkQigTzJ3KwpO3XOV6
   chords: https://tabs.ultimate-guitar.com/tab/the_everly_brothers/bye_bye_love_chords_188059
+  chordpro: bye-bye-love
 - title: Lean on Me
   artist: Bill Withers
   spotify: https://open.spotify.com/track/3M8FzayQWtkvOhqMn2V4T2
@@ -225,6 +221,7 @@
   artist: The Monkees
   spotify: https://open.spotify.com/track/7uEcCGtM1FBBGIhPozhJjv
   chords: https://tabs.ultimate-guitar.com/tab/the_monkees/daydream_believer_chords_186971
+  chordpro: daydream-believer
 - title: Last Train to Clarksville
   artist: The Monkees
   spotify: https://open.spotify.com/track/3h4t9qpFktohHeUQc3hZCa
