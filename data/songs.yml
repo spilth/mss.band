@@ -37,13 +37,6 @@
   lyrics: http://www.azlyrics.com/lyrics/tompettyandtheheartbreakers/freefallin.html
   capo: 3rd
   year: 1989
-- title: Run-Around
-  artist: Blues Traveler
-  youtube: https://www.youtube.com/watch?v=ousaiByU1ko
-  spotify: https://open.spotify.com/track/3y8rEUEUdmAcPCpPoLotnO
-  chords: https://tabs.ultimate-guitar.com/b/blues_traveler/run_around_crd.htm
-  lyrics: http://www.azlyrics.com/lyrics/bluestraveler/runaround.html
-  year: 1994
 - title: Island in the Sun
   artist: Weezer
   youtube: https://www.youtube.com/watch?v=erG5rgNYSdk
@@ -154,6 +147,7 @@
   chords: https://tabs.ultimate-guitar.com/t/the_beatles/while_my_guitar_gently_weeps_ver5_crd.htm
   lyrics: http://www.azlyrics.com/lyrics/beatles/whilemyguitargentlyweeps.html
   year: 1968
+  chordpro: while-my-guitar-gently-weeps
 - title: Mrs. Robinson
   artist: Simon & Garfunkle
   youtube: https://www.youtube.com/watch?v=9C1BCAgu2I8
@@ -169,6 +163,7 @@
   chords: https://tabs.ultimate-guitar.com/e/elvis_presley/love_me_tender_ver2_crd.htm
   lyrics: http://www.azlyrics.com/lyrics/elvispresley/lovemetender.html
   year: 1956
+  chordpro: love-me-tender
 - title: Wild World
   artist: Cat Stevens
   youtube: https://www.youtube.com/watch?v=k_0U3DlLFSU
@@ -199,6 +194,7 @@
   chords: https://tabs.ultimate-guitar.com/tab/the_drifters/under_the_boardwalk_chords_1088919
   lyrics: https://genius.com/The-drifters-under-the-boardwalk-lyrics
   year: 1964
+  chordpro: under-the-boardwalk
 - title: Wake Me Up When September Ends
   artist: Green Day
   spotify: https://open.spotify.com/track/3ZffCQKLFLUvYM59XKLbVm
