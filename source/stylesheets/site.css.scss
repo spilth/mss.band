@@ -30,4 +30,8 @@
   margin-bottom: 0.5em;
 }
 
-
+@media print {
+  .line {
+    page-break-inside: avoid;
+  }
+}
