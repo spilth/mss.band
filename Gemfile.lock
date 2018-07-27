@@ -25,6 +25,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    combine_pdf (1.0.14)
+      ruby-rc4 (>= 0.1.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.5)
@@ -128,6 +130,7 @@ GEM
       activesupport (>= 3.1)
     parallel (1.12.1)
     parslet (1.8.2)
+    pdfkit (0.8.2)
     public_suffix (3.0.2)
     rack (2.0.5)
     rb-fsevent (0.10.3)
@@ -135,6 +138,7 @@ GEM
       ffi (>= 0.5.0, < 2)
     redcarpet (3.4.0)
     ruby-progressbar (1.9.0)
+    ruby-rc4 (0.1.5)
     sass (3.4.25)
     servolux (0.13.0)
     temple (0.8.0)
@@ -148,16 +152,20 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
+    wkhtmltopdf-binary (0.12.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   chordpro!
+  combine_pdf
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)
   middleman-s3_sync
+  pdfkit
   redcarpet
+  wkhtmltopdf-binary
 
 BUNDLED WITH
    1.16.1
