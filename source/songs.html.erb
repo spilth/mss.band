@@ -1,17 +1,20 @@
 ---
-title: Songs
+title: Song List
 layout: layout
 ---
 
-<p class="lead">This is a collection of songs for our meet ups to learn and play. A playlist of these songs are available on <a href="https://open.spotify.com/user/spilth/playlist/1NaTfvTr9vGRuLPFZ5vPPz">Spotify</a> and <a href="https://www.ultimate-guitar.com/user/playlist/shared?h=CZXbBj5q2-w1AMYO_MpRLFrg">Ultimate Guitar</a>.</p>
+<p class="lead">This is a collection of songs for our meet ups to learn and play together.</p>
+
+<p>A playlist of these songs is available on <a href="https://open.spotify.com/user/spilth/playlist/1NaTfvTr9vGRuLPFZ5vPPz">Spotify</a> and <a href="https://www.ultimate-guitar.com/user/playlist/shared?h=CZXbBj5q2-w1AMYO_MpRLFrg">Ultimate Guitar</a>. You can also <a href="/pdfs/songbook.pdf">download a PDF book of all the songs</a>.</p>
 
 <table class="table table-hover">
   <thead>
     <tr>
       <th>Title</th>
       <th>Artist</th>
-      <th>Listen</th>
-      <th>Learn</th>
+      <th><span class="d-none d-md-inline">Listen</span> <i class="d-md-none fab fa-spotify fa-fw"></i></th>
+      <th><span class="d-none d-md-inline">Learn</span> <i class="d-md-none fas fa-music fa-fw"></i></th>
+      <th><span class="d-none d-md-inline">Download</span> <i class="d-md-none fas fa-file-pdf fa-fw"></i></th>
     </tr>
   </thead>
   <% data.songs.sort_by(&:title).each do |song| %>
@@ -22,12 +25,33 @@ layout: layout
       <td><%= song.artist %></td>
       <td>
         <% if song.spotify %>
-          <%= link_to 'Listen', song.spotify %>
+          <% link_to song.spotify do %>
+            <span class="d-none d-md-inline">Listen</span>
+            <i class="d-md-none fab fa-spotify fa-fw"></i>
+          <% end %>
         <% end %>
       </td>
-      <td>
-        <% if song.chords %>
-          <%= link_to 'Learn', song.chords %>
+        <% if song.chordpro %>
+        <td>
+          <% link_to "/songs/#{song.chordpro}" do %>
+            <span class="d-none d-md-inline">Learn</span>
+            <i class="d-md-none fas fa-music fa-fw"></i>
+          <% end %>
+        </td>
+        <td>
+          <% link_to  "/pdfs/#{song.chordpro}.pdf" do %>
+            <span class="d-none d-md-inline">Download</span>
+            <i class="d-md-none fas fa-file-pdf fa-fw"></i>
+          <% end %>
+        </td>
+        <% elsif song.chords %>
+        <td>
+          <% link_to song.chords do %>
+            <span class="d-none d-md-inline">Learn</span>
+            <i class="d-md-none fas fa-music fa-fw"></i>
+          <% end %>
+        </td>
+        <td></td>
         <% end %>
       </td>
     </tr>
