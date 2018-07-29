@@ -22,6 +22,7 @@ class PdfGenerator < Middleman::Extension
     FileUtils::mkdir_p(PDF_BUILD_PATH)
 
     generate_blank_pdf
+    generate_toc_pdf
     generate_song_pdfs
     generate_songbook_pdf
   end
@@ -48,8 +49,23 @@ class PdfGenerator < Middleman::Extension
     resources << Middleman::Sitemap::Resource.new(@app.sitemap, song_path, song_source)
   end
 
+  def generate_toc_pdf
+    html = File.open('build/songbook/toc/index.html', "rb").read
+    pdf = PDFKit.new(
+        html,
+        page_size: 'Letter',
+        margin_top: 10,
+        margin_bottom: 10,
+        margin_left: 10,
+        margin_right: 10,
+        print_media_type: true,
+        dpi: 480
+    )
+    pdf.to_file("#{PDF_BUILD_PATH}/toc.pdf")
+  end
+
   def generate_blank_pdf
-    html = File.open('build/blank_page/index.html', "rb").read
+    html = File.open('build/songbook/blank_page/index.html', "rb").read
     pdf = PDFKit.new(
         html,
         page_size: 'Letter',
@@ -91,7 +107,7 @@ class PdfGenerator < Middleman::Extension
 
   def generate_songbook_pdf
     songbook_pdf = CombinePDF.new
-    songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/blank.pdf")
+    songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/toc.pdf")
 
     SONGS.each do |song|
       songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/#{song['chordpro']}.pdf")

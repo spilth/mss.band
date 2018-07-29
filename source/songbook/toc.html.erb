@@ -1,0 +1,20 @@
+---
+title: NYC Musicians, Singers & Songwriters Songbook
+---
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Song</th>
+    <th>Page</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% data.songs.reject { |song| song['chordpro'].nil? }.sort_by { |song| song['title'] }.each_with_index do |song, index| %>
+    <tr>
+      <td><%= song.title %></td>
+      <td><%= index * 2 + 2 %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
