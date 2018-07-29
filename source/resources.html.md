@@ -1,11 +1,8 @@
 ---
-title: NYC Musicians, Singers & Songwriters
+title: Resources
 ---
 
-- [Meetup Group](https://www.meetup.com/nycmss/) - Join us for acoustic jams in the parks of NYC. Singers and acoustic musicians of all types are welcome.
-- [Song List](/songs) - The collection of songs that we play at our acoustic jams.
-
-### Other Meetups and Organizations
+## Other Meetups and Organizations
 
 - [Beatles Music Jam](https://www.meetup.com/Beatles-Music-Jam/)
 - [Brooklyn Traditional Slow Jam](https://www.meetup.com/Brooklyn-Traditional-Slow-Jam/)
