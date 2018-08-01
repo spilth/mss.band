@@ -1,8 +1,7 @@
 {title: Space Oddity}
 {subtitle: David Bowie}
 
-[Fmaj7] [Em] [Fmaj7] [Em]
-[Fmaj7] [Em] [Fmaj7] [Em]
+[Fmaj7] [Em] [Fmaj7] [Em] [Fmaj7] [Em] [Fmaj7] [Em]
 
 [C] Ground Control to Major [Em]Tom
 [C] Ground Control to Major [Em]Tom
@@ -11,7 +10,7 @@
 [C] Commencing countdown, engines [Em]on
 [Am] Check ig-[Am/G]nition and may [D/F#]God's love be with you
 
-{comment: 6 measure break}
+{comment: 6 measure build}
 
 [C] This is Ground Control to Major [E]Tom
 You've really made the [F]grade
@@ -33,8 +32,7 @@ And there's [G]nothing I can [F] do
 
 {comment: Solo}
 
-[Fmaj7] [Em] [A] [C]
-[D] [E]
+[Fmaj7] [Em] [A] [C] [D] [E]
 
 [C]Though I'm past one hundred thousand [E]miles
 I'm feeling very [F]still
@@ -59,7 +57,5 @@ And there's [G]nothing I can [F]do
 
 {comment: Solo}
 
-[Fmaj7] [Em] [A] [C]
-[D] [E]
-[E] [E] [E] [E]
+[Fmaj7] [Em] [A] [C] [D] [E]
 
