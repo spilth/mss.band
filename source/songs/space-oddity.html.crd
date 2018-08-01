@@ -1,16 +1,17 @@
 {title: Space Oddity}
-{subtitle: David Bowi}
+{subtitle: David Bowie}
 
-[F] [Em]
+[Fmaj7] [Em] [Fmaj7] [Em]
+[Fmaj7] [Em] [Fmaj7] [Em]
 
 [C] Ground Control to Major [Em]Tom
 [C] Ground Control to Major [Em]Tom
 [Am] Take your [Am/G]protein pills and [D/F#]put your helmet on
-[C] Ground Control to Major [EM]Tom
+[C] Ground Control to Major [Em]Tom
 [C] Commencing countdown, engines [Em]on
 [Am] Check ig-[Am/G]nition and may [D/F#]God's love be with you
 
-<pause>
+{comment: 6 measure break}
 
 [C] This is Ground Control to Major [E]Tom
 You've really made the [F]grade
@@ -22,28 +23,43 @@ I'm stepping through the [F]door
 And I'm [Fm]floating in a [C]most peculiar [F]way
 And the [Fm]stars look very [C]different [F]today
 
-For [F]here
-Am I [Em]sitting in a tin can
+For [F]here am I [Em]sitting in a tin can
 [F] Far above the [Em]world
 [Bb]Planet Earth is [Am]blue
 And there's [G]nothing I can [F] do
 
-<chord riff>
+[C] [F] [G] [A]
+[C] [F] [G] [A]
 
-<solo>
+{comment: Solo}
+
+[Fmaj7] [Em] [A] [C]
+[D] [E]
 
 [C]Though I'm past one hundred thousand [E]miles
 I'm feeling very [F]still
 And I [Fm]think my spaceship [C]knows which way to [F]go
 Tell my [Fm]wife I love her [C]very much she [F]knows
 
-Ground Control to Major Tom
-Your circuit's dead, there's something wrong
-Can you hear me, Major Tom?
-Can you hear me, Major Tom?
-Can you hear me, Major Tom?
+[G]Ground Control to [G#dim]Major Tom
+[Am]Your circuit's dead, there's [Am/G]something wrong
+Can you [D/F#]hear me, Major Tom?
+Can you [C]hear me, Major Tom?
+Can you [G]hear me, Major Tom?
 
-Can you "Here am I floating 'round my tin can
-Far above the moon
-Planet Earth is blue
-And there's nothing I can do"
+Can you... 
+
+[Fmaj7]Here am I [Em]floating 'round my tin can
+[Fmaj7]Far above the [Em]moon
+[Bb]Planet Earth is [Am]blue
+And there's [G]nothing I can [F]do
+
+[C] [F] [G] [A]
+[C] [F] [G] [A]
+
+{comment: Solo}
+
+[Fmaj7] [Em] [A] [C]
+[D] [E]
+[E] [E] [E] [E]
+
