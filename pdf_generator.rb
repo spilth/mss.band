@@ -96,6 +96,8 @@ class PdfGenerator < Middleman::Extension
         margin_right: 10,
         print_media_type: true,
         dpi: 480,
+        header_right: "http://mss.nyc/songs/#{song['chordpro']}",
+        header_font_size: 9,
         footer_center: "#{song['title']} by #{song['artist']}",
         footer_font_size: 9
     )
