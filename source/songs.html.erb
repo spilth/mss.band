@@ -18,7 +18,7 @@ layout: layout
       <th><span class="d-none d-md-inline">Listen</span> <i class="d-md-none fab fa-spotify fa-fw"></i></th>
     </tr>
   </thead>
-  <% data.songs.sort_by(&:title).each do |song| %>
+  <% data.songs.each do |song| %>
     <tr>
       <td>
         <% if song.chordpro %>

@@ -6,8 +6,7 @@ class PdfGenerator < Middleman::Extension
   PDF_BUILD_PATH = 'build/pdfs'
 
   SONGS = YAML.load_file('data/songs.yml').
-      reject { |song| song['chordpro'].nil? }.
-      sort_by { |song| song['title'] }
+      reject { |song| song['chordpro'].nil? }
 
   def manipulate_resource_list(resources)
     FileUtils::mkdir_p(PDF_BUILD_PATH)
