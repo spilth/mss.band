@@ -55,8 +55,8 @@ class PdfGenerator < Middleman::Extension
         page_size: 'Letter',
         margin_top: 10,
         margin_bottom: 10,
-        margin_left: 10,
-        margin_right: 10,
+        margin_left: 20,
+        margin_right: 20,
         print_media_type: true,
         dpi: 480
     )
@@ -70,8 +70,8 @@ class PdfGenerator < Middleman::Extension
         page_size: 'Letter',
         margin_top: 10,
         margin_bottom: 10,
-        margin_left: 10,
-        margin_right: 10,
+        margin_left: 20,
+        margin_right: 20,
         print_media_type: true,
         dpi: 480
     )
@@ -92,8 +92,8 @@ class PdfGenerator < Middleman::Extension
         page_size: 'Letter',
         margin_top: 10,
         margin_bottom: 10,
-        margin_left: 10,
-        margin_right: 10,
+        margin_left: 20,
+        margin_right: 20,
         print_media_type: true,
         dpi: 480,
         header_right: "http://mss.nyc/songs/#{song['chordpro']}",
