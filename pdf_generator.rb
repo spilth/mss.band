@@ -53,12 +53,12 @@ class PdfGenerator < Middleman::Extension
     pdf = PDFKit.new(
         html,
         page_size: 'Letter',
-        margin_top: 10,
-        margin_bottom: 10,
+        margin_top: 5,
+        margin_bottom: 5,
         margin_left: 20,
         margin_right: 20,
         print_media_type: true,
-        dpi: 480
+        dpi: 300
     )
     pdf.to_file("#{PDF_BUILD_PATH}/toc.pdf")
   end
@@ -68,12 +68,12 @@ class PdfGenerator < Middleman::Extension
     pdf = PDFKit.new(
         html,
         page_size: 'Letter',
-        margin_top: 10,
-        margin_bottom: 10,
+        margin_top: 5,
+        margin_bottom: 5,
         margin_left: 20,
         margin_right: 20,
         print_media_type: true,
-        dpi: 480
+        dpi: 300
     )
     pdf.to_file("#{PDF_BUILD_PATH}/blank.pdf")
   end
@@ -87,19 +87,21 @@ class PdfGenerator < Middleman::Extension
     pdf_path = "#{PDF_BUILD_PATH}/#{song['chordpro']}.pdf"
     html = File.open(html_path, "rb").read
 
+    puts "Generating #{pdf_path}"
+
     pdf = PDFKit.new(
         html,
         page_size: 'Letter',
-        margin_top: 10,
-        margin_bottom: 10,
+        margin_top: 5,
+        margin_bottom: 5,
         margin_left: 20,
         margin_right: 20,
         print_media_type: true,
-        dpi: 480,
         header_right: "http://mss.nyc/songs/#{song['chordpro']}",
         header_font_size: 9,
         footer_center: "#{song['title']} by #{song['artist']}",
-        footer_font_size: 9
+        footer_font_size: 9,
+        dpi: 300
     )
 
     pdf.stylesheets << "build/stylesheets/site.css"
