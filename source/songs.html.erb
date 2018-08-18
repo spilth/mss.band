@@ -24,7 +24,7 @@ layout: layout
         <% if song.chordpro %>
           <%= link_to song.title, "/songs/#{song.chordpro}" %>
         <% else %>
-          <%= link_to song.title,  "/pdfs/#{song.chordpro}.pdf" %>
+          <%= link_to song.title,  "#{song.chords}" %>
         <% end %>
       </td>
       <td><%= song.artist %></td>
