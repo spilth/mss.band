@@ -3,7 +3,17 @@ require 'fileutils'
 require 'combine_pdf'
 
 class PdfGenerator < Middleman::Extension
-  PDF_BUILD_PATH = 'build/pdfs'
+  PDF_BUILD_PATH = 'build/pdfs'.freeze
+  PDF_OPTIONS = {
+    page_size: 'letter',
+    margin_top: '10mm',
+    margin_bottom: '10mm',
+    margin_left: '20mm',
+    margin_right: '20mm',
+    print_media_type: true,
+    dpi: 300,
+    zoom: 0.78
+  }
 
   SONGS = YAML.load_file('data/songs.yml').
       reject { |song| song['chordpro'].nil? }
@@ -41,7 +51,7 @@ class PdfGenerator < Middleman::Extension
   end
 
   def add_songbook_pdf_to_resource_list(resources)
-    song_path = "pdfs/songbook.pdf"
+    song_path = 'pdfs/songbook.pdf'
     song_source = "#{__dir__}/#{PDF_BUILD_PATH}/songbook.pdf"
 
     FileUtils.touch(song_source)
@@ -49,33 +59,19 @@ class PdfGenerator < Middleman::Extension
   end
 
   def generate_toc_pdf
-    html = File.open('build/songbook/toc/index.html', "rb").read
+    html = File.open('build/songbook/toc/index.html', 'rb').read
     pdf = PDFKit.new(
-        html,
-        page_size: 'letter',
-        margin_top: '10mm',
-        margin_bottom: '10mm',
-        margin_left: '20mm',
-        margin_right: '20mm',
-        print_media_type: true,
-        dpi: 300,
-        zoom: 0.78
+      html,
+      PDF_OPTIONS
     )
     pdf.to_file("#{PDF_BUILD_PATH}/toc.pdf")
   end
 
   def generate_blank_pdf
-    html = File.open('build/songbook/blank_page/index.html', "rb").read
+    html = File.open('build/songbook/blank_page/index.html', 'rb').read
     pdf = PDFKit.new(
-        html,
-        page_size: 'letter',
-        margin_top: '10mm',
-        margin_bottom: '10mm',
-        margin_left: '20mm',
-        margin_right: '20mm',
-        print_media_type: true,
-        dpi: 300,
-        zoom: 0.78
+      html,
+      PDF_OPTIONS
     )
     pdf.to_file("#{PDF_BUILD_PATH}/blank.pdf")
   end
@@ -87,27 +83,21 @@ class PdfGenerator < Middleman::Extension
   def generate_song_pdf(song)
     html_path = "build/songs/#{song['chordpro']}/index.html"
     pdf_path = "#{PDF_BUILD_PATH}/#{song['chordpro']}.pdf"
-    html = File.open(html_path, "rb").read
+    html = File.open(html_path, 'rb').read
 
     puts "Generating #{pdf_path}"
 
     pdf = PDFKit.new(
-        html,
-        page_size: 'letter',
-        margin_top: '10mm',
-        margin_bottom: '10mm',
-        margin_left: '20mm',
-        margin_right: '20mm',
-        print_media_type: true,
-        dpi: 300,
-        zoom: 0.78,
+      html,
+      PDF_OPTIONS.merge(
         header_right: "http://mss.nyc/songs/#{song['chordpro']}",
         header_font_size: 9,
         footer_center: "#{song['title']} by #{song['artist']}",
         footer_font_size: 9
+      )
     )
 
-    pdf.stylesheets << "build/stylesheets/site.css"
+    pdf.stylesheets << 'build/stylesheets/site.css'
     pdf.to_file(pdf_path)
   end
 
@@ -123,10 +113,10 @@ class PdfGenerator < Middleman::Extension
     end
 
     songbook_pdf.number_pages(
-        number_format: '%s',
-        location: :bottom_right,
-        margin_from_height: 5,
-        font_size: 9
+      number_format: '%s',
+      location: :bottom_right,
+      margin_from_height: 5,
+      font_size: 9
     )
 
     songbook_pdf.save("#{__dir__}/#{PDF_BUILD_PATH}/songbook.pdf")
