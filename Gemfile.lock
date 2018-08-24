@@ -6,6 +6,13 @@ GIT
       builder
       parslet
 
+GIT
+  remote: https://github.com/spilth/song_pro
+  revision: c4cd624a58b272928e478ac2f1b1c15f66f8f1e1
+  ref: c4cd624a58
+  specs:
+    song_pro (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -165,6 +172,7 @@ DEPENDENCIES
   middleman-s3_sync
   pdfkit
   redcarpet
+  song_pro!
   wkhtmltopdf-binary
 
 BUNDLED WITH

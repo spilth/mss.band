@@ -1,13 +1,19 @@
-{title: While My Guitar Gently Weeps}
-{subtitle: The Beatles}
+@title=While My Guitar Gently Weeps
+@artist=The Beatles
+
+# Intro
 
 [Am] [Am/G] [D/F#] [Dm/F]
 [Am] [G] [D] [E]
+
+# Chorus 1
 
 I [Am]look at you [Am/G]all, see the [D/F#]love there that's [Dm/F]sleeping
 [Am] While my gui-[G]tar gently [D]weeps [E]
 I [Am]look at the [Am/G]floor, and I [D/F#]see it needs [Dm/F]sweeping
 [Am] Still my gui-[G]tar gently [C]weeps [E]
+
+# Verse 1
 
 [A] I don't know [C#m]why
 [F#m] nobody [C#m]told you
@@ -16,19 +22,21 @@ I [Am]look at the [Am/G]floor, and I [D/F#]see it needs [Dm/F]sweeping
 [F#m] someone con-[C#m]trolled you
 [Bm] They bought and sold [E]you
 
-I [Am]look at the [Am/G]world
-And I [D/F#]notice it's [Dm/F]turning
+# Chorus 2
+
+I [Am]look at the [Am/G]world And I [D/F#]notice it's [Dm/F]turning
 [Am] While my gui[G]tar gently [D]weeps [E]
-With [Am]every mis-[Am/G]take we must
-[D/F#]surely be [Dm/F]learning
+With [Am]every mis-[Am/G]take we must [D/F#]surely be [Dm/F]learning
 [Am] Still my gui-[G]tar gently [C]weeps [E]
 
-{comment: Guitar Solo}
+# Guitar Solo
 
 [Am] [Am/G] [D/F#] [Dm/F]
 [Am] [G] [D] [E]
 [Am] [Am/G] [D/F#] [Dm/F]
 [Am] [G] [C] [E]
+
+# Verse 2
 
 [A] I don't know [C#m]how
 [F#m] you were di-[C#m]verted
@@ -37,19 +45,14 @@ With [Am]every mis-[Am/G]take we must
 [F#m] you were in-[C#m]verted
 [Bm] No one alerted [E]you
 
-I [Am]look at you [Am/G]all, see the
-[D/F#]love there that's [Dm/F]sleeping
+# Verse 3
+
+I [Am]look at you [Am/G]all, see the [D/F#]love there that's [Dm/F]sleeping
 [Am] While my gui-[G]tar gently [D]weeps [E]
-[Am]Look at you [Am/G]all
-[D/F#] [Dm/F]
+[Am]Look at you [Am/G]all [D/F#] [Dm/F]
 [Am] Still my gui[G]tar gently [C]weeps [E]
 
-{comment: Guitar Solo}
-
-[Am] [Am/G] [D/F#] [Dm/F]
-[Am] [G] [D] [E]
-[Am] [Am/G] [D/F#] [Dm/F]
-[Am] [G] [C] [E]
+# Guitar Solo
 
 [Am] [Am/G] [D/F#] [Dm/F]
 [Am] [G] [D] [E]

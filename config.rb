@@ -18,6 +18,24 @@ activate :pdf_generator
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 
+class SongProTemplate < Tilt::Template
+  self.default_mime_type = 'text/html'
+
+  def prepare
+    @output = nil
+  end
+
+  def evaluate(scope, locals, &block)
+    @output ||= SongPro.parse(data).to_html
+  end
+
+  def allows_script?
+    false
+  end
+end
+
+Tilt.register SongProTemplate, 'sng'
+
 class ChordProTemplate < Tilt::Template
   self.default_mime_type = 'text/html'
 
@@ -35,4 +53,3 @@ class ChordProTemplate < Tilt::Template
 end
 
 Tilt.register ChordProTemplate, 'crd'
-

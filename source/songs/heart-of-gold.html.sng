@@ -1,47 +1,50 @@
-{title: Heart of Gold}
-{subtitle: Neil Young}
+@title=Heart of Gold
+@artist=Neil Young
+
+# Intro
 
 [Em] [D] [Em]
 [Em] [D] [Em]
 
-{comment: Harmonica Solo}
+# Harmonica Solo 1
 
 [Em] [C] [D] [G]
 [Em] [C] [D] [G]
 [Em] [C] [D] [G]
 [Em] [D] [Em]
+
+# Verse 1
 
 [Em] I want to [C]live, [D] I want to [G]give
 [Em] I've been a [C]miner for a [D]heart of [G]gold
 [Em] It's these [C]expressions [D] I never [G]give
+
+# Chorus
 
 [Em] That keep me searching for a [G]heart of gold
 [C] And I'm getting old [C] [G]
 [Em] Keep me searching for a [G]heart of gold
 [C] And I'm getting old [C] [G]
 
-{comment: Harmonica Solo}
+# Harmonica Solo 2
 
-[Em] [C] [D] [G]
-[Em] [C] [D] [G]
-[Em] [C] [D] [G]
-[Em] [D] [Em]
+Same as Harmonica Solo 1
+
+# Verse 2
 
 [Em] I've been to [C]Hollywood, [D] I've been to [G]Redwood
 [Em] I've crossed the [C]ocean for a [D]heart of [G]gold
 [Em] I've been in [C]my mind, [D] it's such a [G]fine line
 
-[Em] That keeps me searching for a [G]heart of gold
-[C] And I'm getting old [C] [G]
-[Em] That keeps me searching for a [G]heart of gold
-[C] And I'm getting old [C] [G]
+# Chorus 2
 
-{comment: Harmonica Solo}
+Same as Chorus 1
 
-[Em] [C] [D] [G]
-[Em] [C] [D] [G]
-[Em] [C] [D] [G]
-[Em] [D] [Em]
+# Harmonica Solo 3
+
+Same as Harmonica Solo 1
+
+# Outro
 
 [Em] Keep me searching for a [D]heart of [Em]gold
 [Em] You keep me searching and I'm [D]growin' [Em]old
