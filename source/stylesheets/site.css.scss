@@ -21,6 +21,17 @@ h2.artist {
   }
 }
 
+@media (max-width:768px) {
+  .section {
+    flex-direction: column;
+
+    .name {
+      width: 100%;
+    }
+  }
+}
+
+
 @media print {
   .section {
     page-break-inside: avoid;
