@@ -156,6 +156,11 @@
   artist: David Bowie
   spotify: https://open.spotify.com/track/72Z17vmmeQKAg8bptWvpVG?si=ZUeWt9d4TcuwttArEojoLA
   chordpro: space-oddity
+- title: Sweet Caroline
+  artist: Neil Diamond
+  spotify: https://open.spotify.com/track/3298yRJKPcCndQdNiTZKIo?si=V8V9nq3VRhmVkeIdC-Wuhg
+  chordpro: sweet-caroline
+  short: true
 - title: Sweet Home Alabama
   artist: Lynyrd Skynyrd
   spotify: https://open.spotify.com/track/7e89621JPkKaeDSTQ3avtg?si=wN2moZ_ZT56YYKuR_QRZaw
