@@ -12,8 +12,8 @@ class PdfGenerator < Middleman::Extension
     margin_right: '20mm',
     print_media_type: true,
     dpi: 300,
-    zoom: 0.78
-  }
+    zoom: 0.80
+  }.freeze
 
   SONGS = YAML.load_file('data/songs.yml').
       reject { |song| song['chordpro'].nil? }
