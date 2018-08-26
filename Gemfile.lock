@@ -8,10 +8,11 @@ GIT
 
 GIT
   remote: https://github.com/spilth/song_pro
-  revision: 1e620d010ae70ca62248e6aab71bcfb8751da0e6
-  ref: 1e620d0
+  revision: 38208feef3d9e7f4375ba00cec8bf2efaf48ab24
+  ref: 38208fee
   specs:
     song_pro (0.1.0)
+      markaby
 
 GEM
   remote: https://rubygems.org/
@@ -75,6 +76,8 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     map (6.6.0)
+    markaby (0.9.0)
+      builder
     memoist (0.16.0)
     middleman (4.2.1)
       coffee-script (~> 2.2)
@@ -176,4 +179,4 @@ DEPENDENCIES
   wkhtmltopdf-binary
 
 BUNDLED WITH
-   1.16.3
+   1.16.4
