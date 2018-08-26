@@ -85,6 +85,10 @@
   spotify: https://open.spotify.com/track/30SCXVFyQGOFMdKnbgJS18
   chordpro: i-can-see-clearly-now
   short: true
+- title: I Am A Man Of Constant Sorrow
+  artist: The Soggy Bottom Boys
+  spotify: https://open.spotify.com/track/5AhDb4oM6f4YmHPXW123Fg?si=ii1kONNzQAuLD8ygxg54pw
+  chordpro: i-am-a-man-of-constant-sorrow
 - title: I'm a Believer
   artist: The Monkees
   spotify: https://open.spotify.com/track/3G7tRC24Uh09Hmp1KZ7LQ2
@@ -105,6 +109,7 @@
   artist: Bill Withers
   spotify: https://open.spotify.com/track/3M8FzayQWtkvOhqMn2V4T2
   chords: https://tabs.ultimate-guitar.com/tab/bill_withers/lean_on_me_chords_150987
+  chordpro: lean-on-me
 - title: Love Me Tender
   artist: Elvis Presley
   spotify: https://open.spotify.com/track/0aDmZSsj0OqOcscNlsASlm
@@ -151,6 +156,10 @@
   artist: David Bowie
   spotify: https://open.spotify.com/track/72Z17vmmeQKAg8bptWvpVG?si=ZUeWt9d4TcuwttArEojoLA
   chordpro: space-oddity
+- title: Sweet Home Alabama
+  artist: Lynyrd Skynyrd
+  spotify: https://open.spotify.com/track/7e89621JPkKaeDSTQ3avtg?si=wN2moZ_ZT56YYKuR_QRZaw
+  chordpro: sweet-home-alabama
 - title: Times Like These
   artist: Foo Fighters
   spotify: https://play.spotify.com/track/2vLGMSMrBcOpJcveRvp0j6
