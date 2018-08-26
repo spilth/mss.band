@@ -8,8 +8,8 @@ GIT
 
 GIT
   remote: https://github.com/spilth/song_pro
-  revision: c4cd624a58b272928e478ac2f1b1c15f66f8f1e1
-  ref: c4cd624a58
+  revision: ed577a89aa2b6a66bd27eb7d770ce103d7abbafa
+  ref: ed577a8
   specs:
     song_pro (0.1.0)
 

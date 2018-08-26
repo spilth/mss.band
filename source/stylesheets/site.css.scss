@@ -31,11 +31,14 @@ h2.artist {
   }
 }
 
-
 @media print {
   .section {
     page-break-inside: avoid;
   }
+}
+
+.information {
+  float: right;
 }
 
 .line {
