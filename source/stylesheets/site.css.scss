@@ -21,6 +21,10 @@ h2.artist {
   }
 }
 
+.information {
+  float: right;
+}
+
 @media screen and (max-width:768px) {
   .section {
     flex-direction: column;
@@ -28,6 +32,19 @@ h2.artist {
     .name {
       width: 100%;
     }
+  }
+
+  .information {
+    float: none;
+    text-align: right
+  }
+
+  .year {
+    display: none;
+  }
+
+  .album {
+    display: none;
   }
 }
 
@@ -37,9 +54,7 @@ h2.artist {
   }
 }
 
-.information {
-  float: right;
-}
+
 
 .line {
   display: flex;
