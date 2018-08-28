@@ -90,7 +90,7 @@ class PdfGenerator < Middleman::Extension
     pdf = PDFKit.new(
       html,
       PDF_OPTIONS.merge(
-        header_right: "http://mss.nyc/songs/#{song['chordpro']}",
+        header_right: 'http://mss.nyc/',
         header_font_size: 9,
         footer_center: "#{song['title']} by #{song['artist']}",
         footer_font_size: 9

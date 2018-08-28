@@ -62,6 +62,15 @@ h2.artist {
   align-items: flex-end;
 }
 
+.tablature {
+  font-family: monospace;
+  font-size: 1.3rem;
+  //letter-spacing: -0.15rem;
+  line-height: 1.0rem;
+  overflow: visible;
+  white-space: nowrap;
+}
+
 .chord, .lyric {
   text-wrap: avoid;
   // Make sure chords right next to each other have breathing room

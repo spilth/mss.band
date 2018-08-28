@@ -145,8 +145,8 @@
   chords: https://tabs.ultimate-guitar.com/s/simon_garfunkel/mrs_robinson_crd.htm
 - title: My Girl
   artist: The Temptations
-  spotify: The Day I Saw Bo Diddley in Washington Square
-  chords: https://tabs.ultimate-guitar.com/t/the_temptations/my_girl_ver5_crd.htm
+  spotify: https://open.spotify.com/track/6jWkZvd1URGktyTTwcpPpB?si=1o7TB8TaQHKIx8VAvkoVKQ
+  chordpro: my-girl
 - title: Only You
   artist: The Platters
   spotify: https://open.spotify.com/track/0S5cs4lAkx99tGjoWS4Jtk?si=CPX1oiB7Q5G0ljPcVCQWRw
@@ -188,7 +188,7 @@
 - title: Wake Me Up When September Ends
   artist: Green Day
   spotify: https://open.spotify.com/track/3ZffCQKLFLUvYM59XKLbVm
-  chords: https://tabs.ultimate-guitar.com/tab/green_day/wake_me_up_when_september_ends_chords_953997
+  chordpro: wake-me-up-when-september-ends
 - title: While My Guitar Gently Weeps
   artist: The Beatles
   spotify: https://open.spotify.com/track/389QX9Q1eUOEZ19vtzzI9O
