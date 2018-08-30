@@ -9,11 +9,11 @@ h2.artist {
 .section {
   display: flex;
   flex-direction: row;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 
   .name {
     width: 12%;
-    margin-top: 1.4rem;
+    // margin-top: 1.4rem;
     font-family: "Times New Roman";
     font-weight: bold;
     font-size: 1.2rem;
@@ -54,8 +54,6 @@ h2.artist {
   }
 }
 
-
-
 .line {
   display: flex;
   flex-wrap: wrap;
@@ -88,7 +86,7 @@ h2.artist {
   // Force the chords above an empty lyrics section to the top
   min-height: 1.5em;
   font-family: "Times New Roman";
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .comment {
@@ -103,3 +101,4 @@ h2.artist {
     page-break-inside: avoid;
   }
 }
+
