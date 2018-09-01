@@ -54,7 +54,7 @@
 - title: Hallelujah
   artist: Jeff Buckley
   spotify: https://open.spotify.com/track/74X1epeRufHckhuX1KFD04
-  chords: https://tabs.ultimate-guitar.com/j/jeff_buckley/hallelujah_ver2_crd.htm
+  chordpro: hallelujah
 - title: Happy Together
   artist: The Turtles
   spotify: https://open.spotify.com/track/1JO1xLtVc8mWhIoE3YaCL0
@@ -192,6 +192,10 @@
   artist: Green Day
   spotify: https://open.spotify.com/track/3ZffCQKLFLUvYM59XKLbVm
   chordpro: wake-me-up-when-september-ends
+- title: Where Did Our Love Go
+  artist: The Supremes
+  spotify: https://open.spotify.com/track/69RH84na5iUNwrwxpgjC5j?si=mChLBG3WTFairdiOvaPgeQ
+  chordpro: where-did-our-love-go
 - title: While My Guitar Gently Weeps
   artist: The Beatles
   spotify: https://open.spotify.com/track/389QX9Q1eUOEZ19vtzzI9O
