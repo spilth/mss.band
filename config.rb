@@ -18,6 +18,12 @@ activate :pdf_generator
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 
+helpers do
+  def pdf_songs
+    data.songs.reject { |song| song['chordpro'].nil? }
+  end
+end
+
 class SongProTemplate < Tilt::Template
   self.default_mime_type = 'text/html'
 

@@ -1,20 +1,26 @@
----
----
-
-<table class="table table-sm">
-  <thead>
+<table style="width: 100%;">
   <tr>
-    <th>Song</th>
-    <th>Page</th>
+<% page_number = 2 %>
+<% pdf_songs.each_slice( pdf_songs.size/2.0) do |songs| %>
+  <td>
+    <table class="table table-sm" style="width: 100%;">
+      <thead>
+      <tr>
+        <th>Song</th>
+        <th>Page</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% songs.each do |song| %>
+        <tr>
+          <td><%= song.title %></td>
+          <td><%= page_number %></td>
+        </tr>
+        <% page_number += 2 %>
+      <% end %>
+      </tbody>
+    </table>
+  </td>
+<% end %>
   </tr>
-  </thead>
-  <tbody>
-  <% data.songs.reject { |song| song['chordpro'].nil? }.each_with_index do |song, index| %>
-    <tr>
-      <td><%= song.title %></td>
-      <td><%= index * 2 + 2 %></td>
-    </tr>
-  <% end %>
-  </tbody>
 </table>
-
