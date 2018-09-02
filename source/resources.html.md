@@ -8,6 +8,7 @@ title: Resources
 - [Brooklyn Traditional Slow Jam](https://www.meetup.com/Brooklyn-Traditional-Slow-Jam/)
 - [Brooklyn Ukes](https://www.meetup.com/Brooklyn-Ukes/)
 - [Jalopy Theatre](http://jalopytheatre.org/)
+- [Jim's Roots & Blues Calendar](http://jimsrootsandblues.com)
 - [Music Producers Club](https://www.meetup.com/NYC-Music-Producers-Club/)
 - [The New York Singer Songwriters](https://www.meetup.com/The-New-York-Singer-Songwriters/)
 - [NYC Electronic Music Producers](https://www.meetup.com/EMP-NYC/)
