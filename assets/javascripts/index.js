@@ -8,6 +8,8 @@ class SongTable extends React.Component {
         this.state = {
             error: null,
             isLoaded: false,
+            titleClassName: 'sortable',
+            artistClassName: 'sortable',
             songs: [],
         };
 
@@ -21,8 +23,10 @@ class SongTable extends React.Component {
             .then(
                 (result) => {
                     this.setState({
-                        isLoaded: true,
-                        songs: result.songs
+                      isLoaded: true,
+                      titleClassName: 'sortable asc',
+                      artistClassName: 'sortable',
+                      songs: result.songs
                     });
                 },
                 (error) => {
@@ -37,7 +41,9 @@ class SongTable extends React.Component {
 
     sortByTitle() {
         this.setState({
-            songs: this.state.songs.sort(function (a, b) {
+          titleClassName: 'sortable asc',
+          artistClassName: 'sortable',
+          songs: this.state.songs.sort(function (a, b) {
                 if (a.title < b.title) return -1;
                 if (a.title > b.title) return 1;
                 return 0;
@@ -47,7 +53,9 @@ class SongTable extends React.Component {
 
     sortByArtist() {
         this.setState({
-            songs: this.state.songs.sort(function (a, b) {
+          titleClassName: 'sortable',
+          artistClassName: 'sortable asc',
+          songs: this.state.songs.sort(function (a, b) {
                 if (a.artist < b.artist) return -1;
                 if (a.artist > b.artist) return 1;
 
@@ -63,8 +71,8 @@ class SongTable extends React.Component {
             <table className="table">
                 <thead>
                 <tr>
-                    <th onClick={this.sortByTitle}>Title</th>
-                    <th onClick={this.sortByArtist}>Artist</th>
+                    <th className={this.state.titleClassName} onClick={this.sortByTitle}>Title</th>
+                    <th className={this.state.artistClassName} onClick={this.sortByArtist}>Artist</th>
                     <th>
                         <span className="d-none d-md-inline">Download</span>
                         <i className="d-md-none fas fa-file-pdf fa-fw"></i>
@@ -77,9 +85,9 @@ class SongTable extends React.Component {
                 </thead>
                 <tbody>
                 {this.state.songs.map((song) => <tr key={song.title}>
-                    <td>{song.title}</td>
+                  <td><a href={'/songs/' + song.chordpro}>{song.title}</a></td>
                     <td>{song.artist}</td>
-                    <td><a href={song.chordpro}>
+                    <td><a href={'/pdfs/' + song.chordpro + '.pdf'}>
                         <span className="d-none d-md-inline">Download</span>
                         <i className="d-md-none fas fa-file-pdf fa-fw"></i>
                     </a></td>
