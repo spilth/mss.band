@@ -9,41 +9,6 @@ layout: layout
 
 <p><a href="/pdfs/songbook.pdf" class="btn btn-primary"><i class="fas fa-download fa-fw"></i> Download Songbook </a></p>
 
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Artist</th>
-      <th><span class="d-none d-md-inline">Download</span> <i class="d-md-none fas fa-file-pdf fa-fw"></i></th>
-      <th><span class="d-none d-md-inline">Listen</span> <i class="d-md-none fa fa-play fa-fw"></i></th>
-    </tr>
-  </thead>
-  <% data.songs.each do |song| %>
-    <tr>
-      <td>
-        <% if song.chordpro %>
-          <%= link_to song.title, "/songs/#{song.chordpro}" %>
-        <% else %>
-          <%= link_to song.title,  "#{song.chords}" %>
-        <% end %>
-      </td>
-      <td><%= song.artist %></td>
-      <td>
-        <% if song.chordpro %>
-          <% link_to  "/pdfs/#{song.chordpro}.pdf" do %>
-            <span class="d-none d-md-inline">Download</span>
-            <i class="d-md-none fas fa-file-pdf fa-fw"></i>
-          <% end %>
-        <% end %>
-      </td>
-      <td>
-        <% if song.listen %>
-          <% link_to song.listen do %>
-            <span class="d-none d-md-inline">Listen</span>
-            <i class="d-md-none fa fa-play fa-fw"></i>
-          <% end %>
-        <% end %>
-      </td>
-    </tr>
-  <% end %>
-</table>
+<div id="song-table"></div>
+
+<%= javascript_include_tag 'bundle' %>

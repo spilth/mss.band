@@ -5,4 +5,5 @@
 .sass-cache
 .s3_sync
 build/
-
+node_modules
+tmp

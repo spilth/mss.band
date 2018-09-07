@@ -2,8 +2,10 @@ require 'tilt'
 require 'tilt/template'
 require 'pdf_generator'
 
+page '/*.json', layout: false
+
 activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
+  prefix.browsers = 'last 2 versions'
 end
 
 activate :directory_indexes
@@ -17,6 +19,14 @@ activate :pdf_generator
 
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
+
+activate :external_pipeline,
+         name: :webpack,
+         command: build? ?
+                      'NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail -p' :
+                      './node_modules/webpack/bin/webpack.js --watch -d --progress --color',
+         source: 'tmp/dist',
+         latency: 1
 
 helpers do
   def pdf_songs

@@ -102,3 +102,21 @@ h2.artist {
   }
 }
 
+th.sortable {
+  cursor: pointer;
+}
+
+th.sortable::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0de";
+  padding-left: 0.5em;
+  color: #ccc;
+}
+
+
+th.asc::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0de";
+  padding-left: 0.5em;
+  color: #000;
+}
