@@ -7,6 +7,7 @@ title: Resources
 - [Beatles Music Jam](https://www.meetup.com/Beatles-Music-Jam/)
 - [Brooklyn Traditional Slow Jam](https://www.meetup.com/Brooklyn-Traditional-Slow-Jam/)
 - [Brooklyn Ukes](https://www.meetup.com/Brooklyn-Ukes/)
+- [Folk Music Society of New York](http://www.folkmusicny.org)
 - [Jalopy Theatre](http://jalopytheatre.org/)
 - [Jim's Roots & Blues Calendar](http://jimsrootsandblues.com)
 - [Music Producers Club](https://www.meetup.com/NYC-Music-Producers-Club/)
