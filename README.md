@@ -1,6 +1,6 @@
 # mss.nyc
 
-[Middleman](https://middlemanapp.com/) web site for providing the lyrics and chords to songs using the [ChordPro](https://www.chordpro.org/) format.
+[Middleman](https://middlemanapp.com/) web site for providing the lyrics and chords to songs using the [SongPro](https://github.com/spilth/song_pro) format.
 
 ## Setup
 

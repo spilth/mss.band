@@ -1,234 +1,289 @@
 - title: A Hard Days Night
   artist: The Beatles
+  difficulty: 2
   listen: https://open.spotify.com/track/5J2CHimS7dWYMImCHkEFaJ
-  chordpro: a-hard-days-night
+  songpro: a-hard-days-night
 - title: All I Have To Do Is Dream
   artist: The Everly Brothers
+  difficulty: 2
   listen: https://open.spotify.com/track/7dblNGnRXEBrVJunazs2U5
-  chordpro: all-i-have-to-do-is-dream
+  songpro: all-i-have-to-do-is-dream
 - title: Bad Moon Rising
   artist: Creedence Clearwater Revival
+  difficulty: 1
   listen: https://open.spotify.com/track/66FSV5dLK5sNLZ00IfHxfD?si=rQq390e7TcKTxdP9yofslw
-  chordpro: bad-moon-rising
+  songpro: bad-moon-rising
 - title: Brown Eyed Girl
   artist: Van Morrison
+  difficulty: 1
   listen: https://play.spotify.com/track/3yrSvpt2l1xhsV9Em88Pul
-  chordpro: brown-eyed-girl
+  songpro: brown-eyed-girl
 - title: Bye Bye Love
   artist: The Everly Brothers
+  difficulty: 1
   listen: https://open.spotify.com/track/6oRHRkQigTzJ3KwpO3XOV6
-  chordpro: bye-bye-love
+  songpro: bye-bye-love
 - title: Can't Help Falling In Love
   artist: Elvis Presley
+  difficulty: 1
   listen: https://open.spotify.com/track/44AyOl4qVkzS48vBsbNXaC
-  chordpro: cant-help-falling-in-love
+  songpro: cant-help-falling-in-love
   short: true
 - title: Daydream
   artist: The Lovin' Spoonful
+  difficulty: 2
   listen: https://open.spotify.com/track/3c06k9x6MHHdPQi3ix68yF?si=XROeDMgtTyGoCc4EA1b8oQ
-  chordpro: daydream
+  songpro: daydream
 - title: Daydream Believer
   artist: The Monkees
+  difficulty: 2
   listen: https://open.spotify.com/track/7uEcCGtM1FBBGIhPozhJjv
-  chordpro: daydream-believer
+  songpro: daydream-believer
 - title: Down On The Corner
   artist: Creedence Clearwater Revival
+  difficulty: 1
   listen: https://open.spotify.com/track/2gE95JskwQ1pCACTpGe1Db?si=5lLYB5OLSQyOGiik0qIQwg
-  chordpro: down-on-the-corner
+  songpro: down-on-the-corner
 - title: Earth Angel
   artist: The Pengiuns
+  difficulty: 1
   listen: https://open.spotify.com/track/75Mwp7YsQRk0ZBq1lOdL2T
-  chordpro: earth-angel
+  songpro: earth-angel
 - title: Escape Capsule
   artist: Brian Kelly
+  difficulty: 2
   listen: https://spilth.bandcamp.com/track/escape-capsule
-  chordpro: escape-capsule
+  songpro: escape-capsule
 - title: Fearless
   artist: Pink Floyd
+  difficulty: 2
   listen: https://open.spotify.com/track/5WEOx4ZXcfX3wvbfxsAoDO?si=qwOseD-NQoWQKhKfyGC1IQ
-  chordpro: fearless
+  songpro: fearless
 - title: Fortunate Son
   artist: Creedence Clearwater Revival
+  difficulty: 1
   listen: https://open.spotify.com/track/4BP3uh0hFLFRb5cjsgLqDh?si=0FZCZo6BTjGghS0OubDKiQ
-  chordpro: fortunate-son
+  songpro: fortunate-son
 - title: Free Fallin'
   artist: Tom Petty
+  difficulty: 1
   listen: https://play.spotify.com/track/5tVA6TkbaAH9QMITTQRrNv
   chords: https://tabs.ultimate-guitar.com/t/tom_petty/free_fallin_ver2_crd.htm
 - title: Hallelujah
   artist: Jeff Buckley
+  difficulty: 2
   listen: https://open.spotify.com/track/74X1epeRufHckhuX1KFD04
-  chordpro: hallelujah
+  songpro: hallelujah
 - title: Happy Together
   artist: The Turtles
+  difficulty: 2
   listen: https://open.spotify.com/track/1JO1xLtVc8mWhIoE3YaCL0
-  chordpro: happy-together
+  songpro: happy-together
 - title: Have You Ever Seen The Rain
   artist: Creedence Clearwater Revival
+  difficulty: 1
   listen: https://open.spotify.com/track/4JuJ9ewGWWGy0U3URuXOSI?si=7rEKGy09QsW4Q9YtPZJkOQ
-  chordpro: have-you-ever-seen-the-rain
+  songpro: have-you-ever-seen-the-rain
   short: true
 - title: Heart of Gold
   artist: Neil Young
+  difficulty: 1
   listen: https://play.spotify.com/track/1Q1b8eVkUPGlpSArl8JAVw
-  chordpro: heart-of-gold
+  songpro: heart-of-gold
 - title: Hey Jude
   artist: The Beatles
+  difficulty: 2
   listen: https://open.spotify.com/track/0aym2LBJBk9DAYuHHutrIl?si=esGP3dSsRmWDlLZUrftY4w
-  chordpro: hey-jude
+  songpro: hey-jude
 - title: Hotel California
   artist: The Eagles
+  difficulty: 2
   listen: https://open.spotify.com/track/40riOy7x9W7GXjyGp4pjAv
-  chordpro: hotel-california
+  songpro: hotel-california
 - title: House of the Rising Sun
   artist: The Animals
+  difficulty: 2
   listen: https://open.spotify.com/track/7BY005dacJkbO6EPiOh2wb
-  chordpro: house-of-the-rising-sun
+  songpro: house-of-the-rising-sun
 - title: I Can See Clearly Now
   artist: Johnny Nash
+  difficulty: 2
   listen: https://open.spotify.com/track/30SCXVFyQGOFMdKnbgJS18
-  chordpro: i-can-see-clearly-now
+  songpro: i-can-see-clearly-now
   short: true
 - title: I Am A Man Of Constant Sorrow
   artist: The Soggy Bottom Boys
+  difficulty: 1
   listen: https://open.spotify.com/track/5AhDb4oM6f4YmHPXW123Fg?si=ii1kONNzQAuLD8ygxg54pw
-  chordpro: i-am-a-man-of-constant-sorrow
+  songpro: i-am-a-man-of-constant-sorrow
 - title: I'm a Believer
   artist: The Monkees
+  difficulty: 1
   listen: https://open.spotify.com/track/3G7tRC24Uh09Hmp1KZ7LQ2
-  chordpro: im-a-believer
-- title: Island in the Sun
-  artist: Weezer
-  listen: https://open.spotify.com/track/3Pnhzf3Knhdsavx0VM2ZmG
-  chords: https://tabs.ultimate-guitar.com/w/weezer/island_in_the_sun_crd.htm
+  songpro: im-a-believer
+#- title: Island in the Sun
+#  artist: Weezer
+#  listen: https://open.spotify.com/track/3Pnhzf3Knhdsavx0VM2ZmG
+#  chords: https://tabs.ultimate-guitar.com/w/weezer/island_in_the_sun_crd.htm
 - title: Knockin' on Heaven's Door
   artist: Bob Dylan
+  difficulty: 1
   listen: https://open.spotify.com/track/7gksXTblFUMjjkU54iS3Ir
   chords: https://tabs.ultimate-guitar.com/e/eric_clapton/knocking_on_heavens_door_crd.htm
 - title: Last Train to Clarksville
   artist: The Monkees
+  difficulty: 2
   listen: https://open.spotify.com/track/3h4t9qpFktohHeUQc3hZCa
-  chordpro: last-train-to-clarksville
+  songproX: last-train-to-clarksville
 - title: Lean on Me
   artist: Bill Withers
+  difficulty: 1
   listen: https://open.spotify.com/track/3M8FzayQWtkvOhqMn2V4T2
-  chordpro: lean-on-me
+  songpro: lean-on-me
+- title: Like A Rolling Stone
+  artist: Bob Dylan
+  difficulty: 2
+  liten: https://open.spotify.com/track/3AhXZa8sUQht0UEdBJgpGc?si=2MqVEc9UTvWqVEN5qUmi_w
+  songproX: like-a-rolling-stone
 - title: Love Me Tender
   artist: Elvis Presley
+  difficulty: 2
   listen: https://open.spotify.com/track/0aDmZSsj0OqOcscNlsASlm
-  chordpro: love-me-tender
+  songpro: love-me-tender
   short: true
 - title: Mad World
   artist: Gary Jules
+  difficulty: 1
   listen: https://open.spotify.com/track/3JOVTQ5h8HGFnDdp4VT3MP?si=oD4X1aREQsa_V7u7nnpTkw
-  chordpro: mad-world
+  songpro: mad-world
 - title: Maggie May
   artist: Rod Stewart
+  difficulty: 2
   listen: https://open.spotify.com/track/6c20LH3R4foocWLmYyojWq?si=_OoTOBvMR6ioZQw3oyAM9Q
-  chordpro: maggie-may
+  songpro: maggie-may
 - title: Manic Monday
   artist: The Bangles
+  difficulty: 1
   listen: https://open.spotify.com/track/00vYs0qZA40Z8AAaN7xmMO?si=RfldUyM4Q22xCU-jJYpZWg
-  chordpro: manic-monday
+  songpro: manic-monday
 - title: Mary Jane's Last Dance
   artist: Tom Petty
+  difficulty: 1
   listen: https://open.spotify.com/track/4DJ9jyiBWos67NogH9c350?si=G50_iHB-Tq2D98p8XsIavA
-  chordpro: mary-janes-last-dance
-- title: Me and Bobby McGee
-  artist: Janis Joplin
-  listen: https://open.spotify.com/track/1IqFh00G2kvvMm8pRMpehA
-  chords: https://tabs.ultimate-guitar.com/j/janis_joplin/me_and_bobby_mcgee_ver3_crd.htm
-- title: Million Reasons
-  artist: Lady Gaga
-  listen: https://open.spotify.com/track/7dZ1Odmx9jWIweQSatnRqo
-  chords: https://tabs.ultimate-guitar.com/l/lady_gaga/million_reasons_ver2_crd.htm
+  songpro: mary-janes-last-dance
+#- title: Me and Bobby McGee
+#  artist: Janis Joplin
+#  listen: https://open.spotify.com/track/1IqFh00G2kvvMm8pRMpehA
+#  chords: https://tabs.ultimate-guitar.com/j/janis_joplin/me_and_bobby_mcgee_ver3_crd.htm
+#- title: Million Reasons
+#  artist: Lady Gaga
+#  listen: https://open.spotify.com/track/7dZ1Odmx9jWIweQSatnRqo
+#  chords: https://tabs.ultimate-guitar.com/l/lady_gaga/million_reasons_ver2_crd.htm
 - title: Moon River
   artist: Andy Williams
+  difficulty: 2
   listen: https://open.spotify.com/track/24AIahNHzBxm9S12peXbnG?si=b1jSTcQcRo6YCg_N9HkH4w
-  chordpro: moon-river
+  songpro: moon-river
 - title: More Than Words
   artist: Extreme
+  difficulty: 2
   listen: https://open.spotify.com/track/1gVgkQFOKa8Wc1HYsJtPdH?si=C-wqtzYNSC6uo1F9Yc0rUw
-  chordpro: more-than-words
-- title: Mrs. Robinson
-  artist: Simon & Garfunkle
-  listen: https://open.spotify.com/track/0iOZM63lendWRTTeKhZBSC
-  chords: https://tabs.ultimate-guitar.com/s/simon_garfunkel/mrs_robinson_crd.htm
+  songpro: more-than-words
+#- title: Mrs. Robinson
+#  artist: Simon & Garfunkle
+#  listen: https://open.spotify.com/track/0iOZM63lendWRTTeKhZBSC
+#  chords: https://tabs.ultimate-guitar.com/s/simon_garfunkel/mrs_robinson_crd.htm
 - title: My Girl
   artist: The Temptations
+  difficulty: 1
   listen: https://open.spotify.com/track/6jWkZvd1URGktyTTwcpPpB?si=1o7TB8TaQHKIx8VAvkoVKQ
-  chordpro: my-girl
+  songpro: my-girl
 - title: One Of Us
   artist: Joan Osborne
+  difficulty: 1
   listen: https://open.spotify.com/track/39aRmixB9qNtCU2t8BmsC1?si=zHo6ngUcSX-Nk0t5wmvKmw
-  chordpro: one-of-us
+  songpro: one-of-us
 - title: Only You
   artist: The Platters
+  difficulty: 2
   listen: https://open.spotify.com/track/0S5cs4lAkx99tGjoWS4Jtk?si=CPX1oiB7Q5G0ljPcVCQWRw
-  chordpro: only-you
+  songpro: only-you
   short: true
 - title: Perfect
   artist: Ed Sheeran
+  difficulty: 1
   listen: https://open.spotify.com/track/0tgVpDi06FyKpA1z0VMD4v?si=5OUv_lMdTTiYIxCmLLbdJg
-  chordpro: perfect
-- title: Runaway Train
-  artist: Soul Asylum
-  listen: https://open.spotify.com/track/3TW48DvQ7ChwY1Yy1tkMaP
-  chords: https://tabs.ultimate-guitar.com/s/soul_asylum/runaway_train_ver4_crd.htm
+  songpro: perfect
+#- title: Runaway Train
+#  artist: Soul Asylum
+#  listen: https://open.spotify.com/track/3TW48DvQ7ChwY1Yy1tkMaP
+#  chords: https://tabs.ultimate-guitar.com/s/soul_asylum/runaway_train_ver4_crd.htm
 - title: Space Oddity
   artist: David Bowie
+  difficulty: 2
   listen: https://open.spotify.com/track/72Z17vmmeQKAg8bptWvpVG?si=ZUeWt9d4TcuwttArEojoLA
-  chordpro: space-oddity
+  songpro: space-oddity
 - title: Sweet Caroline
   artist: Neil Diamond
+  difficulty: 2
   listen: https://open.spotify.com/track/3298yRJKPcCndQdNiTZKIo?si=V8V9nq3VRhmVkeIdC-Wuhg
-  chordpro: sweet-caroline
+  songpro: sweet-caroline
 - title: Sweet Home Alabama
   artist: Lynyrd Skynyrd
+  difficulty: 1
   listen: https://open.spotify.com/track/7e89621JPkKaeDSTQ3avtg?si=wN2moZ_ZT56YYKuR_QRZaw
-  chordpro: sweet-home-alabama
-- title: Times Like These
-  artist: Foo Fighters
-  listen: https://play.spotify.com/track/2vLGMSMrBcOpJcveRvp0j6
-  chords: https://tabs.ultimate-guitar.com/f/foo_fighters/times_like_these_crd.htm
+  songpro: sweet-home-alabama
+#- title: Times Like These
+#  artist: Foo Fighters
+#  listen: https://play.spotify.com/track/2vLGMSMrBcOpJcveRvp0j6
+#  chords: https://tabs.ultimate-guitar.com/f/foo_fighters/times_like_these_crd.htm
 - title: Under the Boardwalk
   artist: The Drifters
+  difficulty: 1
   listen: https://open.spotify.com/track/65jrjEhWfAvysKfnojk1i0
-  chordpro: under-the-boardwalk
+  songpro: under-the-boardwalk
 - title: Up On the Roof
   artist: The Drifters
+  difficulty: 1
   listen: https://open.spotify.com/track/7cNRqg0lbiqBaGeOlA4AEU?si=vFh39ZuXRUCaItQoC5ZmRg
-  chordpro: up-on-the-roof
+  songpro: up-on-the-roof
 - title: Wake Me Up When September Ends
   artist: Green Day
+  difficulty: 2
   listen: https://open.spotify.com/track/3ZffCQKLFLUvYM59XKLbVm
-  chordpro: wake-me-up-when-september-ends
+  songpro: wake-me-up-when-september-ends
 - title: Where Did Our Love Go
   artist: The Supremes
+  difficulty: 1
   listen: https://open.spotify.com/track/69RH84na5iUNwrwxpgjC5j?si=mChLBG3WTFairdiOvaPgeQ
-  chordpro: where-did-our-love-go
+  songpro: where-did-our-love-go
 - title: While My Guitar Gently Weeps
   artist: The Beatles
+  difficulty: 2
   listen: https://open.spotify.com/track/389QX9Q1eUOEZ19vtzzI9O
-  chordpro: while-my-guitar-gently-weeps
+  songpro: while-my-guitar-gently-weeps
 - title: Wild World
   artist: Cat Stevens
+  difficulty: 1
   listen: https://open.spotify.com/track/6Xz7FeyE8HTP90HecgHV57
-  chordpro: wild-world
+  songpro: wild-world
 - title: Will You Still Love Me Tomorrow
   artist: The Shirelles
+  difficulty: 1
   listen: https://open.spotify.com/track/3DkdQdfSF9OEsloB5GY2Wa
-  chordpro: will-you-still-love-me-tomorrow
+  songpro: will-you-still-love-me-tomorrow
   short: true
 - title: Winter
   artist: Brian Kelly
+  difficulty: 2
   listen: https://spilth.bandcamp.com/track/winter
-  chordpro: winter
+  songpro: winter
 - title: Wish You Where Here
   artist: Pink Floyd
+  difficulty: 1
   listen: https://open.spotify.com/track/6mFkJmJqdDVQ1REhVfGgd1?si=_uLlIdrjQreo4K90SnG3aw
-  chordpro: wish-you-were-here
-- title: Wonderwall
-  artist: Oasis
-  listen: https://play.spotify.com/track/5wj4E6IsrVtn8IBJQOd0Cl
-  chords: https://tabs.ultimate-guitar.com/o/oasis/wonderwall_ver7_crd.htm
+  songpro: wish-you-were-here
+#- title: Wonderwall
+#  artist: Oasis
+#  listen: https://play.spotify.com/track/5wj4E6IsrVtn8IBJQOd0Cl
+#  chords: https://tabs.ultimate-guitar.com/o/oasis/wonderwall_ver7_crd.htm

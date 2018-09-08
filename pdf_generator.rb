@@ -16,7 +16,7 @@ class PdfGenerator < Middleman::Extension
   }.freeze
 
   SONGS = YAML.load_file('data/songs.yml').
-      reject { |song| song['chordpro'].nil? }
+      reject { |song| song['songpro'].nil? }
 
   def manipulate_resource_list(resources)
     FileUtils::mkdir_p(PDF_BUILD_PATH)
@@ -43,8 +43,8 @@ class PdfGenerator < Middleman::Extension
   end
 
   def add_song_pdf_to_resource_list(resources, song)
-    song_path = "pdfs/#{song['chordpro']}.pdf"
-    song_source = "#{__dir__}/#{PDF_BUILD_PATH}/#{song['chordpro']}.pdf"
+    song_path = "pdfs/#{song['songpro']}.pdf"
+    song_source = "#{__dir__}/#{PDF_BUILD_PATH}/#{song['songpro']}.pdf"
 
     FileUtils.touch(song_source)
     resources << Middleman::Sitemap::Resource.new(@app.sitemap, song_path, song_source)
@@ -81,8 +81,8 @@ class PdfGenerator < Middleman::Extension
   end
 
   def generate_song_pdf(song)
-    html_path = "build/songs/#{song['chordpro']}/index.html"
-    pdf_path = "#{PDF_BUILD_PATH}/#{song['chordpro']}.pdf"
+    html_path = "build/songs/#{song['songpro']}/index.html"
+    pdf_path = "#{PDF_BUILD_PATH}/#{song['songpro']}.pdf"
     html = File.open(html_path, 'rb').read
 
     puts "Generating #{pdf_path}"
@@ -106,7 +106,7 @@ class PdfGenerator < Middleman::Extension
     songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/toc.pdf")
 
     SONGS.each do |song|
-      songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/#{song['chordpro']}.pdf")
+      songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/#{song['songpro']}.pdf")
       if song['short']
         songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/blank.pdf")
       end

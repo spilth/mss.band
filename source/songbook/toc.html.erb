@@ -1,26 +1,28 @@
 <table style="width: 100%;">
   <tr>
-<% page_number = 2 %>
-<% pdf_songs.each_slice( pdf_songs.size/2.0) do |songs| %>
-  <td>
-    <table class="table table-sm" style="width: 100%;">
-      <thead>
-      <tr>
-        <th>Song</th>
-        <th>Page</th>
-      </tr>
-      </thead>
-      <tbody>
-      <% songs.each do |song| %>
+  <% page_number = 2 %>
+  <% pdf_songs.each_slice( (pdf_songs.size/2.0).ceil ) do |songs| %>
+    <td style="vertical-align: top">
+      <table class="table table-sm" style="width: 100%;">
+        <thead>
         <tr>
-          <td><%= song.title %></td>
-          <td><%= page_number %></td>
+          <th>Song</th>
+          <th>Difficulty</th>
+          <th>Page</th>
         </tr>
-        <% page_number += 2 %>
-      <% end %>
-      </tbody>
-    </table>
-  </td>
-<% end %>
+        </thead>
+        <tbody>
+        <% songs.each do |song| %>
+          <tr>
+            <td><%= song.title %></td>
+            <td><%= difficulty_text(song.difficulty).try(:titleize) %></td>
+            <td><%= page_number %></td>
+          </tr>
+          <% page_number += 2 %>
+        <% end %>
+        </tbody>
+      </table>
+    </td>
+  <% end %>
   </tr>
 </table>

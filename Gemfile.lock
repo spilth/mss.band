@@ -1,12 +1,4 @@
 GIT
-  remote: https://github.com/spilth/chordpro
-  revision: 59ea850a5b6f175fbb0a65e9622be827df4a0e70
-  specs:
-    chordpro (0.0.1)
-      builder
-      parslet
-
-GIT
   remote: https://github.com/spilth/song_pro
   revision: 2ddfd57cf0b215debc1e2898df49ee39f9ebd904
   ref: 2ddfd57
@@ -139,7 +131,6 @@ GEM
     padrino-support (0.13.3.4)
       activesupport (>= 3.1)
     parallel (1.12.1)
-    parslet (1.8.2)
     pdfkit (0.8.2)
     public_suffix (3.0.3)
     rack (2.0.5)
@@ -168,7 +159,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  chordpro!
   combine_pdf
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)

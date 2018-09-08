@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'chordpro', git: 'https://github.com/spilth/chordpro'
 gem 'combine_pdf'
 gem 'middleman', '~> 4.2'
 gem 'middleman-autoprefixer', '~> 2.7'
