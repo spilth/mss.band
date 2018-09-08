@@ -1,6 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+class SongRow extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return <tr>
+      <td><a href={'/songs/' + this.props.song.songpro}>{this.props.song.title}</a></td>
+      <td>{this.props.song.artist}</td>
+      <td>{SongRow.difficultyLabel(this.props.song.difficulty)}</td>
+      <td>
+        <a href={'/pdfs/' + this.props.song.songpro + '.pdf'}>
+          <span className="d-none d-md-inline">Download</span>
+          <i className="d-md-none fas fa-file-pdf fa-fw"/>
+        </a>
+      </td>
+      <td>
+        <a href={this.props.song.listen}>
+          <span className="d-none d-md-inline">Listen</span>
+          <i className="d-md-none fas fa-play fa-fw"/>
+        </a>
+      </td>
+    </tr>;
+  }
+
+  static difficultyLabel(difficulty) {
+    switch (difficulty) {
+      case 1:
+        return <span className="badge badge-success">Easy</span>;
+      case 2:
+        return <span className="badge badge-warning">Medium</span>;
+    }
+  }
+}
+
 class SongTable extends React.Component {
     constructor(props) {
         super(props);
@@ -87,49 +122,33 @@ class SongTable extends React.Component {
       })
     };
 
-    difficultyLabel(difficulty) {
-      switch (difficulty) {
-        case 1:
-          return <span class="badge badge-success">Easy</span>;
-        case 2:
-          return <span class="badge badge-warning">Medium</span>;
-      }
-    }
-
     render() {
         return (
-            <table className="table">
+            <table className="table table-hover">
                 <thead>
                 <tr>
-                    <th className={this.state.titleClassName} onClick={this.sortByTitle}>Title</th>
-                    <th className={this.state.artistClassName} onClick={this.sortByArtist}>Artist</th>
+                    <th className={this.state.titleClassName} onClick={this.sortByTitle}>
+                      Title
+                    </th>
+                    <th className={this.state.artistClassName} onClick={this.sortByArtist}>
+                      Artist
+                    </th>
                     <th className={this.state.difficultyClassName} onClick={this.sortByDifficulty}>
                       <span className="d-none d-lg-inline">Difficulty</span>
-                      <i className="d-lg-none fas fa-signal fa-fw"></i>                    </th>
+                      <i className="d-lg-none fas fa-signal fa-fw"/>
+                    </th>
                     <th>
                         <span className="d-none d-md-inline">Download</span>
-                        <i className="d-md-none fas fa-file-pdf fa-fw"></i>
+                        <i className="d-md-none fas fa-file-pdf fa-fw"/>
                     </th>
                     <th>
                         <span className="d-none d-md-inline">Listen</span>
-                        <i className="d-md-none fas fa-play fa-fw"></i>
+                        <i className="d-md-none fas fa-play fa-fw"/>
                     </th>
                 </tr>
                 </thead>
                 <tbody>
-                {this.state.songs.map((song) => <tr key={song.title}>
-                  <td><a href={'/songs/' + song.songpro}>{song.title}</a></td>
-                    <td>{song.artist}</td>
-                    <td>{this.difficultyLabel(song.difficulty)}</td>
-                    <td><a href={'/pdfs/' + song.songpro + '.pdf'}>
-                        <span className="d-none d-md-inline">Download</span>
-                        <i className="d-md-none fas fa-file-pdf fa-fw"></i>
-                    </a></td>
-                    <td><a href={song.listen}>
-                        <span className="d-none d-md-inline">Listen</span>
-                        <i className="d-md-none fas fa-play fa-fw"></i>
-                    </a></td>
-                </tr>)}
+                  {this.state.songs.map((song) => <SongRow key={song.title} song={song} />)}
                 </tbody>
             </table>
         )
