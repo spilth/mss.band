@@ -64,11 +64,11 @@
   difficulty: 1
   listen: https://open.spotify.com/track/4BP3uh0hFLFRb5cjsgLqDh?si=0FZCZo6BTjGghS0OubDKiQ
   songpro: fortunate-son
-- title: Free Fallin'
-  artist: Tom Petty
-  difficulty: 1
-  listen: https://play.spotify.com/track/5tVA6TkbaAH9QMITTQRrNv
-  chords: https://tabs.ultimate-guitar.com/t/tom_petty/free_fallin_ver2_crd.htm
+# - title: Free Fallin'
+  # artist: Tom Petty
+  # difficulty: 1
+  # listen: https://play.spotify.com/track/5tVA6TkbaAH9QMITTQRrNv
+  # chords: https://tabs.ultimate-guitar.com/t/tom_petty/free_fallin_ver2_crd.htm
 - title: Hallelujah
   artist: Jeff Buckley
   difficulty: 2
@@ -125,26 +125,26 @@
 #  artist: Weezer
 #  listen: https://open.spotify.com/track/3Pnhzf3Knhdsavx0VM2ZmG
 #  chords: https://tabs.ultimate-guitar.com/w/weezer/island_in_the_sun_crd.htm
-- title: Knockin' on Heaven's Door
-  artist: Bob Dylan
-  difficulty: 1
-  listen: https://open.spotify.com/track/7gksXTblFUMjjkU54iS3Ir
-  chords: https://tabs.ultimate-guitar.com/e/eric_clapton/knocking_on_heavens_door_crd.htm
-- title: Last Train to Clarksville
-  artist: The Monkees
-  difficulty: 2
-  listen: https://open.spotify.com/track/3h4t9qpFktohHeUQc3hZCa
-  songproX: last-train-to-clarksville
+#- title: Knockin' on Heaven's Door
+#  artist: Bob Dylan
+#  difficulty: 1
+#  listen: https://open.spotify.com/track/7gksXTblFUMjjkU54iS3Ir
+#  chords: https://tabs.ultimate-guitar.com/e/eric_clapton/knocking_on_heavens_door_crd.htm
+# - title: Last Train to Clarksville
+  # artist: The Monkees
+  # difficulty: 2
+  # listen: https://open.spotify.com/track/3h4t9qpFktohHeUQc3hZCa
+  # songproX: last-train-to-clarksville
 - title: Lean on Me
   artist: Bill Withers
   difficulty: 1
   listen: https://open.spotify.com/track/3M8FzayQWtkvOhqMn2V4T2
   songpro: lean-on-me
-- title: Like A Rolling Stone
-  artist: Bob Dylan
-  difficulty: 2
-  liten: https://open.spotify.com/track/3AhXZa8sUQht0UEdBJgpGc?si=2MqVEc9UTvWqVEN5qUmi_w
-  songproX: like-a-rolling-stone
+# - title: Like A Rolling Stone
+  # artist: Bob Dylan
+  # difficulty: 2
+  # liten: https://open.spotify.com/track/3AhXZa8sUQht0UEdBJgpGc?si=2MqVEc9UTvWqVEN5qUmi_w
+  # songpro: like-a-rolling-stone
 - title: Love Me Tender
   artist: Elvis Presley
   difficulty: 2
