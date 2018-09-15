@@ -6,17 +6,11 @@ export class SongTable extends React.Component {
     super(props);
 
     this.state = {
-      error: null,
-      isLoaded: false,
       titleClassName: 'sortable',
       artistClassName: 'sortable',
       difficultyClassName: 'sortable',
       songs: [],
     };
-
-    this.sortByArtist = this.sortByArtist.bind(this);
-    this.sortByTitle = this.sortByTitle.bind(this);
-    this.sortByDifficulty = this.sortByDifficulty.bind(this);
   }
 
   componentDidMount() {
@@ -25,7 +19,6 @@ export class SongTable extends React.Component {
       .then(
         (result) => {
           this.setState({
-            isLoaded: true,
             titleClassName: 'sortable asc',
             artistClassName: 'sortable',
             difficultyClassName: 'sortable',
@@ -34,10 +27,6 @@ export class SongTable extends React.Component {
         },
         (error) => {
           console.log(error);
-          this.setState({
-            isLoaded: true,
-            error
-          });
         }
       )
   }
@@ -92,13 +81,13 @@ export class SongTable extends React.Component {
       <table className="table table-hover">
         <thead>
         <tr>
-          <th className={this.state.titleClassName} onClick={this.sortByTitle}>
+          <th className={this.state.titleClassName} onClick={() => this.sortByTitle()}>
             Title
           </th>
-          <th className={this.state.artistClassName} onClick={this.sortByArtist}>
+          <th className={this.state.artistClassName} onClick={() => this.sortByArtist()}>
             Artist
           </th>
-          <th className={this.state.difficultyClassName} onClick={this.sortByDifficulty}>
+          <th className={this.state.difficultyClassName} onClick={() => this.sortByDifficulty()}>
             <span className="d-none d-lg-inline">Difficulty</span>
             <i className="d-lg-none fas fa-signal fa-fw"/>
           </th>

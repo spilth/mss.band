@@ -1,10 +1,6 @@
 import React from "react";
 
 export class SongRow extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return <tr>
       <td><a href={'/songs/' + this.props.song.songpro}>{this.props.song.title}</a></td>
