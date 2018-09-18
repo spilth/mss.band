@@ -49,11 +49,11 @@
   difficulty: 1
   listen: https://open.spotify.com/track/75Mwp7YsQRk0ZBq1lOdL2T
   songpro: earth-angel
-- title: Escape Capsule
-  artist: Brian Kelly
-  difficulty: 2
-  listen: https://spilth.bandcamp.com/track/escape-capsule
-  songpro: escape-capsule
+#- title: Escape Capsule
+#  artist: Brian Kelly
+#  difficulty: 2
+#  listen: https://spilth.bandcamp.com/track/escape-capsule
+#  songpro: escape-capsule
 - title: Fearless
   artist: Pink Floyd
   difficulty: 2
@@ -273,11 +273,11 @@
   listen: https://open.spotify.com/track/3DkdQdfSF9OEsloB5GY2Wa
   songpro: will-you-still-love-me-tomorrow
   short: true
-- title: Winter
-  artist: Brian Kelly
-  difficulty: 2
-  listen: https://spilth.bandcamp.com/track/winter
-  songpro: winter
+#- title: Winter
+#  artist: Brian Kelly
+#  difficulty: 2
+#  listen: https://spilth.bandcamp.com/track/winter
+#  songpro: winter
 - title: Wish You Where Here
   artist: Pink Floyd
   difficulty: 1
