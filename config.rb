@@ -3,6 +3,7 @@ require 'tilt/template'
 require 'pdf_generator'
 
 page '/*.json', layout: false
+page 'songs/*', layout: 'song'
 
 activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
