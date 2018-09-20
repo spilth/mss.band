@@ -85,20 +85,25 @@ class PdfGenerator < Middleman::Extension
     pdf_path = "#{PDF_BUILD_PATH}/#{song['songpro']}.pdf"
     html = File.open(html_path, 'rb').read
 
-    puts "Generating #{pdf_path}"
+    if File.file?(pdf_path) && (File.mtime(pdf_path) > File.mtime(html_path))
+      puts "Skipping #{pdf_path} - already up to date"
+    else
+      puts "Generating #{pdf_path}"
 
-    pdf = PDFKit.new(
-      html,
-      PDF_OPTIONS.merge(
-        header_right: 'http://mss.nyc/',
-        header_font_size: 9,
-        footer_center: "#{song['title']} by #{song['artist']}",
-        footer_font_size: 9
+      pdf = PDFKit.new(
+        html,
+          PDF_OPTIONS.merge(
+            header_right: 'http://mss.nyc/',
+            header_font_size: 9,
+            footer_center: "#{song['title']} by #{song['artist']}",
+            footer_font_size: 9
+          )
       )
-    )
 
-    pdf.stylesheets << 'build/stylesheets/site.css'
-    pdf.to_file(pdf_path)
+      pdf.stylesheets << 'build/stylesheets/site.css'
+      pdf.to_file(pdf_path)
+    end
+    
   end
 
   def generate_songbook_pdf
