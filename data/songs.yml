@@ -288,6 +288,11 @@
   difficulty: 1
   listen: https://open.spotify.com/track/6mFkJmJqdDVQ1REhVfGgd1?si=_uLlIdrjQreo4K90SnG3aw
   songpro: wish-you-were-here
+- title: (What A) Wonderful World
+  artist: Sam Cooke
+  difficulty: 1
+  listen: https://open.spotify.com/track/6ziu09sltKO0HGBhsYTrj8?si=E2Pjv2biQL6qRpvfwGbEFg
+  songpro: wonderful-world
 #- title: Wonderwall
 #  artist: Oasis
 #  listen: https://play.spotify.com/track/5wj4E6IsrVtn8IBJQOd0Cl
