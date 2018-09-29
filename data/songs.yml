@@ -243,6 +243,11 @@
   difficulty: 1
   listen: https://open.spotify.com/track/7e89621JPkKaeDSTQ3avtg?si=wN2moZ_ZT56YYKuR_QRZaw
   songpro: sweet-home-alabama
+- title: That Thing You Do
+  artist: The Wonders
+  difficulty: 2
+  listen: https://open.spotify.com/track/4O6ZaZrRCFfiZZKjnrXqlk?si=mVGamcSLQfuF8ICKz22UPQ
+  songpro: that-thing-you-do
 #- title: Times Like These
 #  artist: Foo Fighters
 #  listen: https://play.spotify.com/track/2vLGMSMrBcOpJcveRvp0j6
@@ -302,6 +307,11 @@
 #  artist: Oasis
 #  listen: https://play.spotify.com/track/5wj4E6IsrVtn8IBJQOd0Cl
 #  chords: https://tabs.ultimate-guitar.com/o/oasis/wonderwall_ver7_crd.htm
+- title: You Can't Hurry Love
+  artist: The Supremes
+  difficulty: 2
+  listen: https://open.spotify.com/track/1OppEieGNdItZbE14gLBEv?si=_7mziCkvT5ibY6KLVIUHMg
+  songpro: you-cant-hurry-love
 - title: You Got It
   artist: Roy Orbison
   difficulty: 2
