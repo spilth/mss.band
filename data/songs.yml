@@ -54,11 +54,11 @@
 #  difficulty: 2
 #  listen: https://spilth.bandcamp.com/track/escape-capsule
 #  songpro: escape-capsule
-- title: Fearless
-  artist: Pink Floyd
-  difficulty: 2
-  listen: https://open.spotify.com/track/5WEOx4ZXcfX3wvbfxsAoDO?si=qwOseD-NQoWQKhKfyGC1IQ
-  songpro: fearless
+#- title: Fearless
+#  artist: Pink Floyd
+#  difficulty: 2
+#  listen: https://open.spotify.com/track/5WEOx4ZXcfX3wvbfxsAoDO?si=qwOseD-NQoWQKhKfyGC1IQ
+#  songpro: fearless
 - title: Fortunate Son
   artist: Creedence Clearwater Revival
   difficulty: 1
@@ -84,7 +84,6 @@
   difficulty: 1
   listen: https://open.spotify.com/track/4JuJ9ewGWWGy0U3URuXOSI?si=7rEKGy09QsW4Q9YtPZJkOQ
   songpro: have-you-ever-seen-the-rain
-  short: true
 - title: Heart of Gold
   artist: Neil Young
   difficulty: 1
@@ -155,7 +154,6 @@
   difficulty: 2
   listen: https://open.spotify.com/track/0aDmZSsj0OqOcscNlsASlm
   songpro: love-me-tender
-  short: true
 - title: Mad World
   artist: Gary Jules
   difficulty: 1
