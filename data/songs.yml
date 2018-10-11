@@ -153,6 +153,7 @@
   artist: Elvis Presley
   difficulty: 2
   listen: https://open.spotify.com/track/0aDmZSsj0OqOcscNlsASlm
+
   songpro: love-me-tender
 - title: Mad World
   artist: Gary Jules
@@ -174,10 +175,11 @@
   difficulty: 1
   listen: https://open.spotify.com/track/4DJ9jyiBWos67NogH9c350?si=G50_iHB-Tq2D98p8XsIavA
   songpro: mary-janes-last-dance
-#- title: Me and Bobby McGee
-#  artist: Janis Joplin
-#  listen: https://open.spotify.com/track/1IqFh00G2kvvMm8pRMpehA
-#  chords: https://tabs.ultimate-guitar.com/j/janis_joplin/me_and_bobby_mcgee_ver3_crd.htm
+- title: Me and Bobby McGee
+  artist: Janis Joplin
+  listen: https://open.spotify.com/track/1IqFh00G2kvvMm8pRMpehA
+  difficulty: 1
+  songpro: me-and-bobby-mcgee
 #- title: Million Reasons
 #  artist: Lady Gaga
 #  listen: https://open.spotify.com/track/7dZ1Odmx9jWIweQSatnRqo
