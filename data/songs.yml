@@ -59,6 +59,11 @@
 #  difficulty: 2
 #  listen: https://open.spotify.com/track/5WEOx4ZXcfX3wvbfxsAoDO?si=qwOseD-NQoWQKhKfyGC1IQ
 #  songpro: fearless
+- title: Fields of Gold
+  artist: Sting
+  difficulty: 1
+  listen: https://open.spotify.com/track/5Y9Hqg5Z3EHUDDwd54FDQb?si=ykLPenGVRIGNNpWAtq5_Tw
+  songpro: fields-of-gold
 - title: Fortunate Son
   artist: Creedence Clearwater Revival
   difficulty: 1
@@ -224,6 +229,11 @@
   difficulty: 1
   listen: https://open.spotify.com/track/2EC9IJj7g0mN1Q5VrZkiYY?si=cM4hRsupSY6yCSlDDa8A8g
   songpro: rebel-rebel
+- title: Rockin' in the Free World
+  artist: Neil Young
+  difficulty: 1
+  listen: https://open.spotify.com/track/4Y7fEQ4PAzhlLnLviRw2P4?si=SphUY7C_QN2CN9f-ozAyzw
+  songpro: rockin-in-the-free-world
 #- title: Runaway Train
 #  artist: Soul Asylum
 #  listen: https://open.spotify.com/track/3TW48DvQ7ChwY1Yy1tkMaP
@@ -298,6 +308,11 @@
   difficulty: 1
   listen: https://open.spotify.com/track/6mFkJmJqdDVQ1REhVfGgd1?si=_uLlIdrjQreo4K90SnG3aw
   songpro: wish-you-were-here
+- title: With Or Without You
+  artist: U2
+  difficulty: 1
+  listen: https://open.spotify.com/track/4ha9ajL4Kz98uldAfuos6p?si=eTgjKaBVRHCYN2nTVPWKwA
+  songpro: with-or-without-you
 - title: (What A) Wonderful World
   artist: Sam Cooke
   difficulty: 1
