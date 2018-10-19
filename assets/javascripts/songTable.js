@@ -102,7 +102,14 @@ export class SongTable extends React.Component {
         </tr>
         </thead>
         <tbody>
-        {this.state.songs.map((song) => <SongRow key={song.title} song={song}/>)}
+        {this.state.songs.map((song) => <SongRow
+            key={song.title}
+            title={song.title}
+            artist={song.artist}
+            difficulty={song.difficulty}
+            songpro={song.songpro}
+            listen={song.listen}
+        />)}
         </tbody>
       </table>
     )

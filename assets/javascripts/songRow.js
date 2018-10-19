@@ -1,32 +1,34 @@
 import React from "react";
+import * as PropTypes from "prop-types";
+import {DifficultyLabel} from "./difficultyLabel";
+import {ListenLink} from "./listenLink";
+import {PdfDownloadLink} from "./pdfDownloadLink";
+import {ViewLink} from "./viewLink";
 
-export class SongRow extends React.Component {
-  render() {
+export function SongRow(props) {
     return <tr>
-      <td><a href={'/songs/' + this.props.song.songpro}>{this.props.song.title}</a></td>
-      <td>{this.props.song.artist}</td>
-      <td>{SongRow.difficultyLabel(this.props.song.difficulty)}</td>
-      <td>
-        <a href={'/pdfs/' + this.props.song.songpro + '.pdf'}>
-          <span className="d-none d-md-inline">Download</span>
-          <i className="d-md-none fas fa-file-pdf fa-fw"/>
-        </a>
-      </td>
-      <td>
-        <a href={this.props.song.listen}>
-          <span className="d-none d-md-inline">Listen</span>
-          <i className="d-md-none fas fa-play fa-fw"/>
-        </a>
-      </td>
+        <td>
+            <ViewLink path={props.songpro} title={props.title}/>
+        </td>
+        <td>
+            {props.artist}
+        </td>
+        <td>
+            <DifficultyLabel difficulty={props.difficulty}/>
+        </td>
+        <td>
+            <PdfDownloadLink filename={props.songpro}/>
+        </td>
+        <td>
+            <ListenLink href={props.listen}/>
+        </td>
     </tr>;
-  }
-
-  static difficultyLabel(difficulty) {
-    switch (difficulty) {
-      case 1:
-        return <span className="badge badge-success">Easy</span>;
-      case 2:
-        return <span className="badge badge-warning">Medium</span>;
-    }
-  }
 }
+
+SongRow.propTypes = {
+    title: PropTypes.string.isRequired,
+    artist: PropTypes.string.isRequired,
+    listen: PropTypes.string.isRequired,
+    difficulty: PropTypes.number,
+    songpro: PropTypes.string,
+};
