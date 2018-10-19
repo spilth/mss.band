@@ -36,7 +36,7 @@ export class SongTable extends React.Component {
       titleClassName: 'sortable asc',
       artistClassName: 'sortable',
       difficultyClassName: 'sortable',
-      songs: this.state.songs.sort(function (a, b) {
+      songs: this.state.songs.sort((a, b) => {
         if (a.title < b.title) return -1;
         if (a.title > b.title) return 1;
         return 0;
@@ -49,7 +49,7 @@ export class SongTable extends React.Component {
       titleClassName: 'sortable',
       artistClassName: 'sortable asc',
       difficultyClassName: 'sortable',
-      songs: this.state.songs.sort(function (a, b) {
+      songs: this.state.songs.sort((a, b) => {
         if (a.artist < b.artist) return -1;
         if (a.artist > b.artist) return 1;
 
@@ -65,7 +65,7 @@ export class SongTable extends React.Component {
       titleClassName: 'sortable',
       artistClassName: 'sortable',
       difficultyClassName: 'sortable asc',
-      songs: this.state.songs.sort(function (a, b) {
+      songs: this.state.songs.sort((a, b) => {
         if (a.difficulty < b.difficulty) return -1;
         if (a.difficulty > b.difficulty) return 1;
 
