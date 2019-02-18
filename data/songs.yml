@@ -288,6 +288,11 @@
   difficulty: 2
   listen: https://open.spotify.com/track/4O6ZaZrRCFfiZZKjnrXqlk?si=mVGamcSLQfuF8ICKz22UPQ
   songpro: that-thing-you-do
+- title: Three Little Birds
+  artist: Bob Marley and the Wailers
+  difficulty: 1
+  listen: https://open.spotify.com/track/1P49MJhU5vzttesFxw3dOM
+  songpro: three-little-birds
 #- title: Times Like These
 #  artist: Foo Fighters
 #  listen: https://play.spotify.com/track/2vLGMSMrBcOpJcveRvp0j6
