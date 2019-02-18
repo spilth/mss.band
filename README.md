@@ -16,6 +16,12 @@ $ rake server
 
 You can then view the site as <http://localhost:4567>
 
+To build the PDF versions of all songs to the `build/pdfs` directory:
+
+```bash
+$ bundle exec middleman build
+```
+
 ## Deployment
 
 To deploy, first create an `.s3_sync` file with the following:
