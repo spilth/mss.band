@@ -10,6 +10,7 @@ To set up the project, do the following:
 $ git clone git@github.com:spilth/mss.nyc.git
 $ cd mss.nyc
 $ bundle
+$ npm install
 $ rake server
 ```
 
