@@ -1,18 +1,3 @@
 {
-  "songs":
-    <%=
-      Dir.glob('source/songs/*.html.sng').sort.collect do |filename|
-       song = SongPro.parse(File.read(filename))
-          {
-            title: song.title,
-            artist: song.artist,
-            difficulty: song.custom[:difficulty],
-            listen: song.custom[:spotify],
-            path: song.title.parameterize,
-            ignore: song.custom[:ignore],
-            }
-      end.reject! do |song|
-        song[:ignore]
-      end.to_json
-     %>
+  "songs":  <%= pdf_songs.to_json %>
 }

@@ -1,6 +1,4 @@
-require 'tilt'
-require 'tilt/template'
-require 'pdf_generator'
+  require 'pdf_generator'
 
 page '/*.json', layout: false
 page 'songs/*', layout: 'song'
@@ -43,7 +41,7 @@ helpers do
           title: song.title,
           artist: song.artist,
           difficulty: song.custom[:difficulty],
-          songpro: song.title.parameterize,
+          path: song.title.parameterize,
           short: song.custom[:short],
           ignore: song.custom[:ignore],
       }
@@ -60,30 +58,4 @@ helpers do
       'Medium'
     end
   end
-  def difficulty_label(difficulty)
-    case difficulty
-    when 1
-      '<span class="badge badge-success">Easy</span>'
-    when 2
-      '<span class="badge badge-warning">Medium</span>'
-    end
-  end
 end
-
-class SongProTemplate < Tilt::Template
-  self.default_mime_type = 'text/html'
-
-  def prepare
-    @output = nil
-  end
-
-  def evaluate(scope, locals, &block)
-    @output ||= SongPro.parse(data).to_html
-  end
-
-  def allows_script?
-    false
-  end
-end
-
-Tilt.register SongProTemplate, 'sng'
