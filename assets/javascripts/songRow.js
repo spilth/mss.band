@@ -8,7 +8,7 @@ import {ViewLink} from "./viewLink";
 export function SongRow(props) {
     return <tr>
         <td>
-            <ViewLink path={props.songpro} title={props.title}/>
+            <ViewLink path={props.path} title={props.title}/>
         </td>
         <td>
             {props.artist}
@@ -17,7 +17,7 @@ export function SongRow(props) {
             <DifficultyLabel difficulty={props.difficulty}/>
         </td>
         <td>
-            <PdfDownloadLink filename={props.songpro}/>
+            <PdfDownloadLink filename={props.path}/>
         </td>
         <td>
             <ListenLink href={props.listen}/>
@@ -30,5 +30,5 @@ SongRow.propTypes = {
     artist: PropTypes.string.isRequired,
     listen: PropTypes.string.isRequired,
     difficulty: PropTypes.number,
-    songpro: PropTypes.string,
+    path: PropTypes.string,
 };

@@ -1,0 +1,41 @@
+%h1.title= song.title if song.title
+%h2.artist= song.artist if song.artist
+
+%dl.information
+  - if song.tuning
+    %dt.tuning Tuning
+    %dd.tuning= song.tuning
+
+  - if song.capo
+    %dt.capo Capo
+    %dd.capo= song.capo
+
+  - if song.key
+    %dt.key Key
+    %dd.key= song.key
+
+  - if song.tempo
+    %dt.tempo Tempo
+    %dd.tempo= song.tempo
+
+  - if song.year
+    %dt.year Year
+    %dd.year= song.year
+
+  - if song.album
+    %dt.album Album
+    %dd.album= song.album
+
+- song.sections.each do |section|
+  %div.section
+    %div.name= section.name
+    %div.lines
+      - section.lines.each do|line|
+        - if line.tablature?
+          %div.tablature= line.tablature
+        - else
+          %div.line
+            - line.parts.each do |part|
+              %div.part
+                %div.chord= part.chord
+                %div.lyric= part.lyric

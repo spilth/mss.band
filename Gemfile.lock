@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/spilth/song_pro
-  revision: 2ddfd57cf0b215debc1e2898df49ee39f9ebd904
-  ref: 2ddfd57
+  revision: 3f12475f6eaadebc94c1e8777a26e3381553982b
+  ref: 3f12475f6eaadebc94c1e8777a26e3381553982b
   specs:
-    song_pro (0.1.0)
+    song_pro (0.1.2)
       markaby
 
 GEM
@@ -67,6 +67,7 @@ GEM
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    mab (0.0.3)
     map (6.6.0)
     markaby (0.9.0)
       builder
@@ -160,6 +161,7 @@ PLATFORMS
 
 DEPENDENCIES
   combine_pdf
+  mab
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)
   middleman-s3_sync
@@ -169,4 +171,4 @@ DEPENDENCIES
   wkhtmltopdf-binary
 
 BUNDLED WITH
-   1.16.4
+   1.17.2

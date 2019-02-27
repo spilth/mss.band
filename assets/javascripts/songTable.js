@@ -107,7 +107,7 @@ export class SongTable extends React.Component {
             title={song.title}
             artist={song.artist}
             difficulty={song.difficulty}
-            songpro={song.songpro}
+            path={song.path}
             listen={song.listen}
         />)}
         </tbody>

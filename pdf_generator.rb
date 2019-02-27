@@ -15,8 +15,19 @@ class PdfGenerator < Middleman::Extension
     zoom: 0.80
   }.freeze
 
-  SONGS = YAML.load_file('data/songs.yml').
-      reject { |song| song['songpro'].nil? }
+  SONGS = Dir.glob('source/songs/*.html.sng').sort.collect do |filename|
+    song = SongPro.parse(File.read(filename))
+    {
+        title: song.title,
+        artist: song.artist,
+        difficulty: song.custom[:difficulty],
+        songpro: song.title.parameterize,
+        short: song.custom[:short],
+        ignore: song.custom[:ignore],
+    }
+  end.reject! do |song|
+    song[:ignore]
+  end
 
   def manipulate_resource_list(resources)
     FileUtils::mkdir_p(PDF_BUILD_PATH)
@@ -43,8 +54,8 @@ class PdfGenerator < Middleman::Extension
   end
 
   def add_song_pdf_to_resource_list(resources, song)
-    song_path = "pdfs/#{song['songpro']}.pdf"
-    song_source = "#{__dir__}/#{PDF_BUILD_PATH}/#{song['songpro']}.pdf"
+    song_path = "pdfs/#{song[:songpro]}.pdf"
+    song_source = "#{__dir__}/#{PDF_BUILD_PATH}/#{song[:songpro]}.pdf"
 
     FileUtils.touch(song_source)
     resources << Middleman::Sitemap::Resource.new(@app.sitemap, song_path, song_source)
@@ -81,8 +92,8 @@ class PdfGenerator < Middleman::Extension
   end
 
   def generate_song_pdf(song)
-    html_path = "build/songs/#{song['songpro']}/index.html"
-    pdf_path = "#{PDF_BUILD_PATH}/#{song['songpro']}.pdf"
+    html_path = "build/songs/#{song[:songpro]}/index.html"
+    pdf_path = "#{PDF_BUILD_PATH}/#{song[:songpro]}.pdf"
     html = File.open(html_path, 'rb').read
 
     if File.file?(pdf_path) && (File.mtime(pdf_path) > File.mtime(html_path))
@@ -95,7 +106,7 @@ class PdfGenerator < Middleman::Extension
           PDF_OPTIONS.merge(
             header_right: 'http://mss.nyc/',
             header_font_size: 9,
-            footer_center: "#{song['title']} by #{song['artist']}",
+            footer_center: "#{song[:title]} by #{song[:artist]}",
             footer_font_size: 9
           )
       )
@@ -111,8 +122,8 @@ class PdfGenerator < Middleman::Extension
     songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/toc.pdf")
 
     SONGS.each do |song|
-      songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/#{song['songpro']}.pdf")
-      if song['short']
+      songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/#{song[:songpro]}.pdf")
+      if song[:short]
         songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/blank.pdf")
       end
     end

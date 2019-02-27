@@ -14,8 +14,8 @@
         <tbody>
         <% songs.each do |song| %>
           <tr>
-            <td><%= song.title %></td>
-            <td><%= difficulty_text(song.difficulty).try(:titleize) %></td>
+            <td><%= song[:title] %></td>
+            <td><%= difficulty_text(song[:difficulty]).try(:titleize) %></td>
             <td><%= page_number %></td>
           </tr>
           <% page_number += 2 %>
