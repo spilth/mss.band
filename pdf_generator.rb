@@ -6,7 +6,8 @@ class PdfGenerator < Middleman::Extension
   PDF_BUILD_PATH = 'build/pdfs'.freeze
 
   def self.retina_display?
-    /Ultra High/.match?(`system_profiler SPDisplaysDataType | grep Resolution`)
+    resolution = `system_profiler SPDisplaysDataType | grep Resolution`
+    /Retina|Ultra High/.match?(resolution)
   end
 
   PDF_OPTIONS = {
