@@ -1,4 +1,4 @@
-  require 'pdf_generator'
+require 'pdf_generator'
 
 page '/*.json', layout: false
 page 'songs/*', layout: 'song'
@@ -44,6 +44,7 @@ helpers do
           path: song.title.parameterize,
           short: song.custom[:short],
           ignore: song.custom[:ignore],
+          spotify: song.custom[:spotify]
       }
     end.reject! do |song|
       song[:ignore]
