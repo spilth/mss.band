@@ -21,6 +21,8 @@ class PdfGenerator < Middleman::Extension
     zoom: 0.80
   }.freeze
 
+  TIMESTAMP = Time.new.strftime("%Y.%m.%d-%H:%M")
+
   SONGS = Dir.glob('source/songs/*.html.sng').sort.collect do |filename|
     song = SongPro.parse(File.read(filename))
     {
@@ -68,8 +70,8 @@ class PdfGenerator < Middleman::Extension
   end
 
   def add_songbook_pdf_to_resource_list(resources)
-    song_path = 'pdfs/songbook.pdf'
-    song_source = "#{__dir__}/#{PDF_BUILD_PATH}/songbook.pdf"
+    song_path = 'pdfs/mss-songbook.pdf'
+    song_source = "#{__dir__}/#{PDF_BUILD_PATH}/mss-songbook.pdf"
 
     FileUtils.touch(song_source)
     resources << Middleman::Sitemap::Resource.new(@app.sitemap, song_path, song_source)
@@ -79,7 +81,13 @@ class PdfGenerator < Middleman::Extension
     html = File.open('build/songbook/toc/index.html', 'rb').read
     pdf = PDFKit.new(
       html,
-      PDF_OPTIONS
+      PDF_OPTIONS.merge(
+        footer_center: "Table of Contents",
+        footer_font_size: 9,
+        footer_left: TIMESTAMP,
+        footer_right: 'http://mss.nyc/',
+      )
+
     )
     pdf.to_file("#{PDF_BUILD_PATH}/toc.pdf")
   end
@@ -88,7 +96,11 @@ class PdfGenerator < Middleman::Extension
     html = File.open('build/songbook/blank_page/index.html', 'rb').read
     pdf = PDFKit.new(
       html,
-      PDF_OPTIONS
+      PDF_OPTIONS.merge(
+          footer_font_size: 9,
+          footer_left: TIMESTAMP,
+          footer_right: 'http://mss.nyc/',
+          )
     )
     pdf.to_file("#{PDF_BUILD_PATH}/blank.pdf")
   end
@@ -109,12 +121,12 @@ class PdfGenerator < Middleman::Extension
 
       pdf = PDFKit.new(
         html,
-          PDF_OPTIONS.merge(
-            header_right: 'http://mss.nyc/',
-            header_font_size: 9,
-            footer_center: "#{song[:title]} by #{song[:artist]}",
-            footer_font_size: 9
-          )
+        PDF_OPTIONS.merge(
+          footer_center: "#{song[:title]}",
+          footer_font_size: 9,
+          footer_left: TIMESTAMP,
+          footer_right: 'http://mss.nyc/',
+        )
       )
 
       pdf.stylesheets << 'build/stylesheets/site.css'
@@ -141,7 +153,7 @@ class PdfGenerator < Middleman::Extension
       font_size: 9
     )
 
-    songbook_pdf.save("#{__dir__}/#{PDF_BUILD_PATH}/songbook.pdf")
+    songbook_pdf.save("#{__dir__}/#{PDF_BUILD_PATH}/mss-songbook.pdf")
   end
 end
 
