@@ -4,6 +4,11 @@ require 'combine_pdf'
 
 class PdfGenerator < Middleman::Extension
   PDF_BUILD_PATH = 'build/pdfs'.freeze
+
+  def self.retina_display?
+    /Ultra High/.match?(`system_profiler SPDisplaysDataType | grep Resolution`)
+  end
+
   PDF_OPTIONS = {
     page_size: 'letter',
     margin_top: '10mm',
@@ -11,7 +16,7 @@ class PdfGenerator < Middleman::Extension
     margin_left: '20mm',
     margin_right: '20mm',
     print_media_type: true,
-    dpi: 300,
+    dpi: retina_display? ? 600 : 300,
     zoom: 0.80
   }.freeze
 
