@@ -29,6 +29,6 @@ SongRow.propTypes = {
     title: PropTypes.string.isRequired,
     artist: PropTypes.string.isRequired,
     listen: PropTypes.string.isRequired,
-    difficulty: PropTypes.number,
+    difficulty: PropTypes.string,
     path: PropTypes.string,
 };

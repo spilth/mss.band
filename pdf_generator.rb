@@ -18,7 +18,7 @@ class PdfGenerator < Middleman::Extension
     margin_right: '20mm',
     print_media_type: true,
     dpi: retina_display? ? 600 : 300,
-    zoom: 0.80
+    zoom: 0.80,
   }.freeze
 
   TIMESTAMP = Time.new.strftime("%Y.%m.%d-%H:%M")
@@ -132,7 +132,6 @@ class PdfGenerator < Middleman::Extension
       pdf.stylesheets << 'build/stylesheets/site.css'
       pdf.to_file(pdf_path)
     end
-    
   end
 
   def generate_songbook_pdf

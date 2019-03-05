@@ -1,4 +1,5 @@
 require 'pdf_generator'
+require 'extensions/chord_diagrams'
 
 page '/*.json', layout: false
 page 'songs/*', layout: 'song'
@@ -8,6 +9,7 @@ activate :autoprefixer do |prefix|
 end
 
 activate :directory_indexes
+activate :chord_diagrams
 
 activate :s3_sync do |s3_sync|
   s3_sync.bucket = 'mss.nyc'
@@ -18,7 +20,8 @@ ignore 'songs/*.html.sng'
 Dir.glob('source/songs/*.html.sng').each do |filename|
   contents = File.read(filename)
   song = SongPro.parse(contents)
-  proxy "/songs/#{song.title.parameterize}/index.html", '/songs/template.html', locals: { song: song}, ignore: true
+  chords = song.sections.collect { |section| section.lines.collect { |line| line.parts.collect { |part| part.chord }}}.flatten.uniq.reject(&:empty?)
+  proxy "/songs/#{song.title.parameterize}/index.html", '/songs/template.html', locals: { song: song, chords: chords}, ignore: true
 end
 
 activate :pdf_generator
