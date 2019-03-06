@@ -97,14 +97,19 @@ class ChordDiagrams < Middleman::Extension
       'C': 'x32010',
       'D': 'x00232',
       'E': '022100',
+      'Eb': 'x68886',
       'F': '133211',
       'F#': '244322',
       'G': '320003',
+
+      # Six Chords
+      'E6': '022120',
 
       # Seventh Chords
       'A7': '002020',
       'B7': 'x21202',
       'C7': 'x32310',
+      'C#7': 'x46464',
       'D7': 'x00212',
       'E7': '020100',
       'F7': '131211',
@@ -148,10 +153,19 @@ class ChordDiagrams < Middleman::Extension
       'Fm7': '131111',
       'Gm7': '353333',
 
+      # Minor Eleventh Chords
+      'Bm11': 'x20220',
+
       # Major 9th Chords
       'Cadd9': 'x32033',
 
+      # Root/Five Chords
+      'C5': 'x355xx',
+      'D5': 'x577xx',
+
       # Major Chords with Bass Notes
+      'A/E': '002220',
+      'A/F#': '202220',
       'Bb/A': 'x00331',
       'C/B': 'x22010',
       'C/E': '032010',
@@ -168,7 +182,7 @@ class ChordDiagrams < Middleman::Extension
       'Dm/F': '10323x',
 
       # Diminished Chords
-
+      'G#dim': '4564xx',
   }
 end
 
