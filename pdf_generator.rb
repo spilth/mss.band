@@ -129,7 +129,8 @@ class PdfGenerator < Middleman::Extension
         )
       )
 
-      pdf.stylesheets << 'build/stylesheets/site.css'
+      hashed_stylesheet = Dir.glob('build/stylesheets/*.css')[0]
+      pdf.stylesheets << hashed_stylesheet
       pdf.to_file(pdf_path)
     end
   end
@@ -157,3 +158,4 @@ class PdfGenerator < Middleman::Extension
 end
 
 ::Middleman::Extensions.register(:pdf_generator, PdfGenerator)
+
