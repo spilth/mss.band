@@ -9,41 +9,41 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.0.7)
+    activesupport (5.0.7.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.2)
+    addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     ansi (1.5.0)
     autoprefixer-rails (8.6.5)
       execjs
-    backports (3.11.3)
+    backports (3.12.0)
     builder (3.2.3)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    combine_pdf (1.0.15)
+    combine_pdf (1.0.16)
       ruby-rc4 (>= 0.1.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    concurrent-ruby (1.0.5)
+    concurrent-ruby (1.1.4)
     contracts (0.13.0)
-    dotenv (2.5.0)
+    dotenv (2.7.1)
     erubis (2.7.0)
     excon (0.62.0)
     execjs (2.7.0)
     fast_blank (1.0.0)
-    fastimage (2.1.3)
-    ffi (1.9.25)
-    fog-aws (3.0.0)
+    fastimage (2.1.5)
+    ffi (1.10.0)
+    fog-aws (3.3.0)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
       fog-xml (~> 0.1)
       ipaddress (~> 0.8)
-    fog-core (2.1.0)
+    fog-core (2.1.2)
       builder
       excon (~> 0.58)
       formatador (~> 0.2)
@@ -131,22 +131,22 @@ GEM
       tilt (>= 1.4.1, < 3)
     padrino-support (0.13.3.4)
       activesupport (>= 3.1)
-    parallel (1.12.1)
+    parallel (1.14.0)
     pdfkit (0.8.2)
     public_suffix (3.0.3)
     rack (2.0.6)
     rb-fsevent (0.10.3)
-    rb-inotify (0.9.10)
-      ffi (>= 0.5.0, < 2)
+    rb-inotify (0.10.0)
+      ffi (~> 1.0)
     redcarpet (3.4.0)
     ruby-progressbar (1.10.0)
     ruby-rc4 (0.1.5)
     sass (3.4.25)
     servolux (0.13.0)
-    temple (0.8.0)
-    thor (0.20.0)
+    temple (0.8.1)
+    thor (0.20.3)
     thread_safe (0.3.6)
-    tilt (2.0.8)
+    tilt (2.0.9)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (3.2.0)
@@ -154,6 +154,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
+    victor (0.2.4)
     wkhtmltopdf-binary (0.12.4)
 
 PLATFORMS
@@ -162,12 +163,13 @@ PLATFORMS
 DEPENDENCIES
   combine_pdf
   mab
-  middleman (~> 4.2)
-  middleman-autoprefixer (~> 2.7)
+  middleman (= 4.2.1)
+  middleman-autoprefixer (= 2.9.0)
   middleman-s3_sync
-  pdfkit
+  pdfkit (= 0.8.2)
   redcarpet
   song_pro!
+  victor
   wkhtmltopdf-binary
 
 BUNDLED WITH

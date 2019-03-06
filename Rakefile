@@ -18,4 +18,7 @@ task deploy: [:build] do
   system 'bundle exec middleman s3_sync'
 end
 
-
+desc 'Extract all chords from all songs'
+task :chords do
+  system 'grep -ohE "\[[^]]+\]" source/songs/*.sng | sort | uniq'
+end

@@ -6,6 +6,11 @@ h2.artist {
   text-align: center;
 }
 
+#chords {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
 .section {
   display: flex;
   flex-direction: row;
@@ -23,6 +28,7 @@ h2.artist {
 
 .information {
   float: right;
+  max-width: 128px;
 }
 
 @media screen and (max-width:768px) {
@@ -36,7 +42,8 @@ h2.artist {
 
   .information {
     float: none;
-    text-align: right
+    text-align: right;
+    max-width: 768px;
   }
 
   .year {
