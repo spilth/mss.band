@@ -47,7 +47,7 @@ class ChordDiagrams < Middleman::Extension
     else
       puts "Could't find fingerings for the chord '#{name}'"
 
-      svg.text '?', x: 102, y: 165, text_anchor: :middle, style: {
+      svg.text '?', x: 102, y: 155, text_anchor: :middle, style: {
           font_size: 96,
           font_weight: :bold,
           fill: :gray,
