@@ -1,7 +1,15 @@
 class ChordDiagrams < Middleman::Extension
   expose_to_template :chord_svg
 
+  LINE_STYLE = {stroke: :black, stroke_width: 2, stroke_linecap: :square}
+
   def chord_svg(name, fingerings = nil)
+    svg = Victor::SVG.new template: :html, width: 100, height: 100, viewBox: "0 0 200 200"
+
+    draw_name(name, svg)
+    draw_frets(svg)
+    draw_strings(svg)
+
     if fingerings.nil?
       fingerings = CHORD_FINGERINGS[name.to_sym]
     end
@@ -9,35 +17,77 @@ class ChordDiagrams < Middleman::Extension
     if fingerings.present?
       fingerings = fingerings.split('')
 
-      line_style = {stroke: :black, stroke_width: 2, stroke_linecap: :square}
+      lowest_fret = fingerings.min
 
-      svg = Victor::SVG.new template: :html, width: 100, height: 100, viewBox: "0 0 200 200"
-      svg.text name, x: 100, y: 40, text_anchor: :middle, style: {font_size: 32}
+      if lowest_fret.to_i > 2
+        svg.text lowest_fret, x: 35, y: 96, text_anchor: :end, style: {font_size: 20}
 
-      svg.line x1: 49, y1: 77, x2: 151, y2: 77, style: {stroke: :black, stroke_width: 8, }
-
-      [100, 120, 140, 160, 180].each {|y| svg.line x1: 50, y1: y, x2: 150, y2: y, style: line_style}
-
-      [50, 70, 90, 110, 130, 150].each {|x| svg.line x1: x, y1: 80, x2: x, y2: 180, style: line_style}
+        fingerings = fingerings.map do |fingering|
+          if fingering != "x"
+            fingering.to_i - lowest_fret.to_i + 1
+          else
+            fingering
+          end
+        end
+      else
+        draw_nut(svg)
+      end
 
       fingerings.each_with_index do |fingering, index|
         offset = 50 + (20 * index)
 
         if fingering == "x"
-          svg.line x1: offset - 4, y1: 61 - 4, x2: offset + 4, y2: 61 + 4, style: line_style
-          svg.line x1: offset - 4, y1: 61 + 4, x2: offset + 4, y2: 61 - 4, style: line_style
+          draw_muted(offset, svg)
         elsif fingering == "0"
-          svg.circle cx: offset, cy: 61, r: 6, style: {stroke: :black, fill: :white, stroke_width: 2}
+          draw_open(offset, svg)
         else
-          svg.circle cx: offset, cy: 70 + (fingering.to_i * 20), r: 8, style:{fill: :black}
+          draw_fingered(fingering, offset, svg)
         end
       end
-
-      svg.render
     else
       puts "Could't find fingerings for the chord '#{name}'"
+
+      svg.text '?', x: 102, y: 165, text_anchor: :middle, style: {
+          font_size: 96,
+          font_weight: :bold,
+          fill: :gray,
+      }
     end
+
+    svg.render
   end
+
+  private
+
+  def draw_name(name, svg)
+    svg.text name, x: 100, y: 40, text_anchor: :middle, style: {font_size: 36, font_weight: :bold}
+  end
+
+  def draw_nut(svg)
+    svg.line x1: 49, y1: 77, x2: 151, y2: 77, style: {stroke: :black, stroke_width: 8, }
+  end
+
+  def draw_fingered(fingering, offset, svg)
+    svg.circle cx: offset, cy: 70 + (fingering.to_i * 20), r: 8, style: {fill: :black}
+  end
+
+  def draw_open(offset, svg)
+    svg.circle cx: offset, cy: 61, r: 6, style: {stroke: :black, fill: :white, stroke_width: 2}
+  end
+
+  def draw_muted(offset, svg)
+    svg.line x1: offset - 4, y1: 61 - 4, x2: offset + 4, y2: 61 + 4, style: LINE_STYLE
+    svg.line x1: offset - 4, y1: 61 + 4, x2: offset + 4, y2: 61 - 4, style: LINE_STYLE
+  end
+
+  def draw_strings(svg)
+    [50, 70, 90, 110, 130, 150].each {|x| svg.line x1: x, y1: 80, x2: x, y2: 160, style: LINE_STYLE}
+  end
+
+  def draw_frets(svg)
+    [80, 100, 120, 140, 160].each {|y| svg.line x1: 50, y1: y, x2: 150, y2: y, style: LINE_STYLE}
+  end
+
 
   CHORD_FINGERINGS = {
       # Major Chords
