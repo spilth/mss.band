@@ -111,7 +111,9 @@ class ChordDiagrams < Middleman::Extension
       'D#5': 'x688xx',
 
       # Six Chords
+      'D6': 'xx0202',
       'E6': '022120',
+      'G6': '320000',
 
       # Seventh Chords
       'A7': '002020',
