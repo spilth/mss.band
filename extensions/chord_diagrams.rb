@@ -142,6 +142,7 @@ class ChordDiagrams < Middleman::Extension
 
       # Seventh Suspended 4th Chords
       'A7sus4': '002030',
+      'G7sus4': '353533',
 
       # Minor Chords
       'Am': '002210',
