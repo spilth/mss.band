@@ -178,6 +178,7 @@ class ChordDiagrams < Middleman::Extension
       'Bb/A': 'x00331',
       'C/B': 'x22010',
       'C/E': '032010',
+      'D/A': 'x04232',
       'D/F#': '200232',
       'F/A': 'x03211',
       'G/B': 'x20003',
