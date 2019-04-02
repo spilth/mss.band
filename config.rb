@@ -58,10 +58,14 @@ helpers do
 
   def difficulty_text(difficulty)
     case difficulty
+    when '0'
+      'Beginner'
     when '1'
       'Easy'
     when '2'
       'Medium'
+    when '3'
+      'Hard'
     else
       'Unknown'
     end
