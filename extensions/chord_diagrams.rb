@@ -163,9 +163,11 @@ class ChordDiagrams < Middleman::Extension
       'A#m7': 'x13121',
       'Bm7': 'x24232',
       'Cm7': 'x35343',
+      'C#m7': 'x46454',
       'Dm7': 'x00211',
       'Em7': '020030',
       'Fm7': '131111',
+      'F#m7': '242222',
       'Gm7': '353333',
 
       # Minor Eleventh Chords
