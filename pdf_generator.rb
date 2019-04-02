@@ -22,7 +22,7 @@ class PdfGenerator < Middleman::Extension
     outline_depth: 1,
   }.freeze
 
-  TIMESTAMP = Time.new.strftime("%Y.%m.%d-%H:%M")
+  TIMESTAMP = Time.new.strftime("%y%m%d.%H%M")
 
   SONGS = Dir.glob('source/songs/*.html.sng').sort.collect do |filename|
     song = SongPro.parse(File.read(filename))
