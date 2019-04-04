@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: Other Resources
 ---
 
 ## Other Meetups and Organizations
@@ -19,9 +19,3 @@ title: Resources
 
 - [Open Mic New York](http://www.openmicnewyork.com/)
 - [openmikes.org](https://openmikes.org/listings/nearzip.php?proximity=10&cityState=New+York%2C+NY)
-
-## Performing Information
-
-- [Musician or Performer Permit](https://www1.nyc.gov/nyc-resources/service/3003/musician-or-performer-permit)
-- [NYC Parks](https://www.nycgovparks.org/)
-
