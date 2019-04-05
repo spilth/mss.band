@@ -1,6 +1,5 @@
 <table style="width: 100%;">
   <tr>
-  <% page_number = 2 %>
   <% pdf_songs.each_slice( (pdf_songs.size/2.0).ceil ) do |songs| %>
     <td style="vertical-align: top">
       <table class="table table-sm" style="width: 100%;">
@@ -16,9 +15,8 @@
           <tr>
             <td><%= song[:title] %></td>
             <td><%= difficulty_text(song[:difficulty]).try(:titleize) %></td>
-            <td><%= page_number %></td>
+            <td><%= (song[:order].to_i * 2) %></td>
           </tr>
-          <% page_number += 2 %>
         <% end %>
         </tbody>
       </table>

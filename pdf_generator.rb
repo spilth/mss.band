@@ -33,10 +33,12 @@ class PdfGenerator < Middleman::Extension
         songpro: song.title.parameterize,
         short: song.custom[:short],
         ignore: song.custom[:ignore],
+        order: song.custom[:order],
+
     }
-  end.reject! do |song|
-    song[:ignore]
-  end
+  end.select! do |song|
+    song[:order]
+  end.sort_by! {|song| song[:order].to_i}
 
   def manipulate_resource_list(resources)
     FileUtils::mkdir_p(PDF_BUILD_PATH)

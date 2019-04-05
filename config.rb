@@ -49,10 +49,11 @@ helpers do
           path: song.title.parameterize,
           short: song.custom[:short],
           ignore: song.custom[:ignore],
-          spotify: song.custom[:spotify]
+          spotify: song.custom[:spotify],
+          order: song.custom[:order],
       }
-    end.reject! do |song|
-      song[:ignore]
+    end.select! do |song|
+      song[:order]
     end
   end
 
