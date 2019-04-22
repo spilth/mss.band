@@ -128,6 +128,7 @@ class ChordDiagrams < Middleman::Extension
       'G#7': '464544',
 
       # Major Seventh Chords
+      'AM7': 'x02120',
       'CM7': 'x32000',
       'DM7': 'xx0222',
       'EM7': 'xx2444',
@@ -178,7 +179,8 @@ class ChordDiagrams < Middleman::Extension
       'Cadd9': 'x32033',
 
       # Major Chords with Bass Notes
-      'A/E': '002220',
+      'A/C#': '002220',
+      'A/E': '04222x',
       'A/F#': '202220',
       'Bb/A': 'x00331',
       'C/B': 'x22010',
