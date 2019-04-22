@@ -17,8 +17,9 @@ class PdfGenerator < Middleman::Extension
     margin_left: '20mm',
     margin_right: '20mm',
     print_media_type: true,
-    dpi: retina_display? ? 600 : 300,
-    zoom: 0.80,
+    lowquality: true,
+    dpi: 62,
+    zoom: 1.0,
     outline_depth: 1,
   }.freeze
 
