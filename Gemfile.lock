@@ -21,6 +21,8 @@ GEM
       execjs
     backports (3.12.0)
     builder (3.2.3)
+    chord_diagrams (0.0.3)
+      victor (= 0.2.4)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -161,6 +163,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  chord_diagrams
   combine_pdf
   mab
   middleman (= 4.2.1)
@@ -169,7 +172,6 @@ DEPENDENCIES
   pdfkit (= 0.8.2)
   redcarpet
   song_pro!
-  victor
   wkhtmltopdf-binary
 
 BUNDLED WITH

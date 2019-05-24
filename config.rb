@@ -1,5 +1,5 @@
 require 'pdf_generator'
-require 'extensions/chord_diagrams'
+require 'extensions/chords'
 
 page '/*.json', layout: false
 page 'songs/*', layout: 'song'
@@ -10,7 +10,7 @@ end
 
 activate :asset_hash
 activate :directory_indexes
-activate :chord_diagrams
+activate :chords
 
 activate :s3_sync do |s3_sync|
   s3_sync.bucket = 'mss.nyc'
