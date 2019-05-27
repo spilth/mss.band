@@ -8,7 +8,7 @@
 
 2-bar drum fill
 
-[E] [Am]
+| [E] | [Am] |
 
 # Verse1
 
@@ -52,10 +52,8 @@ And I [B]just can't take it [C]anymore [B]
 
 # Guitar Solo
 
-[E] [A] [B]
-[E] [A] [B]
-[C#m] [F#]
-[F#m] [Am] [B]
+| [E] | [A] [B] | [E] | [A] [B] |
+| [C#m] | [F#] | [F#m] | [Am] [B] |
 
 'Cause [E]we could be [A]happy [B]can't you [E]see
 If you'd [A]only [B]let me [C#m]be the one to [F#]hold you
@@ -69,5 +67,7 @@ And if [E]I know you you're [Am]doin' that thing
 [E]Every day just [Am]doin' that thing
 [E]I can't take you [B]doin' that thing you [A]do [Am]
 
-[E] [EM7]
+# Outro
+
+| [E] [E] [E] [EM7] |
 
