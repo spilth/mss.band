@@ -139,6 +139,9 @@ GEM
     servolux (0.13.0)
     song_pro (0.1.4)
       markaby
+    tablature (0.0.1)
+      nokogiri
+      victor (= 0.2.4)
     temple (0.8.1)
     thor (0.20.3)
     thread_safe (0.3.6)
@@ -166,6 +169,7 @@ DEPENDENCIES
   pdfkit (= 0.8.2)
   redcarpet
   song_pro (= 0.1.4)
+  tablature (= 0.0.1)
   wkhtmltopdf-binary
 
 BUNDLED WITH

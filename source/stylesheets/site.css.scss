@@ -69,15 +69,6 @@ h2.artist {
   align-items: flex-end;
 }
 
-.tablature {
-  font-family: monospace;
-  font-size: 1.3rem;
-  //letter-spacing: -0.15rem;
-  line-height: 1.0rem;
-  overflow: visible;
-  white-space: nowrap;
-}
-
 .measures {
   display: flex;
   flex-wrap: wrap;
@@ -99,7 +90,6 @@ h2.artist {
     flex-grow: 1;
   }
 }
-
 
 .chord, .lyric {
   text-wrap: avoid;
@@ -126,6 +116,16 @@ h2.artist {
   font-size: 1.4rem;
   font-style: italic;
   margin-bottom: 0.5em;
+}
+
+.tablature {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  svg {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 @media print {

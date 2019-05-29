@@ -37,7 +37,7 @@
     %div.lines
       - section.lines.each do|line|
         - if line.tablature?
-          %div.tablature= line.tablature
+          %div.tablature= tablature_svg(line.tablature)
         - elsif line.measures?
           %div.measures
             - line.measures.each do |measure|
