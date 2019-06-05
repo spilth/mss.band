@@ -28,7 +28,7 @@
       %dd.album= song.album
 
   %div#chords
-    - chords.each do |chord|
+    - song.chords.each do |chord|
       %span= chord_svg chord
 
 - song.sections.each do |section|
