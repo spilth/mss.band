@@ -10,10 +10,17 @@ To set up the project, do the following:
 $ git clone git@github.com:spilth/mss.nyc.git
 $ cd mss.nyc
 $ bundle
+$ npm install
 $ rake server
 ```
 
 You can then view the site as <http://localhost:4567>
+
+To build the PDF versions of all songs to the `build/pdfs` directory:
+
+```bash
+$ bundle exec middleman build
+```
 
 ## Deployment
 
