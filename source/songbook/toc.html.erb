@@ -3,13 +3,6 @@
   <% pdf_songs.each_slice( (pdf_songs.size/2.0).ceil ) do |songs| %>
     <td style="vertical-align: top">
       <table class="table table-sm table-borderless" style="width: 100%;">
-        <thead>
-        <tr>
-          <th>Song</th>
-          <th>Difficulty</th>
-          <th>Page</th>
-        </tr>
-        </thead>
         <tbody>
         <% songs.each do |song| %>
           <tr>
