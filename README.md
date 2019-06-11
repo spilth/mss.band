@@ -2,7 +2,7 @@
 
 [Middleman](https://middlemanapp.com/) web site for providing the lyrics and chords to songs using the [SongPro](https://github.com/spilth/song_pro) format.
 
-## Setup
+## Project Setup
 
 To set up the project, do the following:
 
@@ -16,19 +16,21 @@ $ rake server
 
 You can then view the site as <http://localhost:4567>
 
+## PDF Generation
+
 To build the PDF versions of all songs to the `build/pdfs` directory:
 
 ```bash
-$ bundle exec middleman build
+$ rake build
 ```
 
-## Deployment
+## Site Deployment
 
-To deploy, first create an `.s3_sync` file with the following:
+ To deploy the site to Netlify:
 
-```text
-aws_access_key_id: YOUR_ACCESS_KEY
-aws_secret_access_key: YOUR_SECRET_ACCESS_KEY
+```bash
+$ npm install netlify-cli -g
+$ netlify login
+$ rake deploy 
 ```
 
-Then run `rake deploy`

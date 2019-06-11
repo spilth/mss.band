@@ -12,11 +12,6 @@ activate :asset_hash
 activate :directory_indexes
 activate :chords
 
-activate :s3_sync do |s3_sync|
-  s3_sync.bucket = 'mss.nyc'
-  s3_sync.acl    = 'public-read'
-end
-
 ignore 'songs/*.html.sng'
 Dir.glob('source/songs/*.html.sng').each do |filename|
   contents = File.read(filename)
