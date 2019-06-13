@@ -50,8 +50,11 @@ export class SongTable extends React.Component {
       artistClassName: 'sortable asc',
       difficultyClassName: 'sortable',
       songs: this.state.songs.sort((a, b) => {
-        if (a.artist < b.artist) return -1;
-        if (a.artist > b.artist) return 1;
+        const aName = a.artist.replace(/^The /, "");
+        const bName = b.artist.replace(/^The /, "");
+
+        if (aName < bName) return -1;
+        if (aName > bName) return 1;
 
         // Sort songs by the same artist alphabetically
         if (a.title < b.title) return -1;
