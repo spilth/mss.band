@@ -1,5 +1,8 @@
 @title=Your Cheatin' Heart
 @artist=Hank Williams
+@year=1952
+@tempo=112
+@key=C Major
 !difficulty=1
 !spotify=https://open.spotify.com/track/73HgnHCHDEZCmtMpEzxnO0
 !order=89
@@ -7,7 +10,8 @@
 
 # Intro
 
-| [G7] | [C] |
+| [C] |
+| [G7] | [G7] | [C] | [C] |
 
 # Verse 1
 

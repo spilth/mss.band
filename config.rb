@@ -39,6 +39,9 @@ helpers do
       {
           title: song.title,
           artist: song.artist,
+          year: song.year,
+          key: song.key,
+          tempo: song.tempo,
           difficulty: song.custom[:difficulty],
           path: song.title.parameterize,
           short: song.custom[:short],

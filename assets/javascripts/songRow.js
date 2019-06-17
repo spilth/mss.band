@@ -1,8 +1,6 @@
 import React from "react";
 import * as PropTypes from "prop-types";
 import {DifficultyLabel} from "./difficultyLabel";
-import {ListenLink} from "./listenLink";
-import {PdfDownloadLink} from "./pdfDownloadLink";
 import {ViewLink} from "./viewLink";
 
 export function SongRow(props) {
@@ -14,13 +12,13 @@ export function SongRow(props) {
             {props.artist}
         </td>
         <td>
+            {props.year}
+        </td>
+        <td>
+            {props.tempo}
+        </td>
+        <td>
             <DifficultyLabel difficulty={props.difficulty}/>
-        </td>
-        <td>
-            <PdfDownloadLink filename={props.path}/>
-        </td>
-        <td>
-            <ListenLink href={props.listen}/>
         </td>
     </tr>;
 }
@@ -29,6 +27,9 @@ SongRow.propTypes = {
     title: PropTypes.string.isRequired,
     artist: PropTypes.string.isRequired,
     listen: PropTypes.string.isRequired,
+    tempo: PropTypes.string,
+    musicalKey: PropTypes.string,
+    year: PropTypes.string,
     difficulty: PropTypes.string,
     path: PropTypes.string,
 };

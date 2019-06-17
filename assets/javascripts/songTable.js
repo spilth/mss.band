@@ -8,6 +8,8 @@ export class SongTable extends React.Component {
     this.state = {
       titleClassName: 'sortable',
       artistClassName: 'sortable',
+      yearClassName: 'sortable',
+      tempoClassName: 'sortable',
       difficultyClassName: 'sortable',
       songs: [],
     };
@@ -21,6 +23,8 @@ export class SongTable extends React.Component {
           this.setState({
             titleClassName: 'sortable asc',
             artistClassName: 'sortable',
+            yearClassName: 'sortable',
+            tempoClassName: 'sortable',
             difficultyClassName: 'sortable',
             songs: result.songs
           });
@@ -35,6 +39,8 @@ export class SongTable extends React.Component {
     this.setState({
       titleClassName: 'sortable asc',
       artistClassName: 'sortable',
+      yearClassName: 'sortable',
+      tempoClassName: 'sortable',
       difficultyClassName: 'sortable',
       songs: this.state.songs.sort((a, b) => {
         if (a.title < b.title) return -1;
@@ -44,10 +50,48 @@ export class SongTable extends React.Component {
     })
   };
 
+  sortByYear() {
+    this.setState({
+      titleClassName: 'sortable',
+      artistClassName: 'sortable',
+      yearClassName: 'sortable asc',
+      tempoClassName: 'sortable',
+      difficultyClassName: 'sortable',
+      songs: this.state.songs.sort((a, b) => {
+        if (a.year < b.year) return -1;
+        if (a.year > b.year) return 1;
+
+        // Sort songs with the same year by title
+        if (a.title < b.title) return -1;
+        if (a.title > b.title) return 1;
+      })
+    })
+  };
+
+  sortByTempo() {
+    this.setState({
+      titleClassName: 'sortable',
+      artistClassName: 'sortable',
+      yearClassName: 'sortable ',
+      tempoClassName: 'sortable asc',
+      difficultyClassName: 'sortable',
+      songs: this.state.songs.sort((a, b) => {
+        if (Number(a.tempo) < Number(b.tempo)) return -1;
+        if (Number(a.tempo) > Number(b.tempo)) return 1;
+
+        // Sort songs with the same tempo by title
+        if (a.title < b.title) return -1;
+        if (a.title > b.title) return 1;
+      })
+    })
+  };
+
   sortByArtist() {
     this.setState({
       titleClassName: 'sortable',
       artistClassName: 'sortable asc',
+      yearClassName: 'sortable',
+      tempoClassName: 'sortable',
       difficultyClassName: 'sortable',
       songs: this.state.songs.sort((a, b) => {
         const aName = a.artist.replace(/^The /, "");
@@ -67,6 +111,8 @@ export class SongTable extends React.Component {
     this.setState({
       titleClassName: 'sortable',
       artistClassName: 'sortable',
+      yearClassName: 'sortable',
+      tempoClassName: 'sortable',
       difficultyClassName: 'sortable asc',
       songs: this.state.songs.sort((a, b) => {
         if (a.difficulty < b.difficulty) return -1;
@@ -90,17 +136,17 @@ export class SongTable extends React.Component {
           <th className={this.state.artistClassName} onClick={() => this.sortByArtist()}>
             Artist
           </th>
+          <th className={this.state.yearClassName} onClick={() => this.sortByYear()}>
+            <span className="d-none d-lg-inline">Year</span>
+            <i className="d-lg-none far fa-calendar fa-fw"/>
+          </th>
+          <th className={this.state.tempoClassName} onClick={() => this.sortByTempo()}>
+            <span className="d-none d-lg-inline">Tempo</span>
+            <i className="d-lg-none fas fa-drum fa-fw"/>
+          </th>
           <th className={this.state.difficultyClassName} onClick={() => this.sortByDifficulty()}>
             <span className="d-none d-lg-inline">Difficulty</span>
             <i className="d-lg-none fas fa-signal fa-fw"/>
-          </th>
-          <th>
-            <span className="d-none d-md-inline">Download</span>
-            <i className="d-md-none fas fa-file-pdf fa-fw"/>
-          </th>
-          <th>
-            <span className="d-none d-md-inline">Listen</span>
-            <i className="d-md-none fas fa-play fa-fw"/>
           </th>
         </tr>
         </thead>
@@ -109,6 +155,10 @@ export class SongTable extends React.Component {
             key={song.title}
             title={song.title}
             artist={song.artist}
+            tempo={song.tempo}
+            musicalKey={song.key}
+            tempo={song.tempo}
+            year={song.year}
             difficulty={song.difficulty}
             path={song.path}
             listen={song.spotify}
