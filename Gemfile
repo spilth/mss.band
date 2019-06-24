@@ -10,3 +10,4 @@ gem 'wkhtmltopdf-binary'
 gem 'mab'
 gem 'chord_diagrams', '0.0.4'
 
+gem 'middleman-simple-thumbnailer'

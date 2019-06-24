@@ -8,9 +8,10 @@ activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
 end
 
-activate :asset_hash
+activate :asset_hash, :exts => %w(.js .css)
 activate :directory_indexes
 activate :chords
+activate :middleman_simple_thumbnailer
 
 ignore 'songs/*.html.sng'
 Dir.glob('source/songs/*.html.sng').each do |filename|

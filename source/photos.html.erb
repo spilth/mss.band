@@ -1,0 +1,16 @@
+---
+title: Photos
+layout: layout
+---
+
+<p class="lead">A collection of photos taken at our various jam sessions:</p>
+
+<div class="row">
+  <% 24.downto(1).each do |number| %>
+    <div class="col-md-4">
+      <% link_to "/images/mss - #{number}.jpg" do %>
+        <%= image_tag "mss - #{number}.jpg", resize_to: "480x320", class: 'img-thumbnail img-fluid mb-4' %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
