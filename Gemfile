@@ -9,5 +9,3 @@ gem 'song_pro', '0.1.5'
 gem 'wkhtmltopdf-binary'
 gem 'mab'
 gem 'chord_diagrams', '0.0.4'
-
-gem 'middleman-simple-thumbnailer'

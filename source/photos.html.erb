@@ -9,7 +9,7 @@ layout: layout
   <% 24.downto(1).each do |number| %>
     <div class="col-md-4">
       <% link_to "/images/mss - #{number}.jpg" do %>
-        <%= image_tag "mss - #{number}.jpg", resize_to: "480x320", class: 'img-thumbnail img-fluid mb-4' %>
+        <%= image_tag "mss%20-%20#{number}.jpg", class: 'img-thumbnail img-fluid mb-4' %>
       <% end %>
     </div>
   <% end %>
