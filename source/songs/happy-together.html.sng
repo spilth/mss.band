@@ -1,13 +1,19 @@
 @title=Happy Together
 @artist=The Turtles
 @year=1966
-@tempo=132
+@tempo=120
 @key=E Minor
+@capo=2nd Fret
 !spotify=https://open.spotify.com/track/1JO1xLtVc8mWhIoE3YaCL0
 !difficulty=2
 !order=22
 
-# Intro Riff
+# Intro (Riff)
+
+|-3-2-0-|-0---0-|-3-2-0-|-0---0-|E
+|-------|---3---|-------|---3---|B
+
+# Intro (Chords)
 
 | [Em] | [Em] | [Em] | [Em] |
 
@@ -16,14 +22,14 @@
 Imagine [Em]me and you, I do
 I think about you [D]day and night. It's only right
 To think about the [C]girl you love and hold her tight
-so happy to-[B7]gether
+so happy to-[B]gether
 
 # Verse 2
 
 If I should [Em]call you up, invest a dime
 And you say you be-[D]long to me and ease my mind
 Imagine how the [C]world could be so very fine
-so happy to-[B7]gether
+so happy to-[B]gether
 
 # Chorus 1
 
@@ -37,7 +43,7 @@ for all my [G]life
 [Em]Me and you, and you and me
 no matter how they [D]tossed the dice it had to be
 The only one for [C]me is you and you for me
-so happy to-[B7]gether
+so happy to-[B]gether
 
 # Chorus 2
 
@@ -51,12 +57,12 @@ for all my [G]life
 [Em]Me and you, and you and me
 no matter how they [D]tossed the dice it had to be
 The only one for [C]me is you and you for me
-so happy to-[B7]gether
+so happy to-[B]gether
 
 # Chorus 3
 
-[E] Bah bah bah bah [Bm] bah-bah bah-bah bah-bah[E] bahhhh bah-bah bah [G] bahhhh
-[E] Bah bah bah bah [Bm] bah-bah bah-bah bah-bah[E] bahhhh bah-bah bah [G] bahhhh
+[E] Bah bah bah bah [Bm] bah-bah bah-bah bah-bah [E] bahhhh bah-bah bah [G] bahhhh
+[E] Bah bah bah bah [Bm] bah-bah bah-bah bah-bah [E] bahhhh bah-bah bah [Bm] bahhhh [Bm]
 
 # Verse 5
 
@@ -66,12 +72,16 @@ The only one for [C]me is you and you for me
 
 # Outro
 
-So happy to-[B]gether [Em]
-So happy to-[B]gether [Em]
-How is the [B]weather [Em]
-So happy to-[B]gether [Em]
-We're happy to-[B]gether [Em]
-So happy to-[B]gether [Em]
-So happy to-[B]gether [Em]
-So happy to-[B]gether [Em]
-So happy to-[B]gether [E]
+So happy to-[B]gether
+[Em] So happy to-[B]gether
+[Em] How is the [B]weather
+[Em] So happy to-[B]gether
+[Em] We're happy to-[B]gether
+[Em] So happy to-[B]gether
+[Em] So happy to-[B]gether
+[Em] So happy to-[B]gether
+[Em] So happy to-[B]gether
+
+# Ending
+
+| [E] |

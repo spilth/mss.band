@@ -38,6 +38,8 @@
       - section.lines.each do|line|
         - if line.tablature?
           %div.tablature= line.tablature
+        - elsif line.comment?
+          %div.comment= line.comment
         - elsif line.measures?
           %div.measures
             - line.measures.each do |measure|

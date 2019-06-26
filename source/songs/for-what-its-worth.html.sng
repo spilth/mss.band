@@ -1,48 +1,65 @@
 @title=For What It's Worth
 @artist=Buffalo Springfield
 @year=1966
-@tempo=112
+@tempo=100
 @key=A Major
 !difficulty=0
 !spotify=https://open.spotify.com/track/1qRA5BS78u3gME0loMl9AA
 !order=19
 
-# Intro
+# Intro (Riff)
+
+|------|-7----|------|-7----| E
+|-5----|------|-5----|------| B
+
+# Intro (Chords)
 
 | [E] | [A] | [E] | [A] |
 
 # Verse 1
 
-There's [E] somethin' happenin' [A] here
-What it [E] is ain't exactly [A] clear
-There's a [E] man with a gun over [A] there
-Tellin' [E] me I got to [A] beware
+[E] There's somethin' happenin' here [A]
+
+What it [E] is ain't exactly clear [A]
+There's a [E] man with a gun over [A] there [A]
+Tellin' [E] me I got to be-[A]ware
 I think it's time we...
 
 # Chorus 1
 
 [E] Stop, children, [D] what's that sound?
 [A] Everybody look - what's goin' down?
+
+# Break (Riff)
+
+|------|-7----|------|-7----| E
+|-5----|------|-5----|------| B
+
+# Break (Chords)
+
 | [E] | [A] | [E] | [A] |
 
 # Verse 2
 
-There's [E] battle lines bein' [A] drawn
+[E] There's  battle lines bein' [A] drawn
 Nobody's [E] right if everybody's [A] wrong
-[E] Young people speakin' their [A] minds
+[E] Young people speakin' their minds [A]
 Gettin' [E] so much resistance [A] from behind
 I think it's time we...
 
 # Chorus 2
 
-[E] Stop, children, [D] what's that sound?
+[E] Stop, hey, [D] what's that sound?
 [A] Everybody look - what's goin' down?
+
+# Solo
+
 | [E] | [A] | [E] | [A] |
 
 # Verse 3
 
 [E] What a field day for the [A] heat
-A [E] thousand people in the [A]street
+A [E] thousand people in the [A] street
 Singin' [E] songs and carryin' [A] signs
 Mostly [E] sayin', "hooray for our [A] side"
 It's time we...
@@ -51,23 +68,31 @@ It's time we...
 
 [E] Stop, children, [D] what's that sound?
 [A] Everybody look - what's goin' down?
+
+# Solo 2
+
 | [E] | [A] | [E] | [A] |
 
 # Verse 4
 
 [E] Paranoia strikes [A] deep
 [E] Into your life it will [A] creep
-It [E] starts when you're always [A] afraid
+It [E] starts when you're always a-[A]fraid
 Step out of [E] line, the man come and [A] take you away
 We better...
 
 # Chorus 4
 
-[E] Stop, children, [D] what's that sound?
+[E] Stop, hey, [D] what's that sound?
+[A] Everybody look - what's goin' down?
+[E] Stop, hey, [D] what's that sound?
+[A] Everybody look - what's goin' down?
+[E] Stop, now, [D] what's that sound?
 [A] Everybody look - what's goin' down?
 [E] Stop, children, [D] what's that sound?
 [A] Everybody look - what's goin' down?
-[E] Stop, children, [D] what's that sound?
-[A] Everybody look - what's goin' down?
-[E] Stop, children, [D] what's that sound?
-[A] Everybody look - what's goin' down?
+
+# Ending
+
+| [E] | [A] | [E] | [A] |
+| [E] |
