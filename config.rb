@@ -16,7 +16,8 @@ ignore 'songs/*.html.sng'
 Dir.glob('source/songs/*.html.sng').each do |filename|
   contents = File.read(filename)
   song = SongPro.parse(contents)
-  proxy "/songs/#{song.title.parameterize}/index.html", '/songs/template.html', locals: { song: song}, ignore: true
+  proxy "/songs/#{song.title.parameterize}/index.html", '/songs/template.html', locals: { song: song, ukulele: false}, ignore: true
+  proxy "/songs/#{song.title.parameterize}/ukulele.html", '/songs/template.html', locals: { song: song, ukulele: true}, ignore: true
 end
 
 activate :pdf_generator

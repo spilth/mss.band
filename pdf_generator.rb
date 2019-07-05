@@ -39,8 +39,8 @@ class PdfGenerator < Middleman::Extension
   def manipulate_resource_list(resources)
     FileUtils::mkdir_p(PDF_BUILD_PATH)
 
-    add_song_pdfs_to_resource_list(resources)
-    add_songbook_pdf_to_resource_list(resources)
+    add_guitar_pdf_to_resource_list(resources)
+    add_ukulele_pdf_to_resource_list(resources)
 
     resources
   end
@@ -51,26 +51,24 @@ class PdfGenerator < Middleman::Extension
     generate_blank_pdf
     generate_toc_pdf
     generate_song_pdfs
-    generate_songbook_pdf
+
+    generate_guitar_songbook_pdf
+    generate_ukulele_songbook_pdf
   end
 
   private
 
-  def add_song_pdfs_to_resource_list(resources)
-    SONGS.each { |song| add_song_pdf_to_resource_list(resources, song) }
-  end
-
-  def add_song_pdf_to_resource_list(resources, song)
-    song_path = "pdfs/#{song[:songpro]}.pdf"
-    song_source = "#{__dir__}/#{PDF_BUILD_PATH}/#{song[:songpro]}.pdf"
+  def add_guitar_pdf_to_resource_list(resources)
+    song_path = 'pdfs/mss-guitar.pdf'
+    song_source = "#{__dir__}/#{PDF_BUILD_PATH}/mss-guitar.pdf"
 
     FileUtils.touch(song_source)
     resources << Middleman::Sitemap::Resource.new(@app.sitemap, song_path, song_source)
   end
 
-  def add_songbook_pdf_to_resource_list(resources)
-    song_path = 'pdfs/mss-songbook.pdf'
-    song_source = "#{__dir__}/#{PDF_BUILD_PATH}/mss-songbook.pdf"
+  def add_ukulele_pdf_to_resource_list(resources)
+    song_path = 'pdfs/mss-ukulele.pdf'
+    song_source = "#{__dir__}/#{PDF_BUILD_PATH}/mss-ukulele.pdf"
 
     FileUtils.touch(song_source)
     resources << Middleman::Sitemap::Resource.new(@app.sitemap, song_path, song_source)
@@ -105,27 +103,42 @@ class PdfGenerator < Middleman::Extension
   end
 
   def generate_song_pdfs
-    SONGS.each { |song| generate_song_pdf(song) }
+    SONGS.each do |song|
+      generate_guitar_pdf(song)
+      generate_ukulele_pdf(song)
+    end
   end
 
-  def generate_song_pdf(song)
+  def generate_guitar_pdf(song)
     html_path = "build/songs/#{song[:songpro]}/index.html"
     pdf_path = "#{PDF_BUILD_PATH}/#{song[:songpro]}.pdf"
     html = File.open(html_path, 'rb').read
 
+    generate_song_pdf(html, html_path, pdf_path, song)
+  end
+
+  def generate_ukulele_pdf(song)
+    html_path = "build/songs/#{song[:songpro]}/ukulele/index.html"
+    pdf_path = "#{PDF_BUILD_PATH}/#{song[:songpro]}-ukulele.pdf"
+    html = File.open(html_path, 'rb').read
+
+    generate_song_pdf(html, html_path, pdf_path, song)
+  end
+
+  def generate_song_pdf(html, html_path, pdf_path, song)
     if File.file?(pdf_path) && (File.mtime(pdf_path) > File.mtime(html_path))
       puts "Skipping #{pdf_path} - already up to date"
     else
       puts "Generating #{pdf_path}"
 
       pdf = PDFKit.new(
-        html,
-        PDF_OPTIONS.merge(
-          footer_center: "#{song[:title]}",
-          footer_font_size: 9,
-          footer_left: TIMESTAMP,
-          footer_right: 'http://mss.nyc/',
-        )
+          html,
+          PDF_OPTIONS.merge(
+              footer_center: "#{song[:title]}",
+              footer_font_size: 9,
+              footer_left: TIMESTAMP,
+              footer_right: 'http://mss.nyc/',
+          )
       )
 
       hashed_stylesheet = Dir.glob('build/stylesheets/*.css')[0]
@@ -134,7 +147,7 @@ class PdfGenerator < Middleman::Extension
     end
   end
 
-  def generate_songbook_pdf
+  def generate_guitar_songbook_pdf
     songbook_pdf = CombinePDF.new
     songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/toc.pdf")
 
@@ -152,7 +165,28 @@ class PdfGenerator < Middleman::Extension
       font_size: 9
     )
 
-    songbook_pdf.save("#{__dir__}/#{PDF_BUILD_PATH}/mss-songbook.pdf")
+    songbook_pdf.save("#{__dir__}/#{PDF_BUILD_PATH}/mss-guitar.pdf")
+  end
+
+  def generate_ukulele_songbook_pdf
+    songbook_pdf = CombinePDF.new
+    songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/toc.pdf")
+
+    SONGS.each do |song|
+      songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/#{song[:songpro]}-ukulele.pdf")
+      if song[:short]
+        songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/blank.pdf")
+      end
+    end
+
+    songbook_pdf.number_pages(
+        number_format: '%s',
+        location: :bottom_right,
+        margin_from_height: 5,
+        font_size: 9
+    )
+
+    songbook_pdf.save("#{__dir__}/#{PDF_BUILD_PATH}/mss-ukulele.pdf")
   end
 end
 

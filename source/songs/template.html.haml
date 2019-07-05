@@ -28,12 +28,17 @@
       %dd.album= song.album
 
   %div#chords
-    %div#guitar
-      - song.chords.each do |chord|
-        %span= guitar_svg chord
-    %div#ukulele{style: 'display:none '}
-      - song.chords.each do |chord|
-        %span= ukulele_svg chord
+    - if ukulele
+      %div#ukulele
+        - song.chords.each do |chord|
+          %span= ukulele_svg chord
+    - else
+      %div#guitar
+        - song.chords.each do |chord|
+          %span= guitar_svg chord
+      %div#ukulele{style: 'display:none '}
+        - song.chords.each do |chord|
+          %span= ukulele_svg chord
 
 
 - song.sections.each do |section|
