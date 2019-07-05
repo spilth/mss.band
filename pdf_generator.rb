@@ -5,11 +5,6 @@ require 'combine_pdf'
 class PdfGenerator < Middleman::Extension
   PDF_BUILD_PATH = 'build/pdfs'.freeze
 
-  def self.retina_display?
-    resolution = `system_profiler SPDisplaysDataType | grep Resolution`
-    /Retina|Ultra High/.match?(resolution)
-  end
-
   PDF_OPTIONS = {
     page_size: 'letter',
     margin_top: '10mm',
@@ -81,6 +76,19 @@ class PdfGenerator < Middleman::Extension
     resources << Middleman::Sitemap::Resource.new(@app.sitemap, song_path, song_source)
   end
 
+  def generate_blank_pdf
+    html = File.open('build/songbook/blank_page/index.html', 'rb').read
+    pdf = PDFKit.new(
+        html,
+        PDF_OPTIONS.merge(
+            footer_font_size: 9,
+            footer_left: TIMESTAMP,
+            footer_right: 'http://mss.nyc/',
+            )
+    )
+    pdf.to_file("#{PDF_BUILD_PATH}/blank.pdf")
+  end
+
   def generate_toc_pdf
     html = File.open('build/songbook/toc/index.html', 'rb').read
     pdf = PDFKit.new(
@@ -94,19 +102,6 @@ class PdfGenerator < Middleman::Extension
 
     )
     pdf.to_file("#{PDF_BUILD_PATH}/toc.pdf")
-  end
-
-  def generate_blank_pdf
-    html = File.open('build/songbook/blank_page/index.html', 'rb').read
-    pdf = PDFKit.new(
-      html,
-      PDF_OPTIONS.merge(
-          footer_font_size: 9,
-          footer_left: TIMESTAMP,
-          footer_right: 'http://mss.nyc/',
-          )
-    )
-    pdf.to_file("#{PDF_BUILD_PATH}/blank.pdf")
   end
 
   def generate_song_pdfs
@@ -162,4 +157,3 @@ class PdfGenerator < Middleman::Extension
 end
 
 ::Middleman::Extensions.register(:pdf_generator, PdfGenerator)
-

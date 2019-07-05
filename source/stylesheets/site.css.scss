@@ -20,7 +20,7 @@ h2.artist {
   .name {
     width: 12%;
     // margin-top: 1.4rem;
-    font-family: "Times New Roman";
+    font-family: "Times New Roman", serif;
     font-weight: bold;
     font-size: 1.2rem;
     font-style: italic;
@@ -29,7 +29,7 @@ h2.artist {
 
 .information {
   float: right;
-  max-width: 128px;
+  max-width: 100px;
   text-align: right;
 }
 
@@ -78,6 +78,15 @@ h2.artist {
   white-space: nowrap;
 }
 
+.comment {
+  font-style: italic;
+  font-size: 0.5rem;
+  color: #333;
+  background: #eee;
+  padding: 0.1em 0.25em;
+  border-radius: 4px;
+}
+
 .measures {
   display: flex;
   flex-wrap: wrap;
@@ -117,7 +126,7 @@ h2.artist {
 .lyric {
   // Force the chords above an empty lyrics section to the top
   min-height: 1.5em;
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", serif;
   font-size: 1.4rem;
 }
 
@@ -131,6 +140,10 @@ h2.artist {
 @media print {
   .line {
     page-break-inside: avoid;
+  }
+
+  .ukulele {
+    display: none;
   }
 }
 

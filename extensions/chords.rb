@@ -1,8 +1,12 @@
 class Chords < Middleman::Extension
-  expose_to_template :chord_svg
+  expose_to_template :guitar_svg, :ukulele_svg
 
-  def chord_svg(name, fingerings = nil)
-    ChordDiagrams.chord_svg(name, fingerings)
+  def guitar_svg(name, fingerings = nil)
+    ChordDiagrams.guitar_svg(name, fingerings)
+  end
+
+  def ukulele_svg(name, fingerings = nil)
+    ChordDiagrams.ukulele_svg(name, fingerings)
   end
 end
 

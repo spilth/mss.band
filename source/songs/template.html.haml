@@ -28,8 +28,13 @@
       %dd.album= song.album
 
   %div#chords
-    - song.chords.each do |chord|
-      %span= chord_svg chord
+    %div#guitar
+      - song.chords.each do |chord|
+        %span= guitar_svg chord
+    %div#ukulele{style: 'display:none '}
+      - song.chords.each do |chord|
+        %span= ukulele_svg chord
+
 
 - song.sections.each do |section|
   %div.section
@@ -38,6 +43,8 @@
       - section.lines.each do|line|
         - if line.tablature?
           %div.tablature= line.tablature
+        - elsif line.comment?
+          %div.comment= line.comment
         - elsif line.measures?
           %div.measures
             - line.measures.each do |measure|
