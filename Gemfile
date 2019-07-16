@@ -8,5 +8,4 @@ gem 'redcarpet'
 gem 'song_pro', '0.1.6'
 gem 'wkhtmltopdf-binary'
 gem 'mab'
-gem 'chord_diagrams', '0.0.6'
-
+gem 'chord_diagrams', '0.0.7'
