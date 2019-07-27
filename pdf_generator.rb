@@ -41,6 +41,7 @@ class PdfGenerator < Middleman::Extension
 
     add_guitar_pdf_to_resource_list(resources)
     add_ukulele_pdf_to_resource_list(resources)
+    add_song_pdfs_to_resource_list(resources)
 
     resources
   end
@@ -57,6 +58,29 @@ class PdfGenerator < Middleman::Extension
   end
 
   private
+
+  def add_song_pdfs_to_resource_list(resources)
+    SONGS.each do |song|
+      add_guitar_song_pdf_to_resource_list(resources, song)
+      add_ukulele_song_pdf_to_resource_list(resources, song)
+    end
+  end
+
+  def add_guitar_song_pdf_to_resource_list(resources, song)
+    guitar_song_path = "pdfs/#{song[:songpro]}.pdf"
+    guitar_song_source = "#{__dir__}/#{PDF_BUILD_PATH}/#{song[:songpro]}.pdf"
+
+    FileUtils.touch(guitar_song_source)
+    resources << Middleman::Sitemap::Resource.new(@app.sitemap, guitar_song_path, guitar_song_source)
+  end
+
+  def add_ukulele_song_pdf_to_resource_list(resources, song)
+    ukulele_song_path = "pdfs/#{song[:songpro]}-ukulele.pdf"
+    ukulele_song_source = "#{__dir__}/#{PDF_BUILD_PATH}/#{song[:songpro]}-ukulele.pdf"
+
+    FileUtils.touch(ukulele_song_source)
+    resources << Middleman::Sitemap::Resource.new(@app.sitemap, ukulele_song_path, ukulele_song_source)
+  end
 
   def add_guitar_pdf_to_resource_list(resources)
     song_path = 'pdfs/mss-guitar.pdf'
