@@ -3,6 +3,10 @@
 
 %div.information
   %dl
+    - if song.custom[:order]
+      %dt.page Page
+      %dd.page= song.custom[:order].to_i * 2
+
     - if song.tuning
       %dt.tuning Tuning
       %dd.tuning= song.tuning

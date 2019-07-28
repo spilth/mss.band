@@ -49,6 +49,7 @@ helpers do
           ignore: song.custom[:ignore],
           spotify: song.custom[:spotify],
           order: song.custom[:order],
+          page: song.custom[:order].to_i * 2
       }
     end.select! do |song|
       song[:order]

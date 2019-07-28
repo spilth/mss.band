@@ -61,6 +61,10 @@ h2.artist {
   .section {
     page-break-inside: avoid;
   }
+
+  dt.page, dd.page {
+    display: none;
+  }
 }
 
 .line {
@@ -109,7 +113,6 @@ h2.artist {
   }
 }
 
-
 .chord, .lyric {
   text-wrap: avoid;
   // Make sure chords right next to each other have breathing room
@@ -149,22 +152,10 @@ h2.artist {
 
 th.sortable {
   cursor: pointer;
+  color: #007bff;
 }
 
 th.asc {
   cursor: default;
-}
-
-th.sortable::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f0de";
-  padding-left: 0.5em;
-  color: #ccc;
-}
-
-th.asc::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f0de";
-  padding-left: 0.5em;
-  color: #000;
+  color: #000000;
 }

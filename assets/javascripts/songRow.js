@@ -20,6 +20,9 @@ export function SongRow(props) {
         <td>
             <DifficultyLabel difficulty={props.difficulty}/>
         </td>
+        <td>
+            {props.page}
+        </td>
     </tr>;
 }
 
@@ -32,4 +35,5 @@ SongRow.propTypes = {
     year: PropTypes.string,
     difficulty: PropTypes.string,
     path: PropTypes.string,
+    page: PropTypes.number,
 };
