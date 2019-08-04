@@ -16,7 +16,8 @@ ignore 'songs/*.html.sng'
 Dir.glob('source/songs/*.html.sng').each do |filename|
   contents = File.read(filename)
   song = SongPro.parse(contents)
-  proxy "/songs/#{song.title.parameterize}/index.html", '/songs/template.html', locals: { song: song, ukulele: false}, ignore: true
+  proxy "/songs/#{song.title.parameterize}.html", '/songs/template.html', locals: { song: song, ukulele: false}, ignore: true
+  proxy "/songs/#{song.title.parameterize}/guitar.html", '/songs/template.html', locals: { song: song, ukulele: false}, ignore: true
   proxy "/songs/#{song.title.parameterize}/ukulele.html", '/songs/template.html', locals: { song: song, ukulele: true}, ignore: true
 end
 
@@ -46,7 +47,6 @@ helpers do
           difficulty: song.custom[:difficulty],
           path: song.title.parameterize,
           short: song.custom[:short],
-          ignore: song.custom[:ignore],
           spotify: song.custom[:spotify],
           order: song.custom[:order],
           page: song.custom[:order].to_i * 2
