@@ -140,7 +140,7 @@ class PdfGenerator < Middleman::Extension
     end
 
     songbook_pdf.number_pages(NUMBERING_FORMAT)
-    songbook_pdf.save("#{__dir__}/#{PDF_BUILD_PATH}/mss-#{instrument}")
+    songbook_pdf.save("#{__dir__}/#{PDF_BUILD_PATH}/mss-#{instrument}.pdf")
   end
 end
 
