@@ -7,7 +7,7 @@ class PdfGenerator < Middleman::Extension
   PDF_BUILD_PATH = 'build/pdfs'.freeze
   TIMESTAMP = Time.new.strftime("%y%m%d.%H%M").freeze
 
-  PDF_OPTIONS = {
+  COMMON_PDF_OPTIONS = {
       page_size: 'letter',
       margin_top: '10mm',
       margin_bottom: '10mm',
@@ -18,22 +18,16 @@ class PdfGenerator < Middleman::Extension
       dpi: 62,
       zoom: 1.0,
       outline_depth: 1,
+      footer_font_size: 9,
+      footer_left: TIMESTAMP,
+      footer_right: SITE_URL
   }.freeze
 
   TOC_PDF_OPTIONS = {
       footer_center: "Table of Contents",
-      footer_font_size: 9,
-      footer_left: TIMESTAMP,
-      footer_right: SITE_URL
   }.freeze
 
-  BLANK_PDF_OPTIONS = {
-      footer_font_size: 9,
-      footer_left: TIMESTAMP,
-      footer_right: SITE_URL
-  }.freeze
-
-  PAGE_FORMAT = {
+  NUMBERING_FORMAT = {
       number_format: '%s',
       location: :bottom_right,
       margin_from_height: 5,
@@ -52,7 +46,7 @@ class PdfGenerator < Middleman::Extension
     }
   end.select! do |song|
     song[:order]
-  end.sort_by! { |song| song[:order].to_i }
+  end.sort_by! { |song| song[:order].to_i }.freeze
 
   def manipulate_resource_list(resources)
     FileUtils::mkdir_p(PDF_BUILD_PATH)
@@ -69,12 +63,12 @@ class PdfGenerator < Middleman::Extension
     FileUtils::mkdir_p(PDF_BUILD_PATH)
 
     generate_static_pdf("toc.pdf", TOC_PDF_OPTIONS, 'build/songbook/toc/index.html')
-    generate_static_pdf("blank.pdf", BLANK_PDF_OPTIONS, 'build/songbook/blank_page/index.html')
+    generate_static_pdf("blank.pdf", COMMON_PDF_OPTIONS, 'build/songbook/blank_page/index.html')
 
     generate_song_pdfs
 
-    generate_songbook_pdf("-guitar", "mss-guitar.pdf")
-    generate_songbook_pdf("-ukulele", "mss-ukulele.pdf")
+    generate_songbook_pdf("guitar")
+    generate_songbook_pdf("ukulele")
   end
 
   private
@@ -98,7 +92,7 @@ class PdfGenerator < Middleman::Extension
     html = File.open(source_path, 'rb').read
     pdf = PDFKit.new(
         html,
-        PDF_OPTIONS.merge(options)
+        COMMON_PDF_OPTIONS.merge(options)
     )
     pdf.to_file("#{PDF_BUILD_PATH}/#{filename}")
   end
@@ -114,7 +108,7 @@ class PdfGenerator < Middleman::Extension
     html_path = "build/songs/#{source_filename}"
     pdf_path = "#{PDF_BUILD_PATH}/#{target_filename}"
 
-    if File.file?(pdf_path) && (File.mtime(pdf_path) > File.mtime(html_path))
+    if  pdf_up_to_date(html_path, pdf_path)
       puts "Skipping #{pdf_path} - already up to date"
     else
       puts "Generating #{pdf_path}"
@@ -122,34 +116,31 @@ class PdfGenerator < Middleman::Extension
       html = File.open(html_path, 'rb').read
       pdf = PDFKit.new(
           html,
-          PDF_OPTIONS.merge(
-              footer_center: "#{song[:title]}",
-              footer_font_size: 9,
-              footer_left: TIMESTAMP,
-              footer_right: SITE_URL,
+          COMMON_PDF_OPTIONS.merge(
+              footer_center: "#{song[:title]}"
           )
       )
 
-      hashed_stylesheet = Dir.glob('build/stylesheets/*.css')[0]
-      pdf.stylesheets << hashed_stylesheet
+      pdf.stylesheets << Dir.glob('build/stylesheets/*.css')[0]
       pdf.to_file(pdf_path)
     end
   end
 
-  def generate_songbook_pdf(song_suffix, target_filename)
+  def pdf_up_to_date(html_path, pdf_path)
+    File.file?(pdf_path) && (File.mtime(pdf_path) > File.mtime(html_path))
+  end
+
+  def generate_songbook_pdf(instrument)
     songbook_pdf = CombinePDF.new
     songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/toc.pdf")
 
     SONGS.each do |song|
-      songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/#{song[:filename]}#{song_suffix}.pdf")
-      if song[:short]
-        songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/blank.pdf")
-      end
+      songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/#{song[:filename]}-#{instrument}.pdf")
+      songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/blank.pdf") if song[:short]
     end
 
-    songbook_pdf.number_pages(PAGE_FORMAT)
-
-    songbook_pdf.save("#{__dir__}/#{PDF_BUILD_PATH}/#{target_filename}")
+    songbook_pdf.number_pages(NUMBERING_FORMAT)
+    songbook_pdf.save("#{__dir__}/#{PDF_BUILD_PATH}/mss-#{instrument}")
   end
 end
 
