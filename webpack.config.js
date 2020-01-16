@@ -5,12 +5,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const productionPlugins = [
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': '"production"'
-    }),
-    // isProduction ? new webpack.optimize.UglifyJsPlugin({
-    //     compress: {
-    //         unused: false
-    //     }
-    // }) : null,
+    })
 ];
 
 module.exports = {
