@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'combine_pdf'
-gem 'middleman', '4.2.1'
+gem 'middleman', '4.3.5'
 gem 'middleman-autoprefixer', '2.9.0'
 gem 'pdfkit'
 gem 'redcarpet'

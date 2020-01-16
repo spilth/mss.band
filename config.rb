@@ -8,7 +8,8 @@ activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
 end
 
-activate :asset_hash
+# There is currently a Content Length bug when running `middleman build` using asset_hash
+#activate :asset_hash
 activate :directory_indexes
 activate :chords
 
