@@ -6,6 +6,7 @@ page 'songs/*', layout: 'song'
 
 activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
+  prefix.flexbox = true
 end
 
 # There is currently a Content Length bug when running `middleman build` using asset_hash
