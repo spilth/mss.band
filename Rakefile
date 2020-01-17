@@ -14,7 +14,7 @@ task :build do
 end
 
 desc 'Deploy site to Netlify'
-task deploy: [:build] do
+task :deploy do
   system 'netlify deploy --prod --dir=build'
 end
 
