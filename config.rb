@@ -51,7 +51,8 @@ helpers do
           short: song.custom[:short],
           spotify: song.custom[:spotify],
           order: song.custom[:order],
-          page: song.custom[:order].to_i * 2
+          page: song.custom[:order].to_i * 2,
+          chord_count: song.chords.length
       }
     end.select! do |song|
       song[:order]

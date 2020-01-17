@@ -11,6 +11,7 @@ export class SongTable extends React.Component {
             yearClassName: 'sortable',
             tempoClassName: 'sortable',
             difficultyClassName: 'sortable',
+            chordsClassName: 'sortable',
             pageClassName: 'sortable',
             songs: [],
         };
@@ -27,6 +28,7 @@ export class SongTable extends React.Component {
                         yearClassName: 'sortable',
                         tempoClassName: 'sortable',
                         difficultyClassName: 'sortable asc',
+                        chordsClassName: 'sortable',
                         pageClassName: 'sortable',
                         songs: result.songs
                     }, this.sortByDifficulty);
@@ -79,6 +81,7 @@ export class SongTable extends React.Component {
             yearClassName: 'sortable ',
             tempoClassName: 'sortable asc',
             difficultyClassName: 'sortable',
+            chordsClassName: 'sortable',
             pageClassName: 'sortable',
             songs: this.state.songs.sort((a, b) => {
                 if (Number(a.tempo) < Number(b.tempo)) return -1;
@@ -98,6 +101,7 @@ export class SongTable extends React.Component {
             yearClassName: 'sortable',
             tempoClassName: 'sortable',
             difficultyClassName: 'sortable',
+            chordsClassName: 'sortable',
             pageClassName: 'sortable',
             songs: this.state.songs.sort((a, b) => {
                 const aName = a.artist.replace(/^The /, "");
@@ -120,10 +124,31 @@ export class SongTable extends React.Component {
             yearClassName: 'sortable',
             tempoClassName: 'sortable',
             difficultyClassName: 'sortable asc',
+            chordsClassName: 'sortable',
             pageClassName: 'sortable',
             songs: this.state.songs.sort((a, b) => {
                 if (a.difficulty < b.difficulty) return -1;
                 if (a.difficulty > b.difficulty) return 1;
+
+                // Sort songs by the same artist alphabetically
+                if (a.title < b.title) return -1;
+                if (a.title > b.title) return 1;
+            })
+        })
+    };
+
+    sortByChords() {
+        this.setState({
+            titleClassName: 'sortable',
+            artistClassName: 'sortable',
+            yearClassName: 'sortable',
+            tempoClassName: 'sortable',
+            difficultyClassName: 'sortable',
+            chordsClassName: 'sortable asc',
+            pageClassName: 'sortable',
+            songs: this.state.songs.sort((a, b) => {
+                if (a.chord_count < b.chord_count) return -1;
+                if (a.chord_count > b.chord_count) return 1;
 
                 // Sort songs by the same artist alphabetically
                 if (a.title < b.title) return -1;
@@ -160,7 +185,7 @@ export class SongTable extends React.Component {
                     </th>
                     <th className={this.state.yearClassName} onClick={() => this.sortByYear()}>
                         <span className="d-none d-lg-inline">Year</span>
-                        <i className="d-lg-none far fa-calendar fa-fw"/>
+                        <i className="d-lg-none fas fa-history fa-fw"/>
                     </th>
                     <th className={this.state.tempoClassName} onClick={() => this.sortByTempo()}>
                         <span className="d-none d-lg-inline">Tempo</span>
@@ -168,6 +193,10 @@ export class SongTable extends React.Component {
                     </th>
                     <th className={this.state.difficultyClassName} onClick={() => this.sortByDifficulty()}>
                         <span className="d-none d-lg-inline">Difficulty</span>
+                        <i className="d-lg-none fas fa-graduation-cap fa-fw"/>
+                    </th>
+                    <th className={this.state.chordsClassName} onClick={() => this.sortByChords()}>
+                        <span className="d-none d-lg-inline">Chords</span>
                         <i className="d-lg-none fas fa-guitar fa-fw"/>
                     </th>
                     <th className={this.state.pageClassName} onClick={() => this.sortByPage()}>
@@ -188,6 +217,7 @@ export class SongTable extends React.Component {
                     path={song.path}
                     listen={song.spotify}
                     page={song.page}
+                    chordCount={song.chord_count}
                 />)}
                 </tbody>
             </table>
