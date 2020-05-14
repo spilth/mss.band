@@ -1,5 +1,5 @@
 {
-  "name": "mss.nyc",
+  "name": "mss.band",
   "version": "1.0.0",
   "description": "[Middleman](https://middlemanapp.com/) web site for providing the lyrics and chords to songs using the [ChordPro](https://www.chordpro.org/) format.",
   "main": "index.js",
@@ -20,13 +20,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spilth/mss.nyc.git"
+    "url": "git+https://github.com/spilth/mss.band.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/spilth/mss.nyc/issues"
+    "url": "https://github.com/spilth/mss.band/issues"
   },
-  "homepage": "https://github.com/spilth/mss.nyc#readme"
+  "homepage": "https://github.com/spilth/mss.band#readme"
 }

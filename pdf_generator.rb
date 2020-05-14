@@ -3,9 +3,9 @@ require 'fileutils'
 require 'combine_pdf'
 
 class PdfGenerator < Middleman::Extension
-  SITE_URL = 'http://mss.nyc/'.freeze
+  SITE_URL = 'https://mss.band/'.freeze
   PDF_BUILD_PATH = 'build/pdfs'.freeze
-  TIMESTAMP = Time.new.strftime("%y%m%d.%H%M").freeze
+  TIMESTAMP = Time.new.strftime("%Y%m%d.%H%M").freeze
 
   COMMON_PDF_OPTIONS = {
       page_size: 'letter',
