@@ -171,7 +171,7 @@ export class SongTable extends React.Component {
             })
         })
     };
-    
+
     render() {
         return (
             <table className="table table-hover table-sm">

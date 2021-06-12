@@ -5,7 +5,7 @@ end
 
 desc 'Clean out build directory'
 task :clean do
-  system 'rm -rf ./build'
+  system 'rm -rf build'
 end
 
 desc 'Build the static site'
@@ -17,4 +17,3 @@ desc 'Deploy site to Netlify'
 task :deploy do
   system 'netlify deploy --prod --dir=build'
 end
-

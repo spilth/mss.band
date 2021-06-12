@@ -8,41 +8,41 @@ class PdfGenerator < Middleman::Extension
   TIMESTAMP = Time.new.strftime("%Y%m%d.%H%M").freeze
 
   COMMON_PDF_OPTIONS = {
-      page_size: 'letter',
-      margin_top: '10mm',
-      margin_bottom: '10mm',
-      margin_left: '20mm',
-      margin_right: '20mm',
-      print_media_type: true,
-      lowquality: true,
-      dpi: 62,
-      zoom: 1.0,
-      outline_depth: 1,
-      footer_font_size: 9,
-      footer_left: TIMESTAMP,
-      footer_right: SITE_URL
+    page_size: 'letter',
+    margin_top: '10mm',
+    margin_bottom: '10mm',
+    margin_left: '20mm',
+    margin_right: '20mm',
+    print_media_type: true,
+    lowquality: true,
+    dpi: 62,
+    zoom: 1.0,
+    outline_depth: 1,
+    footer_font_size: 9,
+    footer_left: TIMESTAMP,
+    footer_right: SITE_URL
   }.freeze
 
   TOC_PDF_OPTIONS = {
-      footer_center: "Table of Contents",
+    footer_center: "Table of Contents",
   }.freeze
 
   NUMBERING_FORMAT = {
-      number_format: '%s',
-      location: :bottom_right,
-      margin_from_height: 5,
-      font_size: 9
+    number_format: '%s',
+    location: :bottom_right,
+    margin_from_height: 5,
+    font_size: 9
   }.freeze
 
   SONGS = Dir.glob('source/songs/*.html.sng').sort.collect do |filename|
     song = SongPro.parse(File.read(filename))
     {
-        title: song.title,
-        artist: song.artist,
-        difficulty: song.custom[:difficulty],
-        filename: song.title.parameterize,
-        short: song.custom[:short],
-        order: song.custom[:order],
+      title: song.title,
+      artist: song.artist,
+      difficulty: song.custom[:difficulty],
+      filename: song.title.parameterize,
+      short: song.custom[:short],
+      order: song.custom[:order],
     }
   end.select! do |song|
     song[:order]
@@ -91,8 +91,8 @@ class PdfGenerator < Middleman::Extension
   def generate_static_pdf(filename, options, source_path)
     html = File.open(source_path, 'rb').read
     pdf = PDFKit.new(
-        html,
-        COMMON_PDF_OPTIONS.merge(options)
+      html,
+      COMMON_PDF_OPTIONS.merge(options)
     )
     pdf.to_file("#{PDF_BUILD_PATH}/#{filename}")
   end
@@ -108,17 +108,17 @@ class PdfGenerator < Middleman::Extension
     html_path = "build/songs/#{source_filename}"
     pdf_path = "#{PDF_BUILD_PATH}/#{target_filename}"
 
-    if  pdf_up_to_date(html_path, pdf_path)
+    if pdf_up_to_date(html_path, pdf_path)
       puts "Skipping #{pdf_path} - already up to date"
     else
       puts "Generating #{pdf_path}"
 
       html = File.open(html_path, 'rb').read
       pdf = PDFKit.new(
-          html,
-          COMMON_PDF_OPTIONS.merge(
-              footer_center: "#{song[:title]}"
-          )
+        html,
+        COMMON_PDF_OPTIONS.merge(
+          footer_center: "#{song[:title]}"
+        )
       )
 
       pdf.stylesheets << Dir.glob('build/stylesheets/*.css')[0]
