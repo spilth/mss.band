@@ -44,8 +44,6 @@ class PdfGenerator < Middleman::Extension
       short: song.custom[:short],
       order: song.custom[:order],
     }
-  end.select! do |song|
-    song[:order]
   end.sort_by! { |song| song[:order].to_i }.freeze
 
   def manipulate_resource_list(resources)

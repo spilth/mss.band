@@ -54,8 +54,6 @@ helpers do
         page: song.custom[:order].to_i * 2,
         chord_count: song.chords.length
       }
-    end.select! do |song|
-      song[:order]
     end
   end
 
