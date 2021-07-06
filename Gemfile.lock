@@ -11,9 +11,9 @@ GEM
     autoprefixer-rails (9.7.4)
       execjs
     backports (3.15.0)
-    builder (3.2.3)
-    chord_diagrams (0.0.9)
-      victor (= 0.2.4)
+    builder (3.2.4)
+    chord_diagrams (0.0.11)
+      victor (= 0.3.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -97,7 +97,7 @@ GEM
     sassc (2.2.1)
       ffi (~> 1.9)
     servolux (0.13.0)
-    song_pro (0.1.6)
+    song_pro (0.1.10)
       markaby
     temple (0.8.2)
     thor (1.0.1)
@@ -107,7 +107,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
-    victor (0.2.4)
+    victor (0.3.2)
     wkhtmltopdf-binary (0.12.4)
 
 PLATFORMS
