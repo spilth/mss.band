@@ -37,6 +37,10 @@ activate :external_pipeline,
          latency: 1
 
 helpers do
+  def formatted_chord(chord)
+    chord.gsub("sus4", "sus<sup>4</sup>").gsub("sus2", "sus<sup>2</sup>")
+  end
+
   def pdf_songs
     Dir.glob('source/songs/*.html.sng').sort.collect do |filename|
       song = SongPro.parse(File.read(filename))

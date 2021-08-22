@@ -59,10 +59,10 @@
             - line.measures.each do |measure|
               %div.measure
                 - measure.chords.each do |chord|
-                  %div.chord= chord
+                  %div.chord= formatted_chord(chord)
         - else
           %div.line
             - line.parts.each do |part|
               %div.part
-                %div.chord= part.chord
+                %div.chord= formatted_chord(part.chord)
                 %div.lyric= part.lyric
