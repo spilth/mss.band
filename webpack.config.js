@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -9,8 +9,9 @@ const productionPlugins = [
 ];
 
 module.exports = {
+    mode: 'production',
     entry: './assets/javascripts/index.js',
-    devtool: isProduction ? false : 'source-map',
+    devtool: 'source-map',
     output: {
         library: 'MyApp',
         path: __dirname + '/tmp/dist',

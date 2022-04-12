@@ -31,8 +31,8 @@ set :markdown, fenced_code_blocks: true, smartypants: true
 activate :external_pipeline,
          name: :webpack,
          command: build? ?
-                    'NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail -p' :
-                    './node_modules/webpack/bin/webpack.js --watch -d --progress --color',
+                    'NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail' :
+                    './node_modules/webpack/bin/webpack.js --watch --progress --color',
          source: 'tmp/dist',
          latency: 1
 
