@@ -1,0 +1,5 @@
+---
+title: Songs - Ordered by Tempo
+---
+
+<%= partial(:song_table, locals: { songs: pdf_songs.sort_by { |song| [song.tempo.to_i, song.custom[:difficulty]] } }) %>

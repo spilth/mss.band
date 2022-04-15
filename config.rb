@@ -1,16 +1,13 @@
 require 'pdf_generator'
 require 'extensions/chords'
 
-page '/*.json', layout: false
-page 'songs/*', layout: 'song'
+page 'songs/*.html.sng', layout: 'song'
 
 activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
   prefix.flexbox = true
 end
 
-# There is currently a Content Length bug when running `middleman build` using asset_hash
-#activate :asset_hash
 activate :directory_indexes
 activate :chords
 
@@ -28,14 +25,6 @@ activate :pdf_generator
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 
-activate :external_pipeline,
-         name: :webpack,
-         command: build? ?
-                    'NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail' :
-                    './node_modules/webpack/bin/webpack.js --watch --progress --color',
-         source: 'tmp/dist',
-         latency: 1
-
 helpers do
   def formatted_chord(chord)
     chord.gsub("sus4", "sus<sup>4</sup>").gsub("sus2", "sus<sup>2</sup>")
@@ -43,21 +32,20 @@ helpers do
 
   def pdf_songs
     Dir.glob('source/songs/*.html.sng').sort.collect do |filename|
-      song = SongPro.parse(File.read(filename))
-      {
-        title: song.title,
-        artist: song.artist,
-        year: song.year,
-        key: song.key,
-        tempo: song.tempo,
-        difficulty: song.custom[:difficulty],
-        path: song.title.parameterize,
-        short: song.custom[:short],
-        spotify: song.custom[:spotify],
-        order: song.custom[:order],
-        page: song.custom[:order].to_i * 2,
-        chord_count: song.chords.length
-      }
+      SongPro.parse(File.read(filename))
+    end
+  end
+
+  def difficulty_label(difficulty)
+    case difficulty
+    when '0'
+      '<span class="badge badge-primary">B<span class="d-none d-md-inline">eginner</span></span>'
+    when '1'
+      '<span class="badge badge-success">E<span class="d-none d-md-inline">asy</span></span>'
+    when '2'
+      '<span class="badge badge-warning">M<span class="d-none d-md-inline">edium</span></span>'
+    when '3'
+      '<span class="badge badge-danger">H<span class="d-none d-md-inline">ard</span></span>'
     end
   end
 

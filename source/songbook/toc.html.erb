@@ -10,9 +10,9 @@
           <tbody>
           <% songs.each do |song| %>
             <tr>
-              <td><%= song[:title] %></td>
-              <td><%= (song[:order].to_i * 2) %></td>
-              <td><%= difficulty_text(song[:difficulty]).try(:titleize) %></td>
+              <td><%= song.title %></td>
+              <td><%= song.custom[:order].to_i * 2 %></td>
+              <td><%= difficulty_text(song.custom[:difficulty]).try(:titleize) %></td>
             </tr>
           <% end %>
           </tbody>
