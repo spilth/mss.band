@@ -1,5 +1,6 @@
 ---
 title: Songs - Ordered by Year
+layout: layout
 ---
 
 <%= partial(:song_table, locals: { songs: pdf_songs.sort_by { |song| [song.year, song.title] } }) %>
