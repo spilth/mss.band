@@ -1,34 +1,5 @@
 ---
-title: Songs
-layout: layout
+title: Songs - Ordered by Difficulty
 ---
 
-<p class="lead">These are the songs we learn and play together at our meetups.</p>
-
-<div class="row justify-content-md-center">
-  <div class="col-md-4">
-    <p>
-      <a href="/pdfs/mss-guitar.pdf" class="btn btn-primary btn-block">
-        <i class="fas fa-book fa-fw"></i> Download Guitar Songbook
-      </a>
-    </p>
-  </div>
-  <div class="col-md-4">
-    <p>
-      <a href="/pdfs/mss-ukulele.pdf" class="btn btn-primary btn-block">
-        <i class="fas fa-book fa-fw"></i> Download Ukulele Songbook
-      </a>
-    </p>
-  </div>
-  <div class="col-md-4">
-    <p>
-      <a href="https://open.spotify.com/user/spilth/playlist/1NaTfvTr9vGRuLPFZ5vPPz" class="btn btn-primary btn-block">
-        <i class="fab fa-spotify fa-fw"></i> Spotify Playlist
-      </a>
-    </p>
-  </div>
-</div>
-
-<div id="song-table"></div>
-
-<%= javascript_include_tag 'bundle' %>
+<%= partial(:song_table, locals: { songs: pdf_songs.sort_by { |song| [song.custom[:difficulty], song.title] } }) %>

@@ -1,0 +1,75 @@
+<p class="lead">These are the songs we learn and play together at our meetups.</p>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-4">
+    <p>
+      <a href="/pdfs/mss-guitar.pdf" class="btn btn-primary btn-block">
+        <i class="fas fa-book fa-fw"></i> Download Guitar Songbook
+      </a>
+    </p>
+  </div>
+  <div class="col-md-4">
+    <p>
+      <a href="/pdfs/mss-ukulele.pdf" class="btn btn-primary btn-block">
+        <i class="fas fa-book fa-fw"></i> Download Ukulele Songbook
+      </a>
+    </p>
+  </div>
+  <div class="col-md-4">
+    <p>
+      <a href="https://open.spotify.com/user/spilth/playlist/1NaTfvTr9vGRuLPFZ5vPPz" class="btn btn-primary btn-block">
+        <i class="fab fa-spotify fa-fw"></i> Spotify Playlist
+      </a>
+    </p>
+  </div>
+</div>
+
+<table class="table table-sm">
+  <thead>
+  <th><a href="/songs/by_title">Title</a></th>
+  <th><a href="/songs/by_artist">Artist</a></th>
+  <th>
+    <a href="/songs/by_year">
+      <span class="d-none d-lg-inline">Year</span>
+      <i class="d-lg-none fas fa-history fa-fw"></i>
+    </a>
+  </th>
+  <th>
+    <a href="/songs/by_tempo">
+      <span class="d-none d-lg-inline">Tempo</span>
+      <i class="d-lg-none fas fa-drum fa-fw"></i>
+    </a>
+  </th>
+  <th>
+    <a href="/songs">
+      <span class="d-none d-lg-inline">Difficulty</span>
+      <i class="d-lg-none fas fa-graduation-cap fa-fw"></i>
+    </a>
+  </th>
+  <th>
+    <a href="/songs/by_chords">
+      <span class="d-none d-lg-inline">Chords</span>
+      <i class="d-lg-none fas fa-guitar fa-fw"></i>
+    </a>
+  </th>
+  <th>
+    <a href="/songs/by_page">
+      <span class="d-none d-lg-inline">Page</span>
+      <i class="d-lg-none fas fa-book fa-fw"></i>
+    </a>
+  </th>
+  </thead>
+  <tbody>
+  <% songs.each do |song| %>
+    <tr>
+      <td><%= link_to song.title, "/songs/#{song.title.parameterize}" %></td>
+      <td><%= song.artist %></td>
+      <td><%= song.year %></td>
+      <td><%= song.tempo %></td>
+      <td><%= difficulty_label(song.custom[:difficulty]) %></td>
+      <td><%= song.chords.size %></td>
+      <td><%= song.custom[:order].to_i * 2 %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
