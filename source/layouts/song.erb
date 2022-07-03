@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<%
+  meta = {
+    title: "#{song.title} by #{song.artist}",
+    description: "Song chart of chords and lyrics for #{song.title} by #{song.artist}",
+    image: "https://mss.band/images/instruments.jpg",
+    url: "https://mss.band/songs/#{song.title.parameterize}"
+  }
+%>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,19 +17,19 @@
   <meta property="og:type" content="website">
   <meta property="twitter:card" content="summary_large_image">
 
-  <meta name="title" content="<%= song.title %> by <%= song.artist %>">
-  <meta property="og:title" content="<%= song.title %> by <%= song.artist %>">
-  <meta property="twitter:title" content="<%= song.title %> by <%= song.artist %>">
+  <%= tag :meta, name: "title", content: meta[:title] %>
+  <%= tag :meta, property: "og:title", content: meta[:title] %>
+  <%= tag :meta, property: "twitter:title", content: meta[:title] %>
 
-  <meta name="description" content="Song chart of chords and lyrics for <%= song.title %> by <%= song.artist %>">
-  <meta property="og:description" content="Song chart of chords and lyrics for <%= song.title %> by <%= song.artist %>">
-  <meta property="twitter:description" content="Song chart of chords and lyrics for <%= song.title %> by <%= song.artist %>">
+  <%= tag :meta, name: "description", content: meta[:description] %>
+  <%= tag :meta, property: "og:description", content: meta[:description] %>
+  <%= tag :meta, property: "twitter:description", content: meta[:description] %>
 
-  <meta property="og:image" content="https://mss.band/images/instruments.jpg">
-  <meta property="twitter:image" content="https://mss.band/images/instruments.jpg">
+  <%= tag :meta, property: "og:image", content: meta[:image] %>
+  <%= tag :meta, property: "twitter:image", content: meta[:image] %>
 
-  <meta property="og:url" content="https://mss.band/songs/<%= song.title.parameterize %>">
-  <meta property="twitter:url" content="https://mss.band/song/<%= song.title.parameterize %>">
+  <%= tag :meta, property: "og:url", content: meta[:url] %>
+  <%= tag :meta, property: "twitter:url", content: meta[:url] %>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" integrity="sha256-PF6MatZtiJ8/c9O9HQ8uSUXr++R9KBYu4gbNG5511WE=" crossorigin="anonymous"/>
