@@ -1,3 +1,8 @@
+// For debugging PDF layout sizing
+//* {
+//  outline: 1px solid red;
+//}
+
 h1.title {
   text-align: center;
   font-weight: 900;
@@ -8,18 +13,16 @@ h2.artist {
 }
 
 #chords {
-  margin-bottom: 1em;
   text-align: center;
 }
 
 .section {
   display: flex;
   flex-direction: row;
-  margin-bottom: 1.0em;
+  margin-bottom: 0.9em;
 
   .name {
     width: 12%;
-    // margin-top: 1.4rem;
     font-family: "Times New Roman", serif;
     font-weight: bold;
     font-size: 1.2rem;
@@ -76,7 +79,6 @@ h2.artist {
 .tablature {
   font-family: monospace;
   font-size: 1.3rem;
-  //letter-spacing: -0.15rem;
   line-height: 1.0rem;
   overflow: visible;
   white-space: nowrap;
@@ -134,7 +136,7 @@ h2.artist {
 }
 
 .comment {
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", serif;
   font-size: 1.4rem;
   font-style: italic;
   margin-bottom: 0.5em;

@@ -20,7 +20,8 @@ class PdfGenerator < Middleman::Extension
     outline_depth: 1,
     footer_font_size: 9,
     footer_left: TIMESTAMP,
-    footer_right: SITE_URL
+    footer_right: SITE_URL,
+    enable_local_file_access: true
   }.freeze
 
   TOC_PDF_OPTIONS = {
