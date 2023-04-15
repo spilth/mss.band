@@ -117,7 +117,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     victor (0.3.2)
     webrick (1.8.1)
-    wkhtmltopdf-binary (0.12.4)
+    wkhtmltopdf-binary (0.12.6.6)
 
 PLATFORMS
   ruby
@@ -132,7 +132,7 @@ DEPENDENCIES
   rake
   redcarpet
   song_pro
-  wkhtmltopdf-binary (= 0.12.4)
+  wkhtmltopdf-binary
 
 BUNDLED WITH
    2.4.12
