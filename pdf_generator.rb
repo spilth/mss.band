@@ -88,12 +88,10 @@ class PdfGenerator < Middleman::Extension
   end
 
   def generate_static_pdf(filename, options, source_path)
-    html = File.open(source_path, 'rb').read
-    pdf = PDFKit.new(
-      html,
-      COMMON_PDF_OPTIONS.merge(options)
-    )
-    pdf.to_file("#{PDF_BUILD_PATH}/#{filename}")
+    File.open(source_path, 'rb') do |file|
+      pdf = PDFKit.new(file.read, COMMON_PDF_OPTIONS.merge(options))
+      pdf.to_file("#{PDF_BUILD_PATH}/#{filename}")
+    end
   end
 
   def generate_song_pdfs
@@ -112,16 +110,11 @@ class PdfGenerator < Middleman::Extension
     else
       puts "Generating #{pdf_path}"
 
-      html = File.open(html_path, 'rb').read
-      pdf = PDFKit.new(
-        html,
-        COMMON_PDF_OPTIONS.merge(
-          footer_center: "#{song[:title]}"
-        )
-      )
-
-      pdf.stylesheets << Dir.glob('build/stylesheets/*.css')[0]
-      pdf.to_file(pdf_path)
+      File.open(html_path, 'rb') do |file|
+        pdf = PDFKit.new(file.read, COMMON_PDF_OPTIONS.merge(footer_center: "#{song[:title]}"))
+        pdf.stylesheets << Dir.glob('build/stylesheets/*.css')[0]
+        pdf.to_file(pdf_path)
+      end
     end
   end
 
