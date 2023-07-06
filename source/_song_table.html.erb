@@ -62,7 +62,7 @@
   <tbody>
   <% songs.each do |song| %>
     <tr>
-      <td><%= link_to song.title, "/songs/#{song.title.parameterize}" %></td>
+      <td><%= link_to song.title, "/songs/#{song.title.gsub(/[^\w\s]/i, '').parameterize}" %></td>
       <td><%= song.artist %></td>
       <td><%= song.year %></td>
       <td><%= song.tempo %></td>
