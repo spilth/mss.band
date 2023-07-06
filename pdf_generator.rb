@@ -41,7 +41,7 @@ class PdfGenerator < Middleman::Extension
       title: song.title,
       artist: song.artist,
       difficulty: song.custom[:difficulty],
-      filename: song.title.parameterize,
+      filename: song.title.gsub(/[^\w\s]/i, '').parameterize,
       short: song.custom[:short],
       order: song.custom[:order],
     }

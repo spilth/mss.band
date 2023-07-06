@@ -5,7 +5,7 @@
     title: "#{song.title} by #{song.artist}",
     description: "Song chart of chords and lyrics for #{song.title} by #{song.artist}",
     image: "https://mss.band/images/instruments.jpg",
-    url: "https://mss.band/songs/#{song.title.parameterize}"
+    url: "https://mss.band/songs/#{song.title.gsub(/[^\w\s]/i, '').parameterize}"
   }
 %>
 <head>
