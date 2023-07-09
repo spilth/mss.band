@@ -1,7 +1,3 @@
-<h1 class="text-center">MSS Songbook</h1>
-
-<p class="text-center">B = Beginner, E = Easy, M = Medium, H = Hard</p>
-
 <table style="width: 100%;">
   <tr>
     <% pdf_songs.each_slice((pdf_songs.size / 3.0).ceil) do |songs| %>
@@ -10,9 +6,9 @@
           <tbody>
           <% songs.each do |song| %>
             <tr>
+              <td><%= "*" * song.custom[:difficulty].to_i %></td>
               <td><%= song.title %></td>
               <td><%= song.custom[:order].to_i * 2 %></td>
-              <td><%= difficulty_text(song.custom[:difficulty]).try(:titleize) %></td>
             </tr>
           <% end %>
           </tbody>

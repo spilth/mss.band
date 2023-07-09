@@ -25,7 +25,7 @@ class PdfGenerator < Middleman::Extension
   }.freeze
 
   TOC_PDF_OPTIONS = {
-    footer_center: "Table of Contents",
+    footer_center: "MSS Songbook - Table of Contents",
   }.freeze
 
   NUMBERING_FORMAT = {
