@@ -9,6 +9,8 @@ activate :chords
 activate :directory_indexes
 activate :pdf_generator
 
+set :haml, { escape_html: false }
+
 page 'songs/*', layout: 'song'
 ignore 'songs/*.html.sng'
 
