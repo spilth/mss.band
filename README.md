@@ -1,4 +1,4 @@
-# mss.band [![Netlify Status](https://api.netlify.com/api/v1/badges/a4726d31-9d1f-4724-93c2-0760841fe664/deploy-status)](https://app.netlify.com/sites/mss-band/deploys)
+# mss.band
 
 [Middleman](https://middlemanapp.com/) web site for providing the lyrics and chords to songs using the [SongPro](https://github.com/spilth/song_pro) format.
 
