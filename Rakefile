@@ -17,13 +17,3 @@ desc 'Deploy site to Netlify'
 task :deploy do
   system 'netlify deploy --prod --dir=build'
 end
-
-desc 'Alphabetically re-order songs'
-task :sort do
-  filenames = Dir.glob('source/songs/*.html.sng').sort
-  filenames.each_with_index do |filename, index|
-    content = File.read(filename)
-    new_content = content.gsub(/\!order=\d+/, "!order=#{index + 1}")
-    File.open(filename, "w") { |file| file.puts new_content }
-  end
-end

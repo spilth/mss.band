@@ -3,9 +3,9 @@
 
 %div.information
   %dl
-    - if song.custom[:order]
-      %dt.page Page
-      %dd.page= song.custom[:order].to_i * 2
+    - if song.custom[:difficulty]
+      %dt.tuning Difficulty
+      %dd.tuning= difficulty_text(song.custom[:difficulty])
 
     - if song.tuning
       %dt.tuning Tuning

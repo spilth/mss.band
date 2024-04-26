@@ -1,6 +1,0 @@
----
-title: Songs - Ordered by Page Number
-layout: layout
----
-
-<%= partial(:song_table, locals: { songs: pdf_songs.sort_by { |song| song.custom[:order].to_i } }) %>
