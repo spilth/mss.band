@@ -1,8 +1,6 @@
 require 'extensions/chords'
 require 'pdf_generator'
 
-DIFFICULTY_WORDS = %w(Beginner Easy Medium Hard).freeze
-
 activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
   prefix.flexbox = true
@@ -50,6 +48,17 @@ helpers do
   end
 
   def difficulty_text(difficulty)
-    DIFFICULTY_WORDS[difficulty.to_i]
+    case difficulty
+    when '0'
+      'B'
+    when '1'
+      'E'
+    when '2'
+      'M'
+    when '3'
+      'H'
+    else
+      '?'
+    end
   end
 end

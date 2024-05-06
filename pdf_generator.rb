@@ -42,9 +42,10 @@ class PdfGenerator < Middleman::Extension
       artist: song.artist,
       difficulty: song.custom[:difficulty],
       filename: song.title.gsub(/[^\w\s]/i, '').parameterize,
-      short: song.custom[:short]
+      short: song.custom[:short],
+      order: song.custom[:order],
     }
-  end.sort_by! { |song| song[:filename] }.freeze
+  end.sort_by! { |song| song[:order].to_i }.freeze
 
   def manipulate_resource_list(resources)
     FileUtils::mkdir_p(PDF_BUILD_PATH)
@@ -130,6 +131,7 @@ class PdfGenerator < Middleman::Extension
       songbook_pdf << CombinePDF.load("#{__dir__}/#{PDF_BUILD_PATH}/blank.pdf") if song[:short]
     end
 
+    songbook_pdf.number_pages(NUMBERING_FORMAT)
     songbook_pdf.save("#{__dir__}/#{PDF_BUILD_PATH}/mss-#{instrument}.pdf")
   end
 end

@@ -1,6 +1,0 @@
----
-title: Songs by Difficulty
-layout: layout
----
-
-<%= partial(:song_table, locals: { songs: pdf_songs.sort_by { |song| [song.custom[:difficulty], song.title] } }) %>

@@ -33,7 +33,7 @@
 
 <table class="table table-sm">
   <thead>
-  <th><a href="/songs">Title</a></th>
+  <th><a href="/songs/by_title">Title</a></th>
   <th><a href="/songs/by_artist">Artist</a></th>
   <th>
     <a href="/songs/by_year">
@@ -48,7 +48,7 @@
     </a>
   </th>
   <th>
-    <a href="/songs/by_difficulty">
+    <a href="/songs">
       <span class="d-none d-lg-inline">Difficulty</span>
       <i class="d-lg-none fas fa-graduation-cap fa-fw"></i>
     </a>
@@ -57,6 +57,12 @@
     <a href="/songs/by_chords">
       <span class="d-none d-lg-inline">Chords</span>
       <i class="d-lg-none fas fa-guitar fa-fw"></i>
+    </a>
+  </th>
+  <th>
+    <a href="/songs/by_page">
+      <span class="d-none d-lg-inline">Page</span>
+      <i class="d-lg-none fas fa-book fa-fw"></i>
     </a>
   </th>
   </thead>
@@ -69,6 +75,7 @@
       <td><%= song.tempo %></td>
       <td><%= difficulty_label(song.custom[:difficulty]) %></td>
       <td><%= song.chords.size %></td>
+      <td><%= song.custom[:order].to_i * 2 %></td>
     </tr>
   <% end %>
   </tbody>
