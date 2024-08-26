@@ -100,7 +100,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redcarpet (3.6.0)
-    rexml (3.3.3)
+    rexml (3.3.6)
       strscan
     ruby-rc4 (0.1.5)
     sassc (2.4.0)
