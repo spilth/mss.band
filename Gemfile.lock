@@ -99,7 +99,6 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    redcarpet (3.6.1)
     rexml (3.4.1)
     ruby-rc4 (0.1.5)
     sassc (2.4.0)
@@ -134,7 +133,6 @@ DEPENDENCIES
   mutex_m
   pdfkit
   rake
-  redcarpet
   song_pro
   wkhtmltopdf-binary
 
