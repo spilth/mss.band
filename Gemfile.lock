@@ -106,7 +106,7 @@ GEM
     parslet (2.0.0)
     pdfkit (0.8.7.3)
     public_suffix (6.0.2)
-    rack (3.2.1)
+    rack (3.2.3)
     rackup (2.2.1)
       rack (>= 3)
     rake (13.3.0)
