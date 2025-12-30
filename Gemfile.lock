@@ -129,7 +129,7 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.1)
       execjs (>= 0.3.0, < 3)
-    uri (1.0.3)
+    uri (1.0.4)
     victor (0.3.4)
     webrick (1.9.1)
     wkhtmltopdf-binary (0.12.6.10)
